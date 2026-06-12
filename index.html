@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>YJLAB — 작은 실험실에서 만드는 도구들</title>
-<meta name="description" content="YJLAB은 번역 앱 YomiClaw와 웹 서비스 lunashot을 만드는 1인 개발 실험실입니다." />
+<meta name="description" content="YJLAB은 macOS 파일 매니저 Explorer for Mac, 번역 앱 YomiClaw, 웹 서비스 lunashot을 만드는 1인 개발 실험실입니다." />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="YJLAB" />
-<meta property="og:description" content="번역 앱 YomiClaw와 웹 서비스 lunashot을 만드는 작은 실험실." />
+<meta property="og:description" content="macOS 파일 매니저 Explorer for Mac, 번역 앱 YomiClaw, 웹 서비스 lunashot을 만드는 작은 실험실." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yjlab.io" />
 <meta property="og:image" content="https://yjlab.io/images/yomiclaw-icon.png" />
@@ -209,6 +209,13 @@
       0 0 0 1px rgba(255, 255, 255, 0.06),
       0 0 80px rgba(139, 156, 255, 0.18);
   }
+  /* macOS icons ship their own squircle + padding — shadow only. */
+  .visual.explorer img {
+    width: 64%; max-width: 300px;
+    filter:
+      drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55))
+      drop-shadow(0 0 60px rgba(232, 198, 138, 0.16));
+  }
 
   /* ── footer ── */
   footer { border-top: 1px solid var(--line-soft); padding: 50px 0 70px; margin-top: 40px; }
@@ -230,6 +237,7 @@
     <div class="brand"><span class="dot"></span>YJLAB</div>
     <div class="nav-right">
       <nav class="nav-links">
+        <a href="#explorer">Explorer</a>
         <a href="#yomiclaw">YomiClaw</a>
         <a href="#lunashot">lunashot</a>
       </nav>
@@ -247,13 +255,35 @@
       <p class="eyebrow reveal d1" data-i18n="hero.eyebrow">YJLAB · independent software lab</p>
       <h1 class="reveal d2" data-i18n-html="hero.title">작은 실험실에서<br>만드는 <em>섬세한 도구</em>들.</h1>
       <p class="reveal d3" data-i18n-html="hero.lead">YJLAB은 직접 쓰고 싶은 소프트웨어를 만드는 1인 개발 실험실입니다.
-       일본 여행에 특화된 온디바이스 번역 앱 <strong>YomiClaw</strong>, 그리고 사진가를 위한 웹 서비스 <strong>lunashot</strong>을 운영합니다.</p>
+       macOS 파일 매니저 <strong>Explorer for Mac</strong>, 일본 여행에 특화된 온디바이스 번역 앱 <strong>YomiClaw</strong>, 그리고 사진가를 위한 웹 서비스 <strong>lunashot</strong>을 운영합니다.</p>
+    </div>
+  </section>
+
+  <!-- Explorer for Mac -->
+  <section class="section" id="explorer">
+    <div class="wrap product">
+      <div class="copy-block">
+        <span class="tag" data-i18n="exp.tag">macOS · 파일 매니저</span>
+        <h2>Explorer for Mac</h2>
+        <p class="lead" data-i18n="exp.lead">Windows 탐색기에 익숙한 사용자를 위한 네이티브 macOS 파일 매니저. 손에 익은 그 구조 그대로 파일을 다룰 수 있습니다.</p>
+        <ul class="feat">
+          <li data-i18n="exp.feat_1">항상 보이는 폴더 트리 + 탭 + 주소 표시줄 — 탐색기 그대로의 화면 구조</li>
+          <li data-i18n="exp.feat_2">잘라내기·복사·붙여넣기, F2 이름 바꾸기 — Windows 단축키 그대로</li>
+          <li data-i18n="exp.feat_3">파일 안전 최우선 설계, 완전 오프라인 동작 · 텔레메트리 없음</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="./explorer/" data-i18n="exp.cta">무료 다운로드 →</a>
+        </div>
+      </div>
+      <div class="visual explorer">
+        <img src="images/explorer-icon.png" alt="Explorer for Mac 앱 아이콘" />
+      </div>
     </div>
   </section>
 
   <!-- YomiClaw -->
   <section class="section" id="yomiclaw">
-    <div class="wrap product">
+    <div class="wrap product flip">
       <div class="copy-block">
         <span class="tag" data-i18n="yomi.tag">iOS · 번역 앱</span>
         <h2>YomiClaw</h2>
@@ -277,7 +307,7 @@
 
   <!-- lunashot -->
   <section class="section" id="lunashot">
-    <div class="wrap product flip">
+    <div class="wrap product">
       <div class="copy-block">
         <span class="tag" data-i18n="luna.tag">Web · 서비스</span>
         <h2>lunashot</h2>
@@ -312,7 +342,13 @@
       "page.title": "YJLAB — 작은 실험실에서 만드는 도구들",
       "hero.eyebrow": "YJLAB · independent software lab",
       "hero.title": "작은 실험실에서<br>만드는 <em>섬세한 도구</em>들.",
-      "hero.lead": "YJLAB은 직접 쓰고 싶은 소프트웨어를 만드는 1인 개발 실험실입니다. 일본 여행에 특화된 온디바이스 번역 앱 <strong>YomiClaw</strong>, 그리고 사진가를 위한 웹 서비스 <strong>lunashot</strong>을 운영합니다.",
+      "hero.lead": "YJLAB은 직접 쓰고 싶은 소프트웨어를 만드는 1인 개발 실험실입니다. macOS 파일 매니저 <strong>Explorer for Mac</strong>, 일본 여행에 특화된 온디바이스 번역 앱 <strong>YomiClaw</strong>, 그리고 사진가를 위한 웹 서비스 <strong>lunashot</strong>을 운영합니다.",
+      "exp.tag": "macOS · 파일 매니저",
+      "exp.lead": "Windows 탐색기에 익숙한 사용자를 위한 네이티브 macOS 파일 매니저. 손에 익은 그 구조 그대로 파일을 다룰 수 있습니다.",
+      "exp.feat_1": "항상 보이는 폴더 트리 + 탭 + 주소 표시줄 — 탐색기 그대로의 화면 구조",
+      "exp.feat_2": "잘라내기·복사·붙여넣기, F2 이름 바꾸기 — Windows 단축키 그대로",
+      "exp.feat_3": "파일 안전 최우선 설계, 완전 오프라인 동작 · 텔레메트리 없음",
+      "exp.cta": "무료 다운로드 →",
       "yomi.tag": "iOS · 번역 앱",
       "yomi.lead": "일본 여행에 특화된 온디바이스 번역. 문장이 서버로 전송되지 않고, 아이폰 위에서 직접 처리됩니다.",
       "yomi.feat_1": "온디바이스 기반 번역 — 인터넷 없이도 동작",
@@ -332,7 +368,13 @@
       "page.title": "YJLAB — A small lab making delicate tools",
       "hero.eyebrow": "YJLAB · independent software lab",
       "hero.title": "Thoughtful tools,<br>from a <em>small lab</em>.",
-      "hero.lead": "YJLAB is a one-person software lab building the kind of software I wanted to use myself. We run <strong>YomiClaw</strong>, an on-device translator made for traveling in Japan, and <strong>lunashot</strong>, a web service for photographers.",
+      "hero.lead": "YJLAB is a one-person software lab building the kind of software I wanted to use myself. We make <strong>Explorer for Mac</strong>, a file manager for macOS; <strong>YomiClaw</strong>, an on-device translator made for traveling in Japan; and <strong>lunashot</strong>, a web service for photographers.",
+      "exp.tag": "macOS · File manager",
+      "exp.lead": "A native macOS file manager for people who know Windows Explorer by heart — browse and manage files with the structure your hands already know.",
+      "exp.feat_1": "Persistent folder tree + tabs + address bar — the Explorer layout, unchanged",
+      "exp.feat_2": "Cut, copy, paste, and F2 rename — your Windows shortcuts just work",
+      "exp.feat_3": "File-safety-first design, fully offline · zero telemetry",
+      "exp.cta": "Free download →",
       "yomi.tag": "iOS · Translation app",
       "yomi.lead": "On-device translation made for traveling in Japan. Sentences never reach a server — they're processed right on your iPhone.",
       "yomi.feat_1": "On-device translation — works without internet",
