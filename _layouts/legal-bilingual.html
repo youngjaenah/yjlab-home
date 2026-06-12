@@ -15,87 +15,102 @@
 <meta property="og:title" content="{{ page.title_ko }} — YomiClaw" />
 <meta property="og:description" content="{{ page.title_ko }} · YomiClaw / YJLAB" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yjlab.io{{ page.url }}" />
-<meta property="og:image" content="https://yjlab.io/images/yomiclaw-icon.png" />
+<meta property="og:url" content="https://www.yjlab.io{{ page.url }}" />
+<meta property="og:image" content="https://www.yjlab.io/images/yomiclaw-icon.png" />
 
-<link rel="alternate" hreflang="ko" href="https://yjlab.io{{ page.url }}" />
-<link rel="alternate" hreflang="en" href="https://yjlab.io{{ page.url }}?lang=en" />
+<link rel="alternate" hreflang="ko" href="https://www.yjlab.io{{ page.url }}" />
+<link rel="alternate" hreflang="en" href="https://www.yjlab.io{{ page.url }}?lang=en" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
 <style>
   :root {
-    --bg: #07070c; --ink: #ECEAE4; --ink-dim: #a3a1af; --ink-faint: #6a6878;
-    --gold: #E8C68A; --indigo: #8B9CFF; --line: rgba(236,234,228,0.10);
-    --serif: "Fraunces", Georgia, serif;
-    --sans: "Pretendard", -apple-system, system-ui, sans-serif;
+    --bg: #ffffff;
+    --bg-soft: #f7f7f5;
+    --ink: #17191d;
+    --ink-dim: #585d66;
+    --ink-faint: #8b9099;
+    --accent: #2d5bd7;
+    --line: #e7e7e4;
+    --sans: "Inter", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    background: radial-gradient(ellipse 70% 40% at 80% -5%, rgba(139,156,255,0.08), transparent 60%), var(--bg);
-    color: var(--ink); font-family: var(--sans); line-height: 1.8;
+    background: var(--bg);
+    color: var(--ink); font-family: var(--sans); line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
-  header { border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; background: rgba(7,7,12,0.75); backdrop-filter: blur(14px); }
+  header {
+    border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
+  }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.22em; display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); }
-  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px rgba(232,198,138,0.6); }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.98rem; font-weight: 700; letter-spacing: 0.06em;
+    text-decoration: none; color: var(--ink);
+  }
+  .brand .mark { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
   .nav-right { display: flex; align-items: center; gap: 18px; }
-  .back { color: var(--ink-dim); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
-  .back:hover { color: var(--gold); }
+  .back { color: var(--ink-dim); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+  .back:hover { color: var(--ink); }
 
   /* language toggle */
-  .lang-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
+  .lang-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; padding: 3px; gap: 2px; }
   .lang-toggle a {
-    text-decoration: none; color: var(--ink-faint); font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.08em; padding: 5px 12px; border-radius: 999px; transition: color .2s, background .2s;
+    text-decoration: none; color: var(--ink-faint); font-size: 0.76rem; font-weight: 600;
+    letter-spacing: 0.06em; padding: 4px 10px; border-radius: 6px; transition: color .2s, background .2s;
   }
   .lang-toggle a:hover { color: var(--ink); }
-  .lang-toggle a.active { background: var(--ink); color: var(--bg); }
+  .lang-toggle a.active { background: var(--ink); color: #fff; }
 
-  .doc { padding: 70px 0 100px; }
-  .eyebrow { font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .doc { padding: 64px 0 96px; }
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 18px;
+  }
 
   /* markdown-generated content */
-  .content h1 { font-family: var(--sans); font-weight: 600; font-size: clamp(1.8rem, 4.4vw, 2.5rem); letter-spacing: -0.035em; line-height: 1.25; margin-bottom: 30px; }
+  .content h1 { font-weight: 700; font-size: clamp(1.7rem, 4.2vw, 2.3rem); letter-spacing: -0.03em; line-height: 1.25; margin-bottom: 28px; }
   .content h2 {
-    font-family: var(--sans); font-weight: 600; font-size: 1.35rem; letter-spacing: -0.02em;
+    font-weight: 600; font-size: 1.3rem; letter-spacing: -0.02em;
     margin: 44px 0 14px; padding-top: 30px; border-top: 1px solid var(--line);
   }
   .content > h2:first-of-type { border-top: none; padding-top: 0; }
   .content h3 { font-size: 1.02rem; font-weight: 600; margin: 22px 0 8px; color: var(--ink); }
-  .content p, .content li { color: var(--ink-dim); font-size: 0.98rem; }
+  .content p, .content li { color: var(--ink-dim); font-size: 0.96rem; }
   .content p { margin-bottom: 14px; }
   .content ul, .content ol { margin: 0 0 16px 22px; }
   .content li { margin-bottom: 8px; }
   .content strong { color: var(--ink); }
-  .content a { color: var(--gold); }
+  .content a { color: var(--accent); }
   .content hr { border: none; border-top: 1px solid var(--line); margin: 36px 0; }
 
-  .content table { width: 100%; border-collapse: collapse; margin: 8px 0 22px; font-size: 0.92rem; }
+  .content table { width: 100%; border-collapse: collapse; margin: 8px 0 22px; font-size: 0.9rem; }
   .content th, .content td { text-align: left; padding: 11px 14px; border: 1px solid var(--line); color: var(--ink-dim); vertical-align: top; }
-  .content th { color: var(--ink); font-weight: 600; background: rgba(236,234,228,0.03); }
+  .content th { color: var(--ink); font-weight: 600; background: var(--bg-soft); }
 
   .content blockquote {
-    border-left: 3px solid var(--gold); background: rgba(232,198,138,0.05);
-    padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 20px 0; color: var(--ink);
+    border-left: 3px solid var(--accent); background: var(--bg-soft);
+    padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; color: var(--ink);
   }
   .content blockquote p { color: var(--ink); margin-bottom: 0; }
 
   .content code {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em;
-    background: rgba(236,234,228,0.07); padding: 2px 6px; border-radius: 5px; color: var(--gold);
+    background: var(--bg-soft); border: 1px solid var(--line);
+    padding: 2px 6px; border-radius: 5px; color: var(--ink);
   }
 
-  footer { border-top: 1px solid var(--line); padding: 36px 0; }
+  footer { border-top: 1px solid var(--line); padding: 32px 0; }
   .foot { color: var(--ink-faint); font-size: 0.85rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .foot a { color: var(--ink-dim); text-decoration: none; }
-  .foot a:hover { color: var(--gold); }
+  .foot a:hover { color: var(--ink); }
 
   @media (max-width: 520px) {
     .nav-right { gap: 12px; }
@@ -107,7 +122,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/"><span class="dot"></span>YJLAB</a>
+    <a class="brand" href="/"><span class="mark"></span>YJLAB</a>
     <div class="nav-right">
       <div class="lang-toggle" role="group" aria-label="Language">
         <a href="?" data-set-lang="ko" aria-label="한국어">KO</a>
