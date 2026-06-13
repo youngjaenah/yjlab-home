@@ -124,6 +124,8 @@
     font-size: 0.74rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--ink-faint); margin-bottom: 16px;
   }
+  /* Keep Apple's brand casing inside otherwise-uppercased labels. */
+  .nocaps { text-transform: none; }
   .product h2 {
     font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.1rem);
     letter-spacing: -0.025em; margin-bottom: 14px; line-height: 1.2;
@@ -258,7 +260,7 @@
   <section class="section" id="explorer">
     <div class="wrap product">
       <div class="copy-block">
-        <span class="tag">macOS · File manager</span>
+        <span class="tag"><span class="nocaps">macOS</span> · File manager</span>
         <h2>Explorer for Mac</h2>
         <p class="lead">A native macOS file manager for people who know Windows Explorer by heart — browse and manage files with the structure your hands already know.</p>
         <ul class="feat">

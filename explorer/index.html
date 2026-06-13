@@ -77,6 +77,8 @@
     font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 20px;
   }
+  /* Keep Apple's brand casing inside otherwise-uppercased labels. */
+  .nocaps { text-transform: none; }
   .hero h1 {
     font-weight: 700;
     font-size: clamp(2rem, 4.6vw, 3.1rem);
@@ -284,7 +286,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow reveal d1">macOS · File manager</p>
+        <p class="eyebrow reveal d1"><span class="nocaps">macOS</span> · File manager</p>
         <h1 class="reveal d2">The Windows Explorer feel, right on your Mac.</h1>
         <p class="lead reveal d3">Explorer for Mac is a native macOS file manager built for people coming from Windows. Stop fighting Finder — browse and manage files with the exact structure your hands already know.</p>
         <ul class="feat reveal d3">
