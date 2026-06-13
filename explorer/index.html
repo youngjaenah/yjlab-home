@@ -160,6 +160,15 @@
   .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
   .step p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
 
+  .install-figure { margin: 36px 0 0; text-align: center; }
+  .install-figure img {
+    display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto;
+    border-radius: 12px;
+  }
+  .install-figure figcaption {
+    margin-top: 14px; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.6;
+  }
+
   .fineprint {
     margin-top: 32px; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.7;
     max-width: 76ch;
@@ -252,6 +261,10 @@
           <p>On first launch, macOS asks for access to Desktop, Documents, and Downloads. It's the standard permission for browsing files; change it anytime in System Settings ▸ Privacy &amp; Security.</p>
         </div>
       </div>
+      <figure class="install-figure">
+        <img src="../images/explorer/install-dmg.png" alt="Explorer for Mac DMG window showing the Explorer icon being dragged into the Applications folder shortcut" loading="lazy" />
+        <figcaption>When the DMG opens, drag <strong>Explorer</strong> onto the <strong>Applications</strong> folder.</figcaption>
+      </figure>
       <p class="fineprint"><strong>Privacy.</strong> Explorer for Mac works fully offline and never collects or transmits anything — no file names, no paths, no usage data. The app is notarized by Apple. Found a problem? Use Help ▸ Report a Bug inside the app, or write to <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</p>
     </div>
   </section>
