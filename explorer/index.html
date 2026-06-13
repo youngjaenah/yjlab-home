@@ -178,16 +178,10 @@
     will-change: top, left, opacity, transform;
     animation: dmgDrag 6.5s cubic-bezier(.45,.05,.35,1) infinite;
   }
+  /* the dragged icon is the translucent "ghost" left in place */
   .install-stage .drag-copy img {
-    display: block; width: 100%; height: auto;
+    display: block; width: 100%; height: auto; opacity: 0.7;
     filter: drop-shadow(0 8px 12px rgba(0,0,0,0.5));
-  }
-  .install-stage .copy-badge {
-    position: absolute; right: 8%; bottom: 12%; width: 34%; aspect-ratio: 1;
-    display: flex; align-items: center; justify-content: center;
-    background: #34c759; border: 1.5px solid #fff; border-radius: 50%;
-    color: #fff; font-size: 0.9rem; font-weight: 700; line-height: 1;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
   }
   .install-stage .drag-cursor {
     position: absolute; top: 26.6%; left: 57.9%; width: 6%;
@@ -196,21 +190,45 @@
     animation: dmgCursor 6.5s cubic-bezier(.45,.05,.35,1) infinite;
     pointer-events: none;
   }
+  .install-stage .cursor-arrow { display: block; width: 100%; height: auto;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
+  /* drop badges ride the cursor (lower-right), like macOS */
+  .install-stage .badge {
+    position: absolute; left: 42%; top: 46%; width: 82%; aspect-ratio: 1;
+    opacity: 0; will-change: opacity;
+  }
+  .install-stage .badge svg { display: block; width: 100%; height: 100%;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
+  .install-stage .badge-no { animation: dmgBadgeNo 6.5s ease infinite; }
+  .install-stage .badge-copy { animation: dmgBadgeCopy 6.5s ease infinite; }
   .install-stage .drop-ring {
     position: absolute; top: 27.25%; left: 27.1%; width: 12%; aspect-ratio: 1;
     border: 2px solid rgba(120,170,255,0.9); border-radius: 14px;
     transform: translate(-50%, -50%) scale(0.4); opacity: 0;
     animation: dmgRing 6.5s ease-out infinite; pointer-events: none;
   }
-  /* the lifted copy: invisible at rest, ~0.7 opacity while dragging */
+  /* the lifted copy: hidden at rest, shown while dragging */
   @keyframes dmgDrag {
     0%,6%   { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
-    10%     { top: 25.4%; left: 57.4%; opacity: 0.7; transform: translate(-50%,-50%) scale(1.06); }
-    48%     { top: 27.25%; left: 27.1%; opacity: 0.7; transform: translate(-50%,-50%) scale(1.06); }
-    55%     { top: 27.25%; left: 27.1%; opacity: 0.7; transform: translate(-50%,-50%) scale(.9); }
+    10%     { top: 25.4%; left: 57.4%; opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
+    48%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
+    55%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-50%,-50%) scale(.9); }
     60%     { top: 27.25%; left: 27.1%; opacity: 0; transform: translate(-50%,-50%) scale(.78); }
     60.01%  { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
     100%    { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
+  }
+  /* no-drop (🚫) over empty space, then green + once near Applications */
+  @keyframes dmgBadgeNo {
+    0%,9%   { opacity: 0; }
+    13%,33% { opacity: 1; }
+    38%     { opacity: 0; }
+    100%    { opacity: 0; }
+  }
+  @keyframes dmgBadgeCopy {
+    0%,33%  { opacity: 0; }
+    38%,56% { opacity: 1; }
+    60%     { opacity: 0; }
+    100%    { opacity: 0; }
   }
   /* the cursor: always visible — rests on the icon, drags, then returns */
   @keyframes dmgCursor {
@@ -228,9 +246,8 @@
     100%    { opacity: 0; transform: translate(-50%,-50%) scale(1.05); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .install-stage .drag-copy, .install-stage .drag-cursor, .install-stage .drop-ring {
-      animation: none;
-    }
+    .install-stage .drag-copy, .install-stage .drag-cursor, .install-stage .drop-ring,
+    .install-stage .badge { animation: none; }
     .install-stage .drag-copy, .install-stage .drop-ring { opacity: 0; }
   }
 
@@ -332,12 +349,25 @@
           <span class="drop-ring" aria-hidden="true"></span>
           <span class="drag-copy" aria-hidden="true">
             <img src="../images/explorer/install-dmg-icon.png" alt="" />
-            <span class="copy-badge">+</span>
           </span>
-          <svg class="drag-cursor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 2 L5 19.5 L9.4 15.1 L12.4 21.6 L15 20.4 L12 14 L17.8 14 Z"
-                  fill="#1d1d1f" stroke="#fff" stroke-width="1.2" stroke-linejoin="round" />
-          </svg>
+          <span class="drag-cursor" aria-hidden="true">
+            <svg class="cursor-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 2 L5 19.5 L9.4 15.1 L12.4 21.6 L15 20.4 L12 14 L17.8 14 Z"
+                    fill="#1d1d1f" stroke="#fff" stroke-width="1.2" stroke-linejoin="round" />
+            </svg>
+            <span class="badge badge-no">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#e0322f" stroke="#fff" stroke-width="1.6" />
+                <line x1="6.2" y1="6.2" x2="17.8" y2="17.8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="badge badge-copy">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#34c759" stroke="#fff" stroke-width="1.6" />
+                <path d="M12 7 V17 M7 12 H17" stroke="#fff" stroke-width="2.6" stroke-linecap="round" />
+              </svg>
+            </span>
+          </span>
         </span>
         <figcaption>When the DMG opens, drag <strong>Explorer</strong> onto the <strong>Applications</strong> folder.</figcaption>
       </figure>
