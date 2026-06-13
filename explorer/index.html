@@ -161,12 +161,70 @@
   .step p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
 
   .install-figure { margin: 36px 0 0; text-align: center; }
-  .install-figure img {
-    display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto;
-    border-radius: 12px;
-  }
   .install-figure figcaption {
     margin-top: 14px; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.6;
+  }
+
+  /* animated drag-and-drop install demo */
+  .install-stage {
+    position: relative; display: inline-block;
+    width: 100%; max-width: 560px; margin: 0 auto;
+  }
+  .install-stage > img { display: block; width: 100%; height: auto; border-radius: 12px; }
+  .install-stage .drag-icon {
+    position: absolute; top: 26.6%; left: 57.9%; width: 10.85%; height: auto;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
+    will-change: top, left, opacity, transform;
+    animation: dmgDrag 6.5s cubic-bezier(.45,.05,.35,1) infinite;
+  }
+  .install-stage .drag-cursor {
+    position: absolute; top: 26.6%; left: 57.9%; width: 6%;
+    transform: translate(-6%, -4%);
+    will-change: top, left, opacity, transform;
+    animation: dmgCursor 6.5s cubic-bezier(.45,.05,.35,1) infinite;
+    pointer-events: none;
+  }
+  .install-stage .drop-ring {
+    position: absolute; top: 27.25%; left: 27.1%; width: 12%; aspect-ratio: 1;
+    border: 2px solid rgba(120,170,255,0.9); border-radius: 14px;
+    transform: translate(-50%, -50%) scale(0.4); opacity: 0;
+    animation: dmgRing 6.5s ease-out infinite; pointer-events: none;
+  }
+  @keyframes dmgDrag {
+    0%,6%   { top: 26.6%; left: 57.9%; opacity: 1; transform: translate(-50%,-50%) scale(1); }
+    9%      { top: 26.6%; left: 57.9%; opacity: 1; transform: translate(-50%,-50%) scale(.94); }
+    14%     { top: 24%;   left: 56%;   opacity: 1; transform: translate(-50%,-50%) scale(1.04); }
+    48%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-50%,-50%) scale(1.04); }
+    55%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-50%,-50%) scale(.86); }
+    58%     { top: 27.25%; left: 27.1%; opacity: 0; transform: translate(-50%,-50%) scale(.7); }
+    58.01%  { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
+    88%     { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
+    96%,100%{ top: 26.6%; left: 57.9%; opacity: 1; transform: translate(-50%,-50%) scale(1); }
+  }
+  @keyframes dmgCursor {
+    0%,6%   { top: 26.6%; left: 57.9%; opacity: 1; transform: translate(-6%,-4%) scale(1); }
+    9%      { top: 26.6%; left: 57.9%; opacity: 1; transform: translate(-6%,-4%) scale(.82); }
+    14%     { top: 24%;   left: 56%;   opacity: 1; transform: translate(-6%,-4%) scale(.82); }
+    48%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-6%,-4%) scale(.82); }
+    55%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-6%,-4%) scale(1); }
+    58%     { top: 27.25%; left: 27.1%; opacity: 0; transform: translate(-6%,-4%) scale(1); }
+    58.01%  { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-6%,-4%) scale(1); }
+    88%     { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-6%,-4%) scale(1); }
+    96%,100%{ top: 26.6%; left: 57.9%; opacity: 1; transform: translate(-6%,-4%) scale(1); }
+  }
+  @keyframes dmgRing {
+    0%,52%  { opacity: 0; transform: translate(-50%,-50%) scale(0.45); }
+    56%     { opacity: 0.85; transform: translate(-50%,-50%) scale(0.7); }
+    66%     { opacity: 0; transform: translate(-50%,-50%) scale(1.05); }
+    100%    { opacity: 0; transform: translate(-50%,-50%) scale(1.05); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .install-stage .drag-icon, .install-stage .drag-cursor, .install-stage .drop-ring {
+      animation: none;
+    }
+    .install-stage .drag-icon { top: 26.6%; left: 57.9%; opacity: 1; }
+    .install-stage .drag-cursor, .install-stage .drop-ring { opacity: 0; }
   }
 
   .fineprint {
@@ -262,7 +320,15 @@
         </div>
       </div>
       <figure class="install-figure">
-        <img src="../images/explorer/install-dmg.png" alt="Explorer for Mac DMG window showing the Explorer icon being dragged into the Applications folder shortcut" loading="lazy" />
+        <span class="install-stage" role="img" aria-label="Explorer for Mac DMG window: the Explorer icon is dragged with the mouse and dropped onto the Applications folder">
+          <img src="../images/explorer/install-dmg-bg.png" alt="" loading="lazy" />
+          <span class="drop-ring" aria-hidden="true"></span>
+          <img class="drag-icon" src="../images/explorer/install-dmg-icon.png" alt="" aria-hidden="true" />
+          <svg class="drag-cursor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 2 L5 19.5 L9.4 15.1 L12.4 21.6 L15 20.4 L12 14 L17.8 14 Z"
+                  fill="#1d1d1f" stroke="#fff" stroke-width="1.2" stroke-linejoin="round" />
+          </svg>
+        </span>
         <figcaption>When the DMG opens, drag <strong>Explorer</strong> onto the <strong>Applications</strong> folder.</figcaption>
       </figure>
       <p class="fineprint"><strong>Privacy.</strong> Explorer for Mac works fully offline and never collects or transmits anything — no file names, no paths, no usage data. The app is notarized by Apple. Found a problem? Use Help ▸ Report a Bug inside the app, or write to <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</p>
