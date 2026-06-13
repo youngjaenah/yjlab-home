@@ -134,12 +134,17 @@
   .showcase { padding: 0 0 64px; }
   .showcase img { display: block; width: 100%; height: auto; }
 
-  /* ── install section ── */
+  /* ── sections ── */
   .section { padding: 72px 0; border-top: 1px solid var(--line); }
   .section h2 {
     font-weight: 700; font-size: clamp(1.4rem, 2.8vw, 1.8rem);
     letter-spacing: -0.025em; margin-bottom: 32px;
   }
+  .section-lead {
+    font-size: 1rem; color: var(--ink-dim); line-height: 1.7;
+    max-width: 62ch; margin: -20px 0 36px;
+  }
+  .shot { display: block; width: 100%; height: auto; }
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
   .step {
@@ -214,6 +219,15 @@
   <section class="showcase">
     <div class="wrap">
       <img src="../images/explorer/main-window.png" alt="Explorer for Mac main window showing the folder tree, tabs, address bar, Details view, and preview pane" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ── WORKFLOW ── -->
+  <section class="section" id="workflow">
+    <div class="wrap">
+      <h2>Right-click, like you're used to</h2>
+      <p class="section-lead">Cut, copy, duplicate, and rename — plus Copy Path and Open in Terminal. The context menu works the way your muscle memory expects.</p>
+      <img class="shot" src="../images/explorer/context-menu.png" alt="Explorer for Mac context menu with Cut, Copy, Duplicate, Rename, Copy Path, and Open in Terminal" loading="lazy" />
     </div>
   </section>
 
