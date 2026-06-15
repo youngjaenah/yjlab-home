@@ -175,7 +175,7 @@
   }
   .install-stage > img { display: block; width: 100%; height: auto; border-radius: 12px; }
   .install-stage .drag-copy {
-    position: absolute; top: 26.6%; left: 57.9%; width: 10.85%;
+    position: absolute; top: 55%; left: 25%; width: 17%;
     transform: translate(-50%, -50%); opacity: 0;
     will-change: top, left, opacity, transform;
     animation: dmgDrag 6.5s cubic-bezier(.45,.05,.35,1) infinite;
@@ -186,7 +186,7 @@
     filter: drop-shadow(0 8px 12px rgba(0,0,0,0.5));
   }
   .install-stage .drag-cursor {
-    position: absolute; top: 26.6%; left: 57.9%; width: 6%;
+    position: absolute; top: 55%; left: 25%; width: 5.5%;
     transform: translate(-6%, -4%);
     will-change: top, left, transform;
     animation: dmgCursor 6.5s cubic-bezier(.45,.05,.35,1) infinite;
@@ -204,20 +204,20 @@
   .install-stage .badge-no { animation: dmgBadgeNo 6.5s ease infinite; }
   .install-stage .badge-copy { animation: dmgBadgeCopy 6.5s ease infinite; }
   .install-stage .drop-ring {
-    position: absolute; top: 27.25%; left: 27.1%; width: 12%; aspect-ratio: 1;
+    position: absolute; top: 55%; left: 75%; width: 18%; aspect-ratio: 1;
     border: 2px solid rgba(120,170,255,0.9); border-radius: 14px;
     transform: translate(-50%, -50%) scale(0.4); opacity: 0;
     animation: dmgRing 6.5s ease-out infinite; pointer-events: none;
   }
   /* the lifted copy: hidden at rest, shown while dragging */
   @keyframes dmgDrag {
-    0%,6%   { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
-    10%     { top: 25.4%; left: 57.4%; opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
-    48%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
-    55%     { top: 27.25%; left: 27.1%; opacity: 1; transform: translate(-50%,-50%) scale(.9); }
-    60%     { top: 27.25%; left: 27.1%; opacity: 0; transform: translate(-50%,-50%) scale(.78); }
-    60.01%  { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
-    100%    { top: 26.6%; left: 57.9%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
+    0%,6%   { top: 55%; left: 25%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
+    10%     { top: 53.5%; left: 25.8%; opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
+    48%     { top: 55%; left: 75%; opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
+    55%     { top: 55%; left: 75%; opacity: 1; transform: translate(-50%,-50%) scale(.9); }
+    60%     { top: 55%; left: 75%; opacity: 0; transform: translate(-50%,-50%) scale(.78); }
+    60.01%  { top: 55%; left: 25%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
+    100%    { top: 55%; left: 25%; opacity: 0; transform: translate(-50%,-50%) scale(1); }
   }
   /* no-drop (🚫) over empty space, then green + once near Applications */
   @keyframes dmgBadgeNo {
@@ -234,12 +234,12 @@
   }
   /* the cursor: always visible — rests on the icon, drags, then returns */
   @keyframes dmgCursor {
-    0%,6%   { top: 26.6%; left: 57.9%; transform: translate(-6%,-4%) scale(1); }
-    10%     { top: 25.4%; left: 57.4%; transform: translate(-6%,-4%) scale(.82); }
-    48%     { top: 27.25%; left: 27.1%; transform: translate(-6%,-4%) scale(.82); }
-    55%     { top: 27.25%; left: 27.1%; transform: translate(-6%,-4%) scale(1); }
-    66%     { top: 27.25%; left: 27.1%; transform: translate(-6%,-4%) scale(1); }
-    82%,100%{ top: 26.6%; left: 57.9%; transform: translate(-6%,-4%) scale(1); }
+    0%,6%   { top: 55%; left: 25%; transform: translate(-6%,-4%) scale(1); }
+    10%     { top: 53.5%; left: 25.8%; transform: translate(-6%,-4%) scale(.82); }
+    48%     { top: 55%; left: 75%; transform: translate(-6%,-4%) scale(.82); }
+    55%     { top: 55%; left: 75%; transform: translate(-6%,-4%) scale(1); }
+    66%     { top: 55%; left: 75%; transform: translate(-6%,-4%) scale(1); }
+    82%,100%{ top: 55%; left: 25%; transform: translate(-6%,-4%) scale(1); }
   }
   @keyframes dmgRing {
     0%,52%  { opacity: 0; transform: translate(-50%,-50%) scale(0.45); }
