@@ -122,12 +122,17 @@
     border: none; border-radius: 16px; padding: 0; color: var(--ink);
     background: var(--bg); max-width: 660px; width: calc(100% - 40px);
     max-height: 82vh; box-shadow: 0 24px 60px rgba(0,0,0,.22);
+    overflow: hidden; /* the dialog never scrolls — only .rn-body does */
   }
+  /* Only when open (keeps the default display:none for a closed dialog).
+     Flex column makes .rn-body fill the rest and own the single scrollbar. */
+  dialog.rn[open] { display: flex; flex-direction: column; }
   dialog.rn::backdrop { background: rgba(17,19,23,.45); }
   .rn-head {
+    flex: 0 0 auto;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 24px; border-bottom: 1px solid var(--line);
-    position: sticky; top: 0; background: var(--bg); border-radius: 16px 16px 0 0;
+    background: var(--bg); border-radius: 16px 16px 0 0;
   }
   .rn-head h2 { font-size: 1.05rem; margin: 0; }
   .rn-close {
@@ -135,7 +140,7 @@
     color: var(--ink-faint); cursor: pointer; padding: 2px 8px; border-radius: 8px;
   }
   .rn-close:hover { color: var(--ink); background: var(--bg-soft); }
-  .rn-body { padding: 4px 24px 20px; overflow-y: auto; max-height: calc(82vh - 64px); }
+  .rn-body { flex: 1 1 auto; min-height: 0; padding: 4px 24px 20px; overflow-y: auto; }
   .rn-version { padding: 20px 0; border-bottom: 1px solid var(--line); }
   .rn-version:last-child { border-bottom: none; padding-bottom: 4px; }
   .rn-version h3 {
@@ -513,10 +518,13 @@
       if (typeof dlg.showModal === 'function') dlg.showModal();
       else dlg.setAttribute('open', '');
       // Lock the page scroll so only the dialog scrolls (no double scrollbar).
+      // Both html and body — browsers differ on which is the document scroller.
       document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     });
     dlg.addEventListener('close', function () {
       document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     });
     closeBtn && closeBtn.addEventListener('click', function () { dlg.close(); });
     // Click on the backdrop (outside the card) closes.
