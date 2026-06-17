@@ -110,7 +110,51 @@
   }
   .btn-primary { background: var(--ink); color: #fff; }
   .btn-primary:hover { background: #2c2f36; }
+  .btn-ghost {
+    background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+    cursor: pointer; font-family: inherit;
+  }
+  .btn-ghost:hover { border-color: var(--ink-faint); background: var(--bg-soft); }
   .cta-meta { font-size: 0.83rem; color: var(--ink-faint); margin-top: 14px; }
+
+  /* Release notes dialog */
+  dialog.rn {
+    border: none; border-radius: 16px; padding: 0; color: var(--ink);
+    background: var(--bg); max-width: 660px; width: calc(100% - 40px);
+    max-height: 82vh; box-shadow: 0 24px 60px rgba(0,0,0,.22);
+  }
+  dialog.rn::backdrop { background: rgba(17,19,23,.45); }
+  .rn-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg); border-radius: 16px 16px 0 0;
+  }
+  .rn-head h2 { font-size: 1.05rem; margin: 0; }
+  .rn-close {
+    border: none; background: none; font-size: 1.5rem; line-height: 1;
+    color: var(--ink-faint); cursor: pointer; padding: 2px 8px; border-radius: 8px;
+  }
+  .rn-close:hover { color: var(--ink); background: var(--bg-soft); }
+  .rn-body { padding: 4px 24px 20px; overflow-y: auto; max-height: calc(82vh - 64px); }
+  .rn-version { padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .rn-version:last-child { border-bottom: none; padding-bottom: 4px; }
+  .rn-version h3 {
+    font-size: 0.98rem; margin: 0 0 12px; display: flex;
+    align-items: baseline; gap: 10px;
+  }
+  .rn-date { font-size: 0.78rem; color: var(--ink-faint); font-weight: 500; }
+  .rn-version ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+  .rn-version li {
+    font-size: 0.88rem; color: var(--ink-dim); line-height: 1.6;
+    padding-left: 16px; position: relative;
+  }
+  .rn-version li::before { content: "›"; position: absolute; left: 0; color: var(--ink-faint); }
+  .rn-version li strong { color: var(--ink); font-weight: 600; }
+  .rn-version code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82em;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; color: var(--ink);
+  }
 
   .hero-visual {
     border: 1px solid var(--line);
@@ -299,6 +343,7 @@
         </ul>
         <div class="hero-cta reveal d4">
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
+          <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
         <p class="cta-meta reveal d4">Version 1.1.6 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
@@ -384,6 +429,82 @@
     <p class="copy">Contact: <a href="mailto:support@yjlab.io">support@yjlab.io</a></p>
   </div>
 </footer>
+
+<dialog class="rn" id="rn-dialog" aria-labelledby="rn-title">
+  <div class="rn-head">
+    <h2 id="rn-title">Release notes</h2>
+    <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.1.6 <span class="rn-date">2026-06-17</span></h3>
+      <ul>
+        <li><strong>No more repeated “access other apps’ data” prompt.</strong> Browsing your home folder — or the whole disk at “Macintosh HD” — no longer pops the macOS prompt on every launch. Folder-size measurement never walks into <code>~/Library</code> or the Trash, even while measuring a parent like <code>/</code>.</li>
+        <li><strong>~/Library and the Trash show “—” for size by default.</strong> They aren’t measured (to avoid that prompt). Grant Explorer Full Disk Access and they measure like any other folder.</li>
+        <li><strong>Trash permission message points to the right place.</strong> Opening the Trash without access now sends you to Full Disk Access, not “Files &amp; Folders” (which has no toggle for it).</li>
+        <li><strong>“Calculating size…” indicator.</strong> The status bar shows a blinking indicator on the right while folder sizes compute in the background — it stays visible as you move around.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.1.5 <span class="rn-date">2026-06-15</span></h3>
+      <ul>
+        <li><strong>No dead context menu on Home/Gallery.</strong> Right-clicking the Home or Gallery row no longer shows an all-greyed-out menu — it shows no menu at all.</li>
+        <li><strong>Sort and View buttons disable on Home/Gallery.</strong> They don’t apply to those views, so they now appear disabled instead of looking active but doing nothing.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.1.4 <span class="rn-date">2026-06-15</span></h3>
+      <ul>
+        <li><strong>Friendlier installer.</strong> The DMG opens to a laid-out install window — app on the left, arrow, Applications on the right.</li>
+        <li><strong>Gallery context menu matches the file list,</strong> with the same image-relevant verbs (Open, Show in Finder, Copy, Duplicate, Rename, Share, Get Info…).</li>
+        <li><strong>Undo in the Gallery.</strong> Rename, Move to Trash, and Duplicate are undoable (⌘Z) and redoable, and the grid refreshes immediately.</li>
+        <li><strong>Home tiles have a context menu</strong> and follow the double-click convention (single click selects, double-click opens). Opening a bundle from Home launches it.</li>
+        <li><strong>Fixes:</strong> image preview EXIF alignment, and empty folders no longer stay stuck on “Loading…”.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.1.3 <span class="rn-date">2026-06-15</span></h3>
+      <ul>
+        <li><strong>macOS bundles now behave like files.</strong> Packages such as <code>.app</code>, <code>.photoslibrary</code>, and <code>.lrlibrary</code> sort with files, open/launch on double-click, and show their recursive size — matching Finder. Right-click for “Show Package Contents” to step inside.</li>
+        <li><strong>Sidebar navigation after entering a package.</strong> A stale pin highlight could swallow the next click; it’s now cleared so a click always navigates.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.1.2 <span class="rn-date">2026-06-14</span></h3>
+      <ul>
+        <li>Folder-tree navigation options (“Expand to open folder”, “Show all folders”) and a deep-reveal fix.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.1.1 <span class="rn-date">2026-06-13</span></h3>
+      <ul>
+        <li>Fixed repeated Documents/Desktop/Downloads permission prompts (kqueue → FSEvents) and icon-view drag-into-subfolder.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.1.0 <span class="rn-date">2026-06-12</span></h3>
+      <ul>
+        <li>Undo/redo for file operations, plus paste/clipboard polish.</li>
+      </ul>
+    </article>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    var dlg = document.getElementById('rn-dialog');
+    var openBtn = document.getElementById('rn-open');
+    var closeBtn = document.getElementById('rn-close');
+    if (!dlg || !openBtn) return;
+    openBtn.addEventListener('click', function () {
+      if (typeof dlg.showModal === 'function') dlg.showModal();
+      else dlg.setAttribute('open', '');
+    });
+    closeBtn && closeBtn.addEventListener('click', function () { dlg.close(); });
+    // Click on the backdrop (outside the card) closes.
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  })();
+</script>
 
 </body>
 </html>
