@@ -505,6 +505,11 @@
     openBtn.addEventListener('click', function () {
       if (typeof dlg.showModal === 'function') dlg.showModal();
       else dlg.setAttribute('open', '');
+      // Lock the page scroll so only the dialog scrolls (no double scrollbar).
+      document.documentElement.style.overflow = 'hidden';
+    });
+    dlg.addEventListener('close', function () {
+      document.documentElement.style.overflow = '';
     });
     closeBtn && closeBtn.addEventListener('click', function () { dlg.close(); });
     // Click on the backdrop (outside the card) closes.
