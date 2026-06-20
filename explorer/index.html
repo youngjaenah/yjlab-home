@@ -350,7 +350,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.1.8 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.1.9 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -441,6 +441,14 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.1.9 <span class="rn-date">2026-06-20</span></h3>
+      <ul>
+        <li><strong>Aliases and shortcuts open inside Explorer.</strong> A Finder alias or symlink pointing to a folder — including a Desktop shortcut to an external drive or a <code>Google Drive</code> link — now opens <em>in Explorer</em> on double-click instead of bouncing you to Finder. These links show a folder icon and expand in the sidebar tree like real folders; an alias to a file opens that file directly. Aliases to drives that aren’t mounted are left alone while browsing (no surprise mounts or freezes) and only mount when you open them. Broken aliases show a clear message instead of opening Finder.</li>
+        <li><strong>Rename shortcut is now ⌘R</strong> (was F2). macOS reserves F2 for screen brightness on most laptops, so the old shortcut rarely worked; ⌘R always does.</li>
+        <li><strong>Renaming no longer gets interrupted in busy folders.</strong> In folders that receive frequent background updates (such as your Home folder with a cloud drive), the rename text box could flash open and shut before you could type. It now stays open until you finish.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.1.8 <span class="rn-date">2026-06-17</span></h3>
       <ul>
