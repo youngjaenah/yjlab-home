@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.1.11 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.1.12 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -464,6 +464,13 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.1.12 <span class="rn-date">2026-06-25</span></h3>
+      <ul>
+        <li><strong>No more stuck <code>.smbdelete</code> files on network folders.</strong> When you previewed a PDF, video, or audio file and then deleted it from an SMB network share, macOS could leave behind an undeletable <code>.smbdeleteXXXX</code> ghost file — because the preview pane (and Quick Look) still held the file open, and SMB can’t delete a file that’s in use. Explorer now releases every preview handle, fully tearing down media players and closing Quick Look, immediately before a delete, so the file is unlinked cleanly.</li>
+        <li><strong>Automatic cleanup of leftover network tombstones.</strong> After deleting on a network volume, Explorer makes a quiet, best-effort pass to remove any stray <code>.smbdeleteXXXX</code> / <code>.nfsXXXX</code> tombstones left by the server — for example, from another program that was indexing the file. Tombstones still in use are left untouched and retried; nothing else is ever removed.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.1.11 <span class="rn-date">2026-06-21</span></h3>
       <ul>
