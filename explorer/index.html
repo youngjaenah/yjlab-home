@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.1.15 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.1.16 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -464,6 +464,13 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.1.16 <span class="rn-date">2026-06-29</span></h3>
+      <ul>
+        <li><strong>No more <code>.smbdelete</code> ghost files when deleting a previewed video on a network share.</strong> Deleting a file open in the preview pane closes the preview first so the network server can unlink it cleanly. On SMB shares the match deciding which preview to close compared URLs exactly, which failed for non-ASCII (e.g. Korean) names because the server returns paths in a different Unicode form — so the video stayed open through the delete and the server left an undeletable <code>.smbdeleteXXXX</code> tombstone behind. The match is now Unicode-insensitive, so the preview is released and the file deletes cleanly.</li>
+        <li><strong>No flash of “untitled folder” when naming a new folder.</strong> After you typed a new folder’s name, the list could briefly repaint the old placeholder name before the rename finished. The listing now holds its refresh until the rename lands, so the name you typed stays put.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.1.15 <span class="rn-date">2026-06-28</span></h3>
       <ul>
