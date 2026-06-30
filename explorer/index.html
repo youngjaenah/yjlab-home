@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.1.17 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.1.18 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -464,6 +464,12 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.1.18 <span class="rn-date">2026-06-30</span></h3>
+      <ul>
+        <li><strong>Large RAW (DNG) files no longer peg the CPU or freeze the preview.</strong> Selecting a big RAW made the preview spin while the app decoded the entire RAW image (a 115 MB panorama took ~18 seconds at full tilt), and because that decode couldn’t be cancelled, moving to another file left it running — pinning the CPU and blocking further previews. The preview now uses the RAW’s embedded preview image when it’s large enough (≈0.1s instead of ~18s) and cancels an in-progress decode the moment you select something else. Everyday photos still decode at full quality.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.1.17 <span class="rn-date">2026-06-30</span></h3>
       <ul>
