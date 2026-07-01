@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.1.19 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.1.20 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -464,6 +464,12 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.1.20 <span class="rn-date">2026-07-01</span></h3>
+      <ul>
+        <li><strong>Delete progress bar no longer sits stuck at 0.</strong> When deleting many files — especially on a slow network/SMB drive — the progress popup showed a bar pinned at 0 (e.g. “0/97”) that never advanced, then the operation just finished. Delete and Move-to-Trash now report per-item progress, so the bar fills as files are removed and the current file name is shown. Copy/move progress is unchanged.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.1.19 <span class="rn-date">2026-06-30</span></h3>
       <ul>
