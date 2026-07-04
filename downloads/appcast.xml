@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Explorer</title>
+        <item>
+            <title>1.4.0</title>
+            <pubDate>Sun, 05 Jul 2026 08:35:31 +0900</pubDate>
+            <sparkle:version>31</sparkle:version>
+            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>Explorer updates itself now.</b> Choose "Check for Updates…" from the Explorer menu and, if a newer version is out, Explorer downloads it, verifies its signature, replaces itself, and relaunches — no more re-downloading from the website. Turn on automatic checking to be told about new versions as they ship; Explorer only ever downloads an update after you agree to install it, and it never interrupts a copy or move that's in progress. This is free for everyone.</li>
+<li><b>A nudge to install into Applications.</b> If you run Explorer straight from the disk image (where updates can't work), it now offers to move itself into your Applications folder in one click.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.4.0.dmg" length="4404360" type="application/octet-stream" sparkle:edSignature="fH5IxMeX2038z6yAGgTBUZiXgZkKh6HOYnNfVjRQLR+PFa5wHwPE0xzWSpGn86sM9bvu4Z4g5fX2Q30C/XMSBg=="/>
+        </item>
+    </channel>
+</rss>
