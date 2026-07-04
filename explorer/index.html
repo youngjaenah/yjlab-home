@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.2.0 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.3.0 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -464,6 +464,15 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.3.0 <span class="rn-date">2026-07-04</span></h3>
+      <ul>
+        <li><strong>Remembered network locations (map network drive).</strong> Every network share you mount is now remembered and always shown in the sidebar’s Locations, the way Windows keeps a mapped drive visible. When macOS silently unmounts an idle NAS share it stays listed as a dimmed, disconnected entry; one click reconnects it through the system (your keychain handles the password — Explorer never asks for or stores one) and opens it. Right-click offers “Forget Network Location” to drop a share you no longer use.</li>
+        <li><strong>New app icon</strong> built with Apple’s Icon Composer, so it renders with the native Liquid Glass depth and lighting on macOS 26 and later.</li>
+        <li><strong>The selection size in the status bar no longer flickers.</strong> Selecting a folder while its parent directory was being written to could blink the size between the measured value and “Calculating…” endlessly; a folder whose size is already known now shows it instantly and stays put.</li>
+        <li><strong>Network volumes no longer re-trigger the macOS privacy prompt.</strong> With a NAS share mounted, the “access files on network volumes” prompt could reappear repeatedly; each share is now checked once per session.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.2.0 <span class="rn-date">2026-07-03</span></h3>
       <ul>
