@@ -3,17 +3,31 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.0</title>
+            <pubDate>Sun, 05 Jul 2026 15:33:58 +0900</pubDate>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>The preview panel now tells you as much as Finder's Get Info.</b> For folders and files without a visual preview, the info panel shows the created and last-opened dates, any Finder tags (as color chips), and — for folders — how many items they hold, alongside the name, kind, size, and modified date it already showed. Fields with no value are simply left out, so nothing reads as empty or "Unknown". Free for everyone.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><b>Google Drive and other cloud files no longer show as 0 KB.</b> Online-only documents (Google Docs, Sheets, Slides and similar placeholder files) keep no data on disk, so their size read as zero; Explorer now shows their real size, matching Finder.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.0.dmg" length="4447036" type="application/octet-stream" sparkle:edSignature="uHzBtMZ77Yj/k3IFIbK4mA0QiB7G5uWJ6kj+QQhIxYbp58t5S7iBfQONnuwLA6kpsJXt+XXDYRussxNxZwZ7AA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer32-31.delta" sparkle:deltaFrom="31" length="279318" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21b05IgEuRoffiPfj0SSW0bPqX89CROzz2V2E6cRjyr56DapO/dbhEGDDFAe5IdhvXmYDj97VQgGNGmvYoUpDw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.4.0</title>
             <pubDate>Sun, 05 Jul 2026 08:35:31 +0900</pubDate>
             <sparkle:version>31</sparkle:version>
             <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>Explorer updates itself now.</b> Choose "Check for Updates…" from the Explorer menu and, if a newer version is out, Explorer downloads it, verifies its signature, replaces itself, and relaunches — no more re-downloading from the website. Turn on automatic checking to be told about new versions as they ship; Explorer only ever downloads an update after you agree to install it, and it never interrupts a copy or move that's in progress. This is free for everyone.</li>
-<li><b>A nudge to install into Applications.</b> If you run Explorer straight from the disk image (where updates can't work), it now offers to move itself into your Applications folder in one click.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.4.0.dmg" length="4404360" type="application/octet-stream" sparkle:edSignature="fH5IxMeX2038z6yAGgTBUZiXgZkKh6HOYnNfVjRQLR+PFa5wHwPE0xzWSpGn86sM9bvu4Z4g5fX2Q30C/XMSBg=="/>
         </item>
     </channel>
