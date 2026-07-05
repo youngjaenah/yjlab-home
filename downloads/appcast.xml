@@ -3,20 +3,33 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.1</title>
+            <pubDate>Sun, 05 Jul 2026 20:02:19 +0900</pubDate>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li><b>The preview pane no longer freezes when you open a folder on a slow or</b> unresponsive network share.<b> Counting a folder's items now runs on its own</b> track, so a hung share can't hold up previews of your other files.</li>
+<li><b>A document preview no longer goes blank after entering and leaving full</b> screen.<b> The Quick Look preview now reloads itself correctly when the window</b> returns from full screen.</li>
+<li><b>Files you can't open now explain why again in the preview pane.</b> For documents shown via Quick Look, a "you don't have permission" or "file not found" note is shown when the file can't be read — matching the rest of the app.</li>
+<li><b>The folder "N items" line now matches the list.</b> When Show Hidden Files is on, the preview pane's item count includes hidden items too, so it agrees with what you see.</li>
+<li><b>App bundles show their size in the preview pane</b> once measured, matching the Size column and status bar.</li>
+<li><b>Files with many Finder tags show a "+N" indicator</b> instead of silently cutting the extra tags off.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.1.dmg" length="4446761" type="application/octet-stream" sparkle:edSignature="65A6YBYrhIqQsIxtykwsF25QuXtE+7gTZFsX1ZsF8q1kJ5oHyVeIJKoXO7tbH1WIB9j63i6hmsbBxnGaDdUMBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-32.delta" sparkle:deltaFrom="32" length="199742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LTzM372wFgFkY7N28NYKKK6L8ks6syfS2ZuwdepbbFg8YB5OgKiCmhj3Lm6f35asH6DgmW6FDY5xGi22jiwUBA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-31.delta" sparkle:deltaFrom="31" length="295042" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mf5f6UxpWgpQ+m0VH3NazUnO+eGYIvSCMuXIcHrm6BAzQyJ/cKrAVWxzJOk9AxvbuuuahNy9Pj3bbIPfSWixBA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.0</title>
             <pubDate>Sun, 05 Jul 2026 15:33:58 +0900</pubDate>
             <sparkle:version>32</sparkle:version>
             <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>The preview panel now tells you as much as Finder's Get Info.</b> For folders and files without a visual preview, the info panel shows the created and last-opened dates, any Finder tags (as color chips), and — for folders — how many items they hold, alongside the name, kind, size, and modified date it already showed. Fields with no value are simply left out, so nothing reads as empty or "Unknown". Free for everyone.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li><b>Google Drive and other cloud files no longer show as 0 KB.</b> Online-only documents (Google Docs, Sheets, Slides and similar placeholder files) keep no data on disk, so their size read as zero; Explorer now shows their real size, matching Finder.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.0.dmg" length="4447036" type="application/octet-stream" sparkle:edSignature="uHzBtMZ77Yj/k3IFIbK4mA0QiB7G5uWJ6kj+QQhIxYbp58t5S7iBfQONnuwLA6kpsJXt+XXDYRussxNxZwZ7AA=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer32-31.delta" sparkle:deltaFrom="31" length="279318" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21b05IgEuRoffiPfj0SSW0bPqX89CROzz2V2E6cRjyr56DapO/dbhEGDDFAe5IdhvXmYDj97VQgGNGmvYoUpDw=="/>
