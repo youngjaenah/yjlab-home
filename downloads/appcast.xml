@@ -3,21 +3,29 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.2</title>
+            <pubDate>Tue, 07 Jul 2026 13:33:59 +0900</pubDate>
+            <sparkle:version>34</sparkle:version>
+            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li>Removed a settings section and a menu item that shipped before they were ready for use. Nothing about how the free app works changes.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.2.dmg" length="4421041" type="application/octet-stream" sparkle:edSignature="eN8MtCNa+mbrrRdfYnswNdhsRsDuwOTpWhYwLFfgeh4RIRxJFoHFCEgfm1qAwAqkY8KswsypgP4kqV0Rq+0bDg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-33.delta" sparkle:deltaFrom="33" length="216554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="huKVb6WMH+PRElbpxLhDTxYh2ecStapPRauCM81N4dRcgp6bKph9nQ0WaBlYoyTzQGgiMyBcGvWfYGxM9DW2Bw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-32.delta" sparkle:deltaFrom="32" length="238742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sx95SWz1Rm5HqOXEWtZie0rPSU+dl/PY5TcEB151wJzq4SAQVpSW4F6aLTMcast8kVFnECYw9M2tg+vO3C9IBA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-31.delta" sparkle:deltaFrom="31" length="307054" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="7Pcm7cKPa4e5J2A79rE5nOveit7ddjFeahTW/Quylg4+QqK/22rBULqcv9ijLLSHCKi/gbfG5EQdHWM0Q1K2Cg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.1</title>
             <pubDate>Sun, 05 Jul 2026 20:02:19 +0900</pubDate>
             <sparkle:version>33</sparkle:version>
             <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
-<ul>
-<li><b>The preview pane no longer freezes when you open a folder on a slow or</b> unresponsive network share.<b> Counting a folder's items now runs on its own</b> track, so a hung share can't hold up previews of your other files.</li>
-<li><b>A document preview no longer goes blank after entering and leaving full</b> screen.<b> The Quick Look preview now reloads itself correctly when the window</b> returns from full screen.</li>
-<li><b>Files you can't open now explain why again in the preview pane.</b> For documents shown via Quick Look, a "you don't have permission" or "file not found" note is shown when the file can't be read — matching the rest of the app.</li>
-<li><b>The folder "N items" line now matches the list.</b> When Show Hidden Files is on, the preview pane's item count includes hidden items too, so it agrees with what you see.</li>
-<li><b>App bundles show their size in the preview pane</b> once measured, matching the Size column and status bar.</li>
-<li><b>Files with many Finder tags show a "+N" indicator</b> instead of silently cutting the extra tags off.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.1.dmg" length="4446761" type="application/octet-stream" sparkle:edSignature="65A6YBYrhIqQsIxtykwsF25QuXtE+7gTZFsX1ZsF8q1kJ5oHyVeIJKoXO7tbH1WIB9j63i6hmsbBxnGaDdUMBw=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-32.delta" sparkle:deltaFrom="32" length="199742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LTzM372wFgFkY7N28NYKKK6L8ks6syfS2ZuwdepbbFg8YB5OgKiCmhj3Lm6f35asH6DgmW6FDY5xGi22jiwUBA=="/>
@@ -34,14 +42,6 @@
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer32-31.delta" sparkle:deltaFrom="31" length="279318" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21b05IgEuRoffiPfj0SSW0bPqX89CROzz2V2E6cRjyr56DapO/dbhEGDDFAe5IdhvXmYDj97VQgGNGmvYoUpDw=="/>
             </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.4.0</title>
-            <pubDate>Sun, 05 Jul 2026 08:35:31 +0900</pubDate>
-            <sparkle:version>31</sparkle:version>
-            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.4.0.dmg" length="4404360" type="application/octet-stream" sparkle:edSignature="fH5IxMeX2038z6yAGgTBUZiXgZkKh6HOYnNfVjRQLR+PFa5wHwPE0xzWSpGn86sM9bvu4Z4g5fX2Q30C/XMSBg=="/>
         </item>
     </channel>
 </rss>
