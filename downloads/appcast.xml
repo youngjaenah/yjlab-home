@@ -3,16 +3,30 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.3</title>
+            <pubDate>Wed, 08 Jul 2026 09:04:22 +0900</pubDate>
+            <sparkle:version>35</sparkle:version>
+            <sparkle:shortVersionString>1.5.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li><b>The app no longer crashes when you preview a video and then move to another</b> file.<b> A change in how recent macOS versions analyze video frames could crash</b> the app while a video preview was closing; that analysis is now turned off for previews. Video playback is unaffected.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.3.dmg" length="4423572" type="application/octet-stream" sparkle:edSignature="PvPmShjW8Th+PS/7QwfzOTRsSe3GaBgvlgxA7FRSLUymRveoUVJaf5/cTEXb98nu/xGmCmvvQwS+BdS+HPxRDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-34.delta" sparkle:deltaFrom="34" length="190258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PNPnr4KzsYeNjQEU+d/3v3qiNdineQ5wL6v7uq33KhhzkbUi+s761AP8pAg3zIEdPL/pQ713lr+NS9isqnJEBg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-33.delta" sparkle:deltaFrom="33" length="234358" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uvXigWv01L+HyIOdEThXk3tSNjr5/LiA9XdNQfK01hRwBHDpt0mp7MGCgyqe9rPB4kUICVrUYFCLsX8rF+jyAw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-32.delta" sparkle:deltaFrom="32" length="258066" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="O2nTaHxN3bySrerjtpBya6g5rPKnNKvIezE+ZN2xTtrU+H3Cg640QeeaDzZIasFQ13qhOnFNJVS6pF9wLbfcCg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-31.delta" sparkle:deltaFrom="31" length="324366" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XTks6M9jFrVrWpfZiPwZx1S+iDpHosqp8X3QyLzQ+4t+KgfFPhOhLBzrIUZtOF4twrZiBqvZOSPiZP8SYQYaDw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.2</title>
             <pubDate>Tue, 07 Jul 2026 13:33:59 +0900</pubDate>
             <sparkle:version>34</sparkle:version>
             <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Changed</h3>
-<ul>
-<li>Removed a settings section and a menu item that shipped before they were ready for use. Nothing about how the free app works changes.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.2.dmg" length="4421041" type="application/octet-stream" sparkle:edSignature="eN8MtCNa+mbrrRdfYnswNdhsRsDuwOTpWhYwLFfgeh4RIRxJFoHFCEgfm1qAwAqkY8KswsypgP4kqV0Rq+0bDg=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-33.delta" sparkle:deltaFrom="33" length="216554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="huKVb6WMH+PRElbpxLhDTxYh2ecStapPRauCM81N4dRcgp6bKph9nQ0WaBlYoyTzQGgiMyBcGvWfYGxM9DW2Bw=="/>
@@ -30,17 +44,6 @@
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-32.delta" sparkle:deltaFrom="32" length="199742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LTzM372wFgFkY7N28NYKKK6L8ks6syfS2ZuwdepbbFg8YB5OgKiCmhj3Lm6f35asH6DgmW6FDY5xGi22jiwUBA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-31.delta" sparkle:deltaFrom="31" length="295042" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mf5f6UxpWgpQ+m0VH3NazUnO+eGYIvSCMuXIcHrm6BAzQyJ/cKrAVWxzJOk9AxvbuuuahNy9Pj3bbIPfSWixBA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.0</title>
-            <pubDate>Sun, 05 Jul 2026 15:33:58 +0900</pubDate>
-            <sparkle:version>32</sparkle:version>
-            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.0.dmg" length="4447036" type="application/octet-stream" sparkle:edSignature="uHzBtMZ77Yj/k3IFIbK4mA0QiB7G5uWJ6kj+QQhIxYbp58t5S7iBfQONnuwLA6kpsJXt+XXDYRussxNxZwZ7AA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer32-31.delta" sparkle:deltaFrom="31" length="279318" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21b05IgEuRoffiPfj0SSW0bPqX89CROzz2V2E6cRjyr56DapO/dbhEGDDFAe5IdhvXmYDj97VQgGNGmvYoUpDw=="/>
             </sparkle:deltas>
         </item>
     </channel>
