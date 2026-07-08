@@ -3,16 +3,31 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.4</title>
+            <pubDate>Wed, 08 Jul 2026 09:48:08 +0900</pubDate>
+            <sparkle:version>36</sparkle:version>
+            <sparkle:shortVersionString>1.5.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li><b>Fully fixes the crash when previewing a video and then moving to another</b> file.<b> 1.5.3 addressed one cause; recent macOS also crashed while</b> reconfiguring the video player's controls as the preview closed. The preview pane now tears down video/audio previews defensively, so switching away from a media file can no longer crash the app. Video playback is unaffected.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.4.dmg" length="4424434" type="application/octet-stream" sparkle:edSignature="DmZMp3taZZ6Zyn5GJTFZk/Jo6rg756MSY0uot4CU8HbLDNEC+EfbHKtGpXmvlk/qNxF+Zn1LFz//lB/rVb+IBg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-35.delta" sparkle:deltaFrom="35" length="161470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Nh1q2K7D8RFLfFU6v+lICCcZttz44lA7aCTb1yo1Ff/2iwjz0ZdzUb7ape9yDuI8qCgsdc8yW0fjl8kkN6fXBQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-34.delta" sparkle:deltaFrom="34" length="207714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mEjPTPBeKTvyyK2pvEKflTQSgHNyJWwHZ63lheUZKqCyStSeLcXP4QewTx0KPdBKgtbvfNT25kQLghMQPUklCQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-33.delta" sparkle:deltaFrom="33" length="246638" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="iixULIzVfmg1vNAG2whOlHE3JNDiVf2c+P/T9BLDXOOwZNFqxQB4TjwM+r0mmnBYWfkeANC4mkuIpaOvcl/YBw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-32.delta" sparkle:deltaFrom="32" length="265394" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wPIEQHipp5AHD/ec0AJmhqSWct0ieYC6BObodxCm+aDPwGuL0oULvUn0HrEDWWLZxdmLkHN4nhXQiPmt/l0RDw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-31.delta" sparkle:deltaFrom="31" length="328698" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Rufba6YE0zCnhSra14n+vw3hsJU9FWfuk92VJVZC2fdBAF7tP+w1iAkGmneNcDCo/4b+U3I3d1+0gAE1R1b4BQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.3</title>
             <pubDate>Wed, 08 Jul 2026 09:04:22 +0900</pubDate>
             <sparkle:version>35</sparkle:version>
             <sparkle:shortVersionString>1.5.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
-<ul>
-<li><b>The app no longer crashes when you preview a video and then move to another</b> file.<b> A change in how recent macOS versions analyze video frames could crash</b> the app while a video preview was closing; that analysis is now turned off for previews. Video playback is unaffected.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.3.dmg" length="4423572" type="application/octet-stream" sparkle:edSignature="PvPmShjW8Th+PS/7QwfzOTRsSe3GaBgvlgxA7FRSLUymRveoUVJaf5/cTEXb98nu/xGmCmvvQwS+BdS+HPxRDA=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-34.delta" sparkle:deltaFrom="34" length="190258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PNPnr4KzsYeNjQEU+d/3v3qiNdineQ5wL6v7uq33KhhzkbUi+s761AP8pAg3zIEdPL/pQ713lr+NS9isqnJEBg=="/>
@@ -32,18 +47,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-33.delta" sparkle:deltaFrom="33" length="216554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="huKVb6WMH+PRElbpxLhDTxYh2ecStapPRauCM81N4dRcgp6bKph9nQ0WaBlYoyTzQGgiMyBcGvWfYGxM9DW2Bw=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-32.delta" sparkle:deltaFrom="32" length="238742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sx95SWz1Rm5HqOXEWtZie0rPSU+dl/PY5TcEB151wJzq4SAQVpSW4F6aLTMcast8kVFnECYw9M2tg+vO3C9IBA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer34-31.delta" sparkle:deltaFrom="31" length="307054" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="7Pcm7cKPa4e5J2A79rE5nOveit7ddjFeahTW/Quylg4+QqK/22rBULqcv9ijLLSHCKi/gbfG5EQdHWM0Q1K2Cg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.1</title>
-            <pubDate>Sun, 05 Jul 2026 20:02:19 +0900</pubDate>
-            <sparkle:version>33</sparkle:version>
-            <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.1.dmg" length="4446761" type="application/octet-stream" sparkle:edSignature="65A6YBYrhIqQsIxtykwsF25QuXtE+7gTZFsX1ZsF8q1kJ5oHyVeIJKoXO7tbH1WIB9j63i6hmsbBxnGaDdUMBw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-32.delta" sparkle:deltaFrom="32" length="199742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LTzM372wFgFkY7N28NYKKK6L8ks6syfS2ZuwdepbbFg8YB5OgKiCmhj3Lm6f35asH6DgmW6FDY5xGi22jiwUBA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer33-31.delta" sparkle:deltaFrom="31" length="295042" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mf5f6UxpWgpQ+m0VH3NazUnO+eGYIvSCMuXIcHrm6BAzQyJ/cKrAVWxzJOk9AxvbuuuahNy9Pj3bbIPfSWixBA=="/>
             </sparkle:deltas>
         </item>
     </channel>
