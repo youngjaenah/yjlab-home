@@ -3,16 +3,35 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.6</title>
+            <pubDate>Fri, 10 Jul 2026 08:48:21 +0900</pubDate>
+            <sparkle:version>38</sparkle:version>
+            <sparkle:shortVersionString>1.5.6</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>New Text Document.</b> Right-click the empty area of a folder (or use File ▸ New Text Document) to create an empty `.txt` file with its name ready to edit — Windows Explorer's "New ▸ Text Document", including collision-safe naming ("New Text Document 2.txt") and undo that removes the file only while it is still empty.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><b>Creating a folder or text file in symlinked locations (such as /tmp)</b> now opens the inline name editor.<b> The just-created item could fail to</b> match the listing in such folders, so the name editor silently never appeared; it now matches reliably, and a missed attempt retries instead of giving up.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.6.dmg" length="4443281" type="application/octet-stream" sparkle:edSignature="+83zPckqsAiW8V21PDYcliSlu8PcrfM3r6B1zOC/kRxWTaJJYanZUrFQ4kM6KZbVMNIEgRshkLFetNzQJAOdDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer38-37.delta" sparkle:deltaFrom="37" length="230938" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3SyIh5FcDKszrlhDqpwdPzOKMDf7RKuANqpjrUP8kQ25ttO9Z0leollV04jOTn8iTEWhy8F1A4fzFy3bVFXtCA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer38-36.delta" sparkle:deltaFrom="36" length="242238" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9HQM5zSiGhIKh1n6H5yK+M/0kxOpXAlWMDjrqeZp9ciXc88y91Za7cH8PN9YyXDQKUEStEA/boDkCxgq4EyBBw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer38-35.delta" sparkle:deltaFrom="35" length="248994" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wY81QWqRr9gAWDPjARCE57asF8ffkfe40NkFiLBJzOBIf03SqOReSTLzm62NNcFlihkhJQFgNyGfwTWozLLbBA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer38-34.delta" sparkle:deltaFrom="34" length="266606" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+dRTt4yFp5citlcblztDDbjxs63jL1U+x/85RYY6v657qHN6MaGdcSbfSL0F+9tloRK3ga0C1iSf4MK3ULTWCw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer38-33.delta" sparkle:deltaFrom="33" length="272666" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ssQOJJLnHIDZDp7unF+dhmZQzRPiN9YlvspGGHWg7JDqEfpZx2DjFokKD16khsDighdecI2kwDiwfeXSk3ZpAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.5</title>
             <pubDate>Fri, 10 Jul 2026 07:18:46 +0900</pubDate>
             <sparkle:version>37</sparkle:version>
             <sparkle:shortVersionString>1.5.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
-<ul>
-<li><b>Double-clicking the system links `var`, `tmp`, and `etc` (on Macintosh HD)</b> now navigates inside Explorer instead of opening Finder.<b> These root-level</b> items are system symbolic links; a quirk in how their targets were resolved made them look like plain files, so activating them handed the folder to Finder. They now resolve correctly and open in place as folder links (into `/private/…`), like any other folder.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.5.dmg" length="4425955" type="application/octet-stream" sparkle:edSignature="nXs9dli/q1D5hmUhGNVdzA+FRLxqHAarFoBy8U6sbsc7Ao/yxpU9GodVHvA2m3rY6HbgxRMyNWda0y2NHfahAQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer37-36.delta" sparkle:deltaFrom="36" length="158498" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wMUrG18lcN3miAvXW79KSZXG3OAMYdpv4byz2TH0EcbYPIlavFaG9AxpUPKjsfHPJiD5p/ZOz1MFXe23Sz5qDQ=="/>
@@ -35,20 +54,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-33.delta" sparkle:deltaFrom="33" length="246638" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="iixULIzVfmg1vNAG2whOlHE3JNDiVf2c+P/T9BLDXOOwZNFqxQB4TjwM+r0mmnBYWfkeANC4mkuIpaOvcl/YBw=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-32.delta" sparkle:deltaFrom="32" length="265394" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wPIEQHipp5AHD/ec0AJmhqSWct0ieYC6BObodxCm+aDPwGuL0oULvUn0HrEDWWLZxdmLkHN4nhXQiPmt/l0RDw=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-31.delta" sparkle:deltaFrom="31" length="328698" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Rufba6YE0zCnhSra14n+vw3hsJU9FWfuk92VJVZC2fdBAF7tP+w1iAkGmneNcDCo/4b+U3I3d1+0gAE1R1b4BQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.3</title>
-            <pubDate>Wed, 08 Jul 2026 09:04:22 +0900</pubDate>
-            <sparkle:version>35</sparkle:version>
-            <sparkle:shortVersionString>1.5.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.3.dmg" length="4423572" type="application/octet-stream" sparkle:edSignature="PvPmShjW8Th+PS/7QwfzOTRsSe3GaBgvlgxA7FRSLUymRveoUVJaf5/cTEXb98nu/xGmCmvvQwS+BdS+HPxRDA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-34.delta" sparkle:deltaFrom="34" length="190258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PNPnr4KzsYeNjQEU+d/3v3qiNdineQ5wL6v7uq33KhhzkbUi+s761AP8pAg3zIEdPL/pQ713lr+NS9isqnJEBg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-33.delta" sparkle:deltaFrom="33" length="234358" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uvXigWv01L+HyIOdEThXk3tSNjr5/LiA9XdNQfK01hRwBHDpt0mp7MGCgyqe9rPB4kUICVrUYFCLsX8rF+jyAw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-32.delta" sparkle:deltaFrom="32" length="258066" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="O2nTaHxN3bySrerjtpBya6g5rPKnNKvIezE+ZN2xTtrU+H3Cg640QeeaDzZIasFQ13qhOnFNJVS6pF9wLbfcCg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer35-31.delta" sparkle:deltaFrom="31" length="324366" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XTks6M9jFrVrWpfZiPwZx1S+iDpHosqp8X3QyLzQ+4t+KgfFPhOhLBzrIUZtOF4twrZiBqvZOSPiZP8SYQYaDw=="/>
             </sparkle:deltas>
         </item>
     </channel>
