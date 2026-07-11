@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terminal MCP — Let AI agents drive Terminal.app, safely</title>
+<meta name="description" content="Terminal MCP is a local MCP server for Apple's Terminal.app. Your AI agent lists sessions, sends commands, and reads output — while you keep per-session control. No cloud, no telemetry." />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href="https://www.yjlab.io/terminalmcp/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Terminal MCP — Let AI agents drive Terminal.app, safely" />
+<meta property="og:description" content="A local MCP server for Apple's Terminal.app. Your AI agent lists sessions, sends commands, and reads output — while you keep per-session control." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.yjlab.io/terminalmcp/" />
+<meta property="og:image" content="https://www.yjlab.io/images/terminalmcp-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f7f5;
+    --ink: #17191d;
+    --ink-dim: #585d66;
+    --ink-faint: #8b9099;
+    --accent: #2d5bd7;
+    --line: #e7e7e4;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── header ── */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.98rem; font-weight: 700; letter-spacing: -0.01em;
+    color: var(--ink); text-decoration: none;
+  }
+  .brand .mark { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+  .nav-links { display: flex; align-items: center; gap: 28px; font-size: 0.9rem; }
+  .nav-links a { color: var(--ink-dim); text-decoration: none; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  @media (max-width: 560px) {
+    .nav-links { gap: 18px; font-size: 0.85rem; }
+  }
+
+  /* ── hero ── */
+  .hero { padding: 96px 0 80px; }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 800px) {
+    .hero { padding: 64px 0 56px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 20px;
+  }
+  /* Keep Apple's brand casing inside otherwise-uppercased labels. */
+  .nocaps { text-transform: none; }
+  .hero h1 {
+    font-weight: 700;
+    font-size: clamp(2rem, 4.6vw, 3.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+  }
+  .hero .lead {
+    font-size: 1.08rem; color: var(--ink-dim); max-width: 50ch; line-height: 1.7; margin-bottom: 26px;
+  }
+
+  .feat { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+  .feat li {
+    display: flex; gap: 11px; align-items: flex-start;
+    font-size: 0.95rem; color: var(--ink); line-height: 1.55;
+  }
+  .feat li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 16px; height: 16px; margin-top: 3px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%232d5bd7' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M2.5 8.5l3.5 3.5 7-8'/%3E%3C/svg%3E") no-repeat center / contain;
+  }
+
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; border-radius: 9px; font-size: 0.94rem; font-weight: 600;
+    text-decoration: none; transition: background .2s, border-color .2s;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: #2c2f36; }
+  .cta-meta { font-size: 0.83rem; color: var(--ink-faint); margin-top: 14px; }
+
+  .hero-visual {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fbfbfa, #f2f2ef);
+    aspect-ratio: 1 / 1; max-width: 400px; margin: 0 auto; width: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-visual img {
+    width: 58%; height: auto;
+    filter: drop-shadow(0 12px 24px rgba(23, 25, 29, 0.16));
+  }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; } .d3 { animation-delay: .25s; } .d4 { animation-delay: .35s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+  }
+
+  /* ── sections ── */
+  .section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .section h2 {
+    font-weight: 700; font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+    letter-spacing: -0.025em; margin-bottom: 32px;
+  }
+  .section-lead {
+    font-size: 1rem; color: var(--ink-dim); line-height: 1.7;
+    max-width: 62ch; margin: -20px 0 36px;
+  }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    border: 1px solid var(--line); border-radius: 12px;
+    background: #fff; padding: 26px 24px;
+  }
+  .step .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    color: var(--ink); font-size: 0.84rem; font-weight: 600; margin-bottom: 16px;
+  }
+  .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .step p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
+  .step code {
+    font-family: var(--mono); font-size: 0.82em;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; color: var(--ink);
+  }
+
+  /* tool grid */
+  .tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 800px) { .tools { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .tools { grid-template-columns: 1fr; } }
+  .tool {
+    border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft);
+    padding: 14px 16px;
+  }
+  .tool code { font-family: var(--mono); font-size: 0.82rem; color: var(--ink); font-weight: 600; }
+  .tool p { font-size: 0.84rem; color: var(--ink-dim); line-height: 1.55; margin-top: 4px; }
+
+  /* config block */
+  pre.config {
+    font-family: var(--mono); font-size: 0.85rem; line-height: 1.6;
+    background: #17191d; color: #e8eaed;
+    border-radius: 12px; padding: 22px 24px; overflow-x: auto;
+    margin-top: 28px;
+  }
+  pre.config .k { color: #8ab4f8; }
+  pre.config .s { color: #a8dab5; }
+
+  .fineprint {
+    margin-top: 32px; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.7;
+    max-width: 76ch;
+  }
+  .fineprint strong { color: var(--ink-dim); font-weight: 600; }
+  .fineprint a { color: var(--ink-dim); }
+
+  /* ── footer ── */
+  footer { border-top: 1px solid var(--line); padding: 40px 0; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .copy { color: var(--ink-faint); font-size: 0.82rem; margin: 0; }
+  .copy a { color: var(--ink-dim); text-decoration: none; transition: color .2s; }
+  .copy a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/terminalmcp/"><span class="mark"></span>Terminal MCP</a>
+    <nav class="nav-links">
+      <a href="/">YJLAB</a>
+      <a href="#tools">Tools</a>
+      <a href="#safety">Safety</a>
+      <a href="#install">How to install</a>
+      <a href="mailto:support@yjlab.io">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow reveal d1"><span class="nocaps">macOS</span> · MCP server</p>
+        <h1 class="reveal d2">Let your AI agent drive Terminal.app — safely.</h1>
+        <p class="lead reveal d3">Terminal MCP is a local MCP server for Apple's Terminal. Claude and other MCP clients can list sessions, run commands, and read output in the real Terminal windows on your Mac — while you decide, per session, what they're allowed to touch.</p>
+        <ul class="feat reveal d3">
+          <li>Works with the Terminal you already use — real windows, real scrollback, no hidden shells</li>
+          <li>Per-session permissions: block a session, make it read-only, or allow commands</li>
+          <li>One-click pause stops all changes instantly from the menu bar</li>
+          <li>100% local — a user-only Unix socket, no HTTP server, no cloud, no telemetry</li>
+          <li>Commands are delivered as data, never evaluated or rewritten by the bridge</li>
+          <li>History is off by default; command bodies are never stored without an explicit opt-in</li>
+        </ul>
+        <div class="hero-cta reveal d4">
+          <a class="btn btn-primary" href="/downloads/TerminalMCP.dmg">Free download</a>
+        </div>
+        <p class="cta-meta reveal d4">Version 1.0.0 · macOS 13 Ventura or later · Apple Silicon</p>
+      </div>
+      <div class="hero-visual reveal d3">
+        <img src="../images/terminalmcp-icon.png" alt="Terminal MCP app icon" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TOOLS ── -->
+  <section class="section" id="tools">
+    <div class="wrap">
+      <h2>Nine tools, one clear contract</h2>
+      <p class="section-lead">Every targeted operation requires a bridge-issued session ID, checked again immediately before it runs — an agent can never "accidentally" type into whatever window happens to be active.</p>
+      <div class="tools">
+        <div class="tool"><code>terminal_status</code><p>Is Terminal running, how many windows, is the bridge paused.</p></div>
+        <div class="tool"><code>terminal_list_sessions</code><p>Every window and tab, with busy state and permissions.</p></div>
+        <div class="tool"><code>terminal_get_active_session</code><p>See what's focused — discovery only, never a command target.</p></div>
+        <div class="tool"><code>terminal_create_session</code><p>Open a fresh Terminal window for the agent to work in.</p></div>
+        <div class="tool"><code>terminal_send_command</code><p>Run a command in one specific, permitted session.</p></div>
+        <div class="tool"><code>terminal_send_key</code><p>Arrow keys, Return, Escape and friends for interactive prompts.</p></div>
+        <div class="tool"><code>terminal_read_output</code><p>Read the visible screen or scrollback, capped at 50,000 characters.</p></div>
+        <div class="tool"><code>terminal_capture_screen</code><p>A read-only screenshot of the session's window.</p></div>
+        <div class="tool"><code>terminal_focus_session</code><p>Bring a session's window to the front.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SAFETY ── -->
+  <section class="section" id="safety">
+    <div class="wrap">
+      <h2>Built so you stay in charge</h2>
+      <p class="section-lead">Terminal remains the owner of every shell, window, and byte of output. The bridge adds control — it never adds a back door.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>No injection, by design</h3>
+          <p>Commands travel as Apple event values into a pre-compiled script — never pasted into script source, never modified, never evaluated by the bridge.</p>
+        </div>
+        <div class="step">
+          <h3>Local-only transport</h3>
+          <p>The MCP helper talks to the app over a current-user-only Unix socket and verifies who's on the other end. There is no URL, port, or remote control surface.</p>
+        </div>
+        <div class="step">
+          <h3>Private by default</h3>
+          <p>Request history is opt-in. Command bodies and output previews each need a separate, explicit opt-in behind a sensitive-data warning — and stay on your Mac.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INSTALL ── -->
+  <section class="section" id="install">
+    <div class="wrap">
+      <h2>How to install</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>Download &amp; drag</h3>
+          <p>Grab the DMG, open it, and drag <strong>TerminalMCP</strong> onto the Applications folder.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Grant permissions</h3>
+          <p>Launch the app once. Onboarding walks you through the Terminal Automation permission (plus optional Accessibility and Screen Recording for special keys and captures).</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>Point your MCP client at it</h3>
+          <p>Add the helper as a local <code>stdio</code> server — that's the whole setup. The helper launches the app for you when it's needed.</p>
+        </div>
+      </div>
+      <pre class="config">{
+  <span class="k">"mcpServers"</span>: {
+    <span class="k">"terminal"</span>: {
+      <span class="k">"command"</span>: <span class="s">"/Applications/TerminalMCP.app/Contents/Helpers/terminal-mcp"</span>
+    }
+  }
+}</pre>
+      <p class="fineprint"><strong>Privacy.</strong> Terminal MCP works fully offline and never collects or transmits anything — no commands, no output, no usage data. The app is notarized by Apple. Questions or problems? Write to <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <p class="copy">© 2026 YJLAB. All rights reserved.</p>
+    <p class="copy">Contact: <a href="mailto:support@yjlab.io">support@yjlab.io</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
