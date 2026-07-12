@@ -111,7 +111,56 @@
   }
   .btn-primary { background: var(--ink); color: #fff; }
   .btn-primary:hover { background: #2c2f36; }
+  .btn-ghost {
+    background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+    cursor: pointer; font-family: inherit;
+  }
+  .btn-ghost:hover { border-color: var(--ink-faint); background: var(--bg-soft); }
   .cta-meta { font-size: 0.83rem; color: var(--ink-faint); margin-top: 14px; }
+
+  /* Release notes dialog */
+  dialog.rn {
+    border: none; border-radius: 16px; padding: 0; color: var(--ink);
+    background: var(--bg); max-width: 660px; width: calc(100% - 40px);
+    max-height: 82vh; box-shadow: 0 24px 60px rgba(0,0,0,.22);
+    overflow: hidden; /* the dialog never scrolls — only .rn-body does */
+  }
+  /* Only when open (keeps the default display:none for a closed dialog).
+     Flex column makes .rn-body fill the rest and own the single scrollbar. */
+  dialog.rn[open] { display: flex; flex-direction: column; }
+  dialog.rn::backdrop { background: rgba(17,19,23,.45); }
+  .rn-head {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px; border-bottom: 1px solid var(--line);
+    background: var(--bg); border-radius: 16px 16px 0 0;
+  }
+  .rn-head h2 { font-size: 1.05rem; margin: 0; }
+  .rn-close {
+    border: none; background: none; font-size: 1.5rem; line-height: 1;
+    color: var(--ink-faint); cursor: pointer; padding: 2px 8px; border-radius: 8px;
+  }
+  .rn-close:hover { color: var(--ink); background: var(--bg-soft); }
+  .rn-body { flex: 1 1 auto; min-height: 0; padding: 4px 24px 20px; overflow-y: auto; }
+  .rn-version { padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .rn-version:last-child { border-bottom: none; padding-bottom: 4px; }
+  .rn-version h3 {
+    font-size: 0.98rem; margin: 0 0 12px; display: flex;
+    align-items: baseline; gap: 10px;
+  }
+  .rn-date { font-size: 0.78rem; color: var(--ink-faint); font-weight: 500; }
+  .rn-version ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+  .rn-version li {
+    font-size: 0.88rem; color: var(--ink-dim); line-height: 1.6;
+    padding-left: 16px; position: relative;
+  }
+  .rn-version li::before { content: "›"; position: absolute; left: 0; color: var(--ink-faint); }
+  .rn-version li strong { color: var(--ink); font-weight: 600; }
+  .rn-version code {
+    font-family: var(--mono); font-size: 0.82em;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 5px; color: var(--ink);
+  }
 
   .hero-visual {
     border: 1px solid var(--line);
@@ -232,8 +281,9 @@
         </ul>
         <div class="hero-cta reveal d4">
           <a class="btn btn-primary" href="/downloads/TerminalMCP.dmg">Free download</a>
+          <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.0.2 · macOS 13 Ventura or later · Apple Silicon</p>
+        <p class="cta-meta reveal d4">Version 1.0.3 · macOS 13 Ventura or later · Apple Silicon</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/terminalmcp-icon.png" alt="Terminal MCP app icon" />
@@ -321,6 +371,67 @@
     <p class="copy">Contact: <a href="mailto:support@yjlab.io">support@yjlab.io</a></p>
   </div>
 </footer>
+
+<dialog class="rn" id="rn-dialog" aria-labelledby="rn-title">
+  <div class="rn-head">
+    <h2 id="rn-title">Release notes</h2>
+    <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.0.3 <span class="rn-date">2026-07-12</span></h3>
+      <ul>
+        <li><strong>Terminal MCP updates itself now.</strong> Choose &ldquo;Check for Updates&hellip;&rdquo; from the Terminal&nbsp;MCP menu &mdash; if a newer version is out, the app downloads it, verifies its signature, replaces itself, and relaunches. No more re-downloading from the website. Turn on automatic checking in Settings &#9656; General &#9656; Updates to be told about new versions as they ship; an update is only ever installed after you approve it.</li>
+        <li><strong>Clearer &ldquo;Store output previews&rdquo; setting.</strong> The Privacy setting now spells out that previews are captured only for <code>terminal_read_output</code> requests (<code>terminal_send_command</code> records delivery, not results), that enabling applies to new requests only, and that disabling removes previews already stored.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.0.2 <span class="rn-date">2026-07-11</span></h3>
+      <ul>
+        <li><strong>Clearer permission setup.</strong> The Permissions section in Settings now shows one row per macOS panel &mdash; Accessibility, Automation, and Screen Recording &mdash; each with a plain-language note on exactly what to enable there and why (for example, that the Automation panel needs both <strong>Terminal</strong> and <strong>System Events</strong> switched on for TerminalMCP).</li>
+        <li><strong>The menu bar&rsquo;s &ldquo;Open Permission Settings&rdquo; matches.</strong> It lists the same three panels, without the duplicate Terminal/System&nbsp;Events entries that pointed at the same place.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.0.1 <span class="rn-date">2026-07-11</span></h3>
+      <ul>
+        <li><strong>Automation consent prompts now appear reliably.</strong> The app ships with the Apple&nbsp;Events automation entitlement it needs under macOS&rsquo;s hardened runtime, so the &ldquo;wants to control Terminal&rdquo; prompts show up instead of control being silently denied.</li>
+        <li><strong>All permissions are requested up front.</strong> After onboarding, the app asks for Terminal and System&nbsp;Events Automation, Screen Recording, and Accessibility in sequence at startup &mdash; so an MCP tool call never stalls behind a system prompt mid-request.</li>
+        <li><strong>About panel.</strong> Terminal&nbsp;MCP &#9656; About shows the version with links to the homepage and support.</li>
+      </ul>
+    </article>
+    <article class="rn-version">
+      <h3>1.0.0 <span class="rn-date">2026-07-11</span></h3>
+      <ul>
+        <li><strong>Initial release.</strong> A local MCP server for Apple&rsquo;s Terminal.app: nine tools to list sessions, run commands, send special keys, read output, and capture windows &mdash; with per-session permissions, a one-click pause in the menu bar, a user-only Unix socket, and history off by default.</li>
+      </ul>
+    </article>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    var dlg = document.getElementById('rn-dialog');
+    var openBtn = document.getElementById('rn-open');
+    var closeBtn = document.getElementById('rn-close');
+    if (!dlg || !openBtn) return;
+    openBtn.addEventListener('click', function () {
+      if (typeof dlg.showModal === 'function') dlg.showModal();
+      else dlg.setAttribute('open', '');
+      // Lock the page scroll so only the dialog scrolls (no double scrollbar).
+      // Both html and body — browsers differ on which is the document scroller.
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    });
+    dlg.addEventListener('close', function () {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    });
+    closeBtn && closeBtn.addEventListener('click', function () { dlg.close(); });
+    // Click on the backdrop (outside the card) closes.
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  })();
+</script>
 
 </body>
 </html>
