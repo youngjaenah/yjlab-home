@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.5.6 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.5.7 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -468,6 +468,13 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.5.7 <span class="rn-date">2026-07-14</span></h3>
+      <ul>
+        <li><strong>Finder color tags now show their color.</strong> A folder or file tagged with a standard Finder color (Red, Blue, &hellip;) showed only a hollow outline instead of the colored dot when the tag's name was in a different language than the app (for example a Korean "&#48753;&#44036;&#49353;" tag in the English app). The color is now resolved from the system's own tag definitions, so standard color tags appear correctly regardless of language, in both the file list and the preview panel.</li>
+        <li><strong>The folder preview no longer jitters.</strong> While a folder was selected in the preview panel, the icon and its info could squirm up and down continuously &mdash; even after the folder's size had finished calculating. The preview now ignores an unchanged re-selection and updates streaming values in place, so it stays still.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.5.6 <span class="rn-date">2026-07-10</span></h3>
       <ul>

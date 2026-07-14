@@ -3,20 +3,32 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.7</title>
+            <pubDate>Tue, 14 Jul 2026 11:05:23 +0900</pubDate>
+            <sparkle:version>39</sparkle:version>
+            <sparkle:shortVersionString>1.5.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li><b>Finder color tags now show their color.</b> A folder or file tagged with a standard Finder color (Red, Blue, …) showed only a hollow outline instead of the colored dot when the tag's name was in a different language than the app (for example a Korean "빨간색" tag in the English app). The color is now resolved from the system's own tag definitions, so standard color tags appear correctly regardless of language, in both the file list and the preview panel.</li>
+<li><b>The folder preview no longer jitters.</b> While a folder was selected in the preview panel, the icon and its info could squirm up and down continuously — even after the folder's size had finished calculating. A repeated, unchanged selection (re-broadcast by the background folder-size sweep) was re-running the preview and toggling its "Items" row on each pass; the preview now ignores an unchanged re-selection and updates streaming values in place, so it stays still.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.7.dmg" length="4446043" type="application/octet-stream" sparkle:edSignature="pHlaMHwW0zJgIhpR8vk+OdiHM+vEIgRp9ZZdXWv+fIJaFHM99rs6SNurhTws7nUw+KgRWg4QJimGuRE+zR1fBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer39-38.delta" sparkle:deltaFrom="38" length="207606" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="80JTd1os8r0D1UWXBZdAkKtdOMa8sNuFg3Rrg1n7rUwkGIHEtN34K3vY3PsMxlus29YBF5qkXvWvP9a2923uBw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer39-37.delta" sparkle:deltaFrom="37" length="264814" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Rq3I1NXyDEITV+GIrNqD+JLAAWA+3vSKDZr/zfLvDPuj9YXY+3binkjvUtyPozFSelWWd05nMjo8PTsJam0LBg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer39-36.delta" sparkle:deltaFrom="36" length="277154" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zmKZzCqT/sKuCtLH1DZNrgutFrWgBfJibUsICK08/tkP0m0ASxQWvDnvMx6AloQZlwcLP0umUYwFNIeGDBLrCg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer39-35.delta" sparkle:deltaFrom="35" length="281510" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hnBNxLUGCPjDybebz/beSo9TERxKQoLxKD/nsih++1Wi+LA+LPQxICiUCOOcqBZG7FjSqu1S0HPMXIFbmFRdAQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer39-34.delta" sparkle:deltaFrom="34" length="292390" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QLI3HNMu30ShQUNfen21cvqM0hFNDOq05FouNvH2tLvuqFHwSVq4iguyFSoQZ8v/J7UMm3hBifcsmDO38pGJBg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.6</title>
             <pubDate>Fri, 10 Jul 2026 08:48:21 +0900</pubDate>
             <sparkle:version>38</sparkle:version>
             <sparkle:shortVersionString>1.5.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>New Text Document.</b> Right-click the empty area of a folder (or use File ▸ New Text Document) to create an empty `.txt` file with its name ready to edit — Windows Explorer's "New ▸ Text Document", including collision-safe naming ("New Text Document 2.txt") and undo that removes the file only while it is still empty.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li><b>Creating a folder or text file in symlinked locations (such as /tmp)</b> now opens the inline name editor.<b> The just-created item could fail to</b> match the listing in such folders, so the name editor silently never appeared; it now matches reliably, and a missed attempt retries instead of giving up.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.6.dmg" length="4443281" type="application/octet-stream" sparkle:edSignature="+83zPckqsAiW8V21PDYcliSlu8PcrfM3r6B1zOC/kRxWTaJJYanZUrFQ4kM6KZbVMNIEgRshkLFetNzQJAOdDw=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer38-37.delta" sparkle:deltaFrom="37" length="230938" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3SyIh5FcDKszrlhDqpwdPzOKMDf7RKuANqpjrUP8kQ25ttO9Z0leollV04jOTn8iTEWhy8F1A4fzFy3bVFXtCA=="/>
@@ -39,21 +51,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer37-34.delta" sparkle:deltaFrom="34" length="216462" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qA/n8lUw/9Xk157uPNme+1nRLNYDdD/bcg7u0Qpr3hQWvej9jVnbLGoqVPcz/pzhZ+zwEW8hSEmv/MGoDyozBg=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer37-33.delta" sparkle:deltaFrom="33" length="248770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ucyscMYVcGyKnY1TqPoGrbIn6GCvZXYosRNXWUw22qMkQTCmdf0SZAeca5q3iHzU1LwfUqC0J1aVsLZVVYKKDw=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer37-32.delta" sparkle:deltaFrom="32" length="267986" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="F1Ar470st2BkAr1MszD5QNPMB7YST2IA03KMz0a4dNQle3CYfELswDv6vC5cEK0NrWKWh9XsOKTAQ+IMQ6PbBg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.4</title>
-            <pubDate>Wed, 08 Jul 2026 09:48:08 +0900</pubDate>
-            <sparkle:version>36</sparkle:version>
-            <sparkle:shortVersionString>1.5.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.4.dmg" length="4424434" type="application/octet-stream" sparkle:edSignature="DmZMp3taZZ6Zyn5GJTFZk/Jo6rg756MSY0uot4CU8HbLDNEC+EfbHKtGpXmvlk/qNxF+Zn1LFz//lB/rVb+IBg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-35.delta" sparkle:deltaFrom="35" length="161470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Nh1q2K7D8RFLfFU6v+lICCcZttz44lA7aCTb1yo1Ff/2iwjz0ZdzUb7ape9yDuI8qCgsdc8yW0fjl8kkN6fXBQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-34.delta" sparkle:deltaFrom="34" length="207714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mEjPTPBeKTvyyK2pvEKflTQSgHNyJWwHZ63lheUZKqCyStSeLcXP4QewTx0KPdBKgtbvfNT25kQLghMQPUklCQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-33.delta" sparkle:deltaFrom="33" length="246638" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="iixULIzVfmg1vNAG2whOlHE3JNDiVf2c+P/T9BLDXOOwZNFqxQB4TjwM+r0mmnBYWfkeANC4mkuIpaOvcl/YBw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-32.delta" sparkle:deltaFrom="32" length="265394" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wPIEQHipp5AHD/ec0AJmhqSWct0ieYC6BObodxCm+aDPwGuL0oULvUn0HrEDWWLZxdmLkHN4nhXQiPmt/l0RDw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer36-31.delta" sparkle:deltaFrom="31" length="328698" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Rufba6YE0zCnhSra14n+vw3hsJU9FWfuk92VJVZC2fdBAF7tP+w1iAkGmneNcDCo/4b+U3I3d1+0gAE1R1b4BQ=="/>
             </sparkle:deltas>
         </item>
     </channel>
