@@ -3,16 +3,31 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.15</title>
+            <pubDate>Thu, 06 Aug 2026 00:59:49 +0900</pubDate>
+            <sparkle:version>47</sparkle:version>
+            <sparkle:shortVersionString>1.5.15</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>Roomier file list, Windows Explorer-style.</b> The List and Details views now use taller rows with slightly larger text and icons, matching the airier feel of Windows 11 File Explorer's details view — this is the new default. Prefer the previous tighter look? Toggle <b>Compact View</b> in the toolbar's View menu (next to Show Hidden Files), just like Windows 11's Compact view. The choice applies to every window and tab, persists across launches, and never touches your per-folder view modes. Icon views, the sidebar, and Gallery are unchanged.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.15.dmg" length="4488410" type="application/octet-stream" sparkle:edSignature="ciL+jOx2Zk/hMYJnhEMNzKburaqm9CSzOSL0yjJUN/+oHXXwjqR5PobsnOv4n3ot24KDuPPWTrj8lAQKbiy7CA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-46.delta" sparkle:deltaFrom="46" length="218290" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kXiwtTLQ/TJbU7E76iCvurE0x/CEeo9Gue0+rF6RHt3Uj0nNJ71hTEHF/WN7OL6ysBcKWFelKI4+RJC6Kl57DA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-45.delta" sparkle:deltaFrom="45" length="228726" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="37g0L++XpbyV0PJRLOXL+GNcMznHRLvfmwJxZGfSQLawVoWc9+b/t1/mCgEnYJk9iqtF3prur6WiZSS/Lf/EAQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-44.delta" sparkle:deltaFrom="44" length="274894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tsvXEdlajHTwq+BSDmkdmVUr0bjbkgSYJfrAK97PBym/4XEYP314UKAQ/dsmOCtS5WyWVzCn0P2g/M1rYttOAA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-43.delta" sparkle:deltaFrom="43" length="299170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0+FlmHqUsQVHEWGlF7K8mEIrDmJP8R3BjqqM7ITRqxaMw1xU6g0ovRunKOpxYCO8UkrkrYDJkoOJIdmdpqAKBA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-42.delta" sparkle:deltaFrom="42" length="304402" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="x+Sfdt5ea6XKAF1Yn4nrAtNSLEOqTDtllI1/2S8CCQTKeh3f4O5VBi3SaFHkQquKMxjhFysxZ+Qeiqq8A5OwDw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.14</title>
             <pubDate>Mon, 03 Aug 2026 18:36:16 +0900</pubDate>
             <sparkle:version>46</sparkle:version>
             <sparkle:shortVersionString>1.5.14</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
-<ul>
-<li><b>Inline rename could rename the wrong file.</b> In Details/List view, if the listing re-sorted while the name editor was open — which reliably happened right after New Text Document / New Folder, because creating the item also bumps the folder's `.DS_Store` timestamp — the commit resolved its target by row index and renamed whatever slid into that row (typically `.DS_Store`). Symptoms included a spurious "name is already taken" alert after creating a new text document, and renamed "text" files that TextEdit refused to open (they contained `.DS_Store` binary data). The rename now always targets the item the editor was opened on. Icon views were unaffected.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.14.dmg" length="4483915" type="application/octet-stream" sparkle:edSignature="cFIgLdKePbg2NtY+3V9EZdOdVi+SZZq+4tb23vyxm6MiuXs5+41kIu4/z0KX8zGVL3QhSeNHrcrUkZODbI32Cg=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer46-45.delta" sparkle:deltaFrom="45" length="155302" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="xT/ga6jBnHKObV/wXb/nYCLdRXGhQrS/TlUke01hzs9KAz+tiTM2Xnamy/MtbqWzJJ1AVIiye84eNYkjXHZABQ=="/>
@@ -35,21 +50,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer45-42.delta" sparkle:deltaFrom="42" length="278174" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6cRYWiz+oTmDy1hxDDjOf3Lr0g6sWKQGfC6jwNX2Q/JKTnIqbareOzS8Mm+LjoExFm/kkCBMJufxgK7VLRzTCA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer45-41.delta" sparkle:deltaFrom="41" length="287994" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+gzKpJEEh/DccjTp4eGZFYaUiI0JUZinnMZ4kK4X52teP9Pm+0cXEzVre3nURCxxL2jZS2IJKDurTTkRmkBbCA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer45-40.delta" sparkle:deltaFrom="40" length="313482" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="d92yKlUIpFl+/ZNYJD2Mrd98A6Va+J5MIi1eKpaLH8ShYZ2nxzM+Ijv3usErTZ4JhR/mJqlL9gvJUvvaNTc8BQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.12</title>
-            <pubDate>Sat, 25 Jul 2026 22:18:22 +0900</pubDate>
-            <sparkle:version>44</sparkle:version>
-            <sparkle:shortVersionString>1.5.12</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.12.dmg" length="4467460" type="application/octet-stream" sparkle:edSignature="a+kpwUz62r96cikDO8iOnulsjPzQh8iOhvuRHFY/XXI0oQ5vK9siaEV5fptr/xgi0316V3d+gbLOuceHquHECw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer44-43.delta" sparkle:deltaFrom="43" length="207174" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="bt+K1vfScAmVWMlzpjCA3amAwRe29WJARKXgsTa4bWI1LqcrWSOiNrqXzgWymPYvkMuwrMtmAG0e/k8MAQF3CQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer44-42.delta" sparkle:deltaFrom="42" length="222086" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UR64G+LocirCeXUO52V/ZKcKVOsDblOgpTZDlWmVAnatp8earEI2cXjs37lUxL+AwzxRKeWMRc8/G6SeDKMxAg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer44-41.delta" sparkle:deltaFrom="41" length="242842" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sRYI9yKp1TMO6/hOL/eGT9sUxs/FQyf+JQiarOiXq88aeh8IUkT8MrpQBKfPx/tylbwWNIHrhwYBYOq32IgSCg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer44-40.delta" sparkle:deltaFrom="40" length="276714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tOerWZS4F3xzc9QjMXxBx6QUJS7rmBVpdhafimZd1+mWJndOMjKdvvZ7mu4s4Dyqh22biPmrHe/ijE2LPf8CCw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer44-39.delta" sparkle:deltaFrom="39" length="278486" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Hk73CWa0ePc/IGg94NwFFL4F5g9JrZDshVc2T8MSMnv8IVHjX4rEV1M2ska7Q0TXEaKxGFaMpl+6RzBKmnm6Dg=="/>
             </sparkle:deltas>
         </item>
     </channel>
