@@ -3,16 +3,36 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.17</title>
+            <pubDate>Thu, 06 Aug 2026 17:57:14 +0900</pubDate>
+            <sparkle:version>49</sparkle:version>
+            <sparkle:shortVersionString>1.5.17</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>Pasted files are selected after a paste, like Windows Explorer.</b> After ⌘V finishes, the pasted file(s) become the selection and scroll into view — instant proof the paste landed, even when you pasted while another file's row was highlighted. Works for copy and cut pastes, uses the final names (so a conflict resolved as "keep both" selects "file 2.txt"), and only applies to items that landed in the folder you're viewing.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Undo-restore now reselects restored items in icon views too (previously the reselection only worked in List/Details).</li>
+<li>Reselection after refresh no longer misses folders or files whose names differ only in Unicode composition (Korean names on SMB shares).</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.17.dmg" length="4491944" type="application/octet-stream" sparkle:edSignature="6YUPAwhSPpglBcHVqJcdc7jRVFzM88lW5dtCLuPVbtnhDq+nF6iFxGHx5ySawPs0otzhgnOyBlGukBZoi44qCA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-48.delta" sparkle:deltaFrom="48" length="182198" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jwl+x9MM+EPFqxoTDd5YB986WA2YOs6hvN+n20EsVByAv6Br0e0Fh3SAFdBsfalv4W5hjuDrBqBGfUVkAtNdDA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-47.delta" sparkle:deltaFrom="47" length="211454" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gwoLM/BcAIpLjIopsFmkpaZyjiUg0/ZVEEN5u2t0j7BokHnrcmTNpqpJ8zSMx4IjCKild/VMV1OKXzsMyo+rBw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-46.delta" sparkle:deltaFrom="46" length="248134" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="EDpUkOocNaTEXTZjIb4IoRJTOu+Ft7gpx/v91TpBfvwne3E1UrX/BJR1iRF67D0tMhqWj/Yas8pzwnuo2WecBA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-45.delta" sparkle:deltaFrom="45" length="251990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1MhaZp5zdRf0tKPfHblUUeKF0nm306gU8SL8jRBCYcI9aNkr/FtwmfA4nkXJjJSqOErc2vxPL/33pOFP1t6+DA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-44.delta" sparkle:deltaFrom="44" length="288366" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9/iazrygTP1tdSx8ZhivCv2UBdTp59csmorNa3rJKTbCkCOJXeBbYnvn/LK10cdzh7Q2lcvLxPnBXdgwgxZ4Bg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.16</title>
             <pubDate>Thu, 06 Aug 2026 01:19:29 +0900</pubDate>
             <sparkle:version>48</sparkle:version>
             <sparkle:shortVersionString>1.5.16</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Changed</h3>
-<ul>
-<li><b>Cleaner separation between tabs, address bar, and file list.</b> The tab strip now sits on a slightly darker band — like Windows 11's title area — with hairline dividers between the tab row, the address row, and the column headers. The breadcrumb path is enclosed in a rounded address field matching the search box beside it, so the path reads as an address bar instead of floating text. Purely visual: navigation, path editing, and drag-and-drop onto path segments behave exactly as before.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.16.dmg" length="4492080" type="application/octet-stream" sparkle:edSignature="q6O0EQeAnjHKby2KtcwcFUEGgwYmwQ60lKJ022vQBW+njVICA8SQzctxGfi4n4mwPc9BTDMeqs71LTFqR6RjDg=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer48-47.delta" sparkle:deltaFrom="47" length="192130" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="AgBhzj+E8jf/pk5HntHWgWzY3MTk7abHEyUyPLBdBQbIX6AGNEqh8IYUTdP3IzhwLEZI4W6CnLfiL0lD1CssDQ=="/>
@@ -35,21 +55,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-44.delta" sparkle:deltaFrom="44" length="274894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tsvXEdlajHTwq+BSDmkdmVUr0bjbkgSYJfrAK97PBym/4XEYP314UKAQ/dsmOCtS5WyWVzCn0P2g/M1rYttOAA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-43.delta" sparkle:deltaFrom="43" length="299170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0+FlmHqUsQVHEWGlF7K8mEIrDmJP8R3BjqqM7ITRqxaMw1xU6g0ovRunKOpxYCO8UkrkrYDJkoOJIdmdpqAKBA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-42.delta" sparkle:deltaFrom="42" length="304402" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="x+Sfdt5ea6XKAF1Yn4nrAtNSLEOqTDtllI1/2S8CCQTKeh3f4O5VBi3SaFHkQquKMxjhFysxZ+Qeiqq8A5OwDw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.14</title>
-            <pubDate>Mon, 03 Aug 2026 18:36:16 +0900</pubDate>
-            <sparkle:version>46</sparkle:version>
-            <sparkle:shortVersionString>1.5.14</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.14.dmg" length="4483915" type="application/octet-stream" sparkle:edSignature="cFIgLdKePbg2NtY+3V9EZdOdVi+SZZq+4tb23vyxm6MiuXs5+41kIu4/z0KX8zGVL3QhSeNHrcrUkZODbI32Cg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer46-45.delta" sparkle:deltaFrom="45" length="155302" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="xT/ga6jBnHKObV/wXb/nYCLdRXGhQrS/TlUke01hzs9KAz+tiTM2Xnamy/MtbqWzJJ1AVIiye84eNYkjXHZABQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer46-44.delta" sparkle:deltaFrom="44" length="246558" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5BGldRG1XjPCso/cViDooilU/PRDuGfoYpbeGTB0K/ofGb+WFSzHcdiOaOJRg61Sjj0coIt6AU/JcVMQFhyhCA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer46-43.delta" sparkle:deltaFrom="43" length="278706" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kMLfuMWN8Hd7BwGqgHjf54tpgQ6+vkuqA7EWEb7R0ZE2YyvwYeWYeWGuYP/iaM2S1mdkNpLMlyYHCmnRMymBAg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer46-42.delta" sparkle:deltaFrom="42" length="283374" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/lCUvLjYoh2n/NymsOQTZp+6KJOPiEtViCb30i9/9LEEQsZks4lF4siuoVf0L8Vx+t2NQT8Ps8OJkBxR10CxDA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer46-41.delta" sparkle:deltaFrom="41" length="291850" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ROS22UpA6T8NeVMpJGsA24mVUGnVcH6EpoCR9ypRGRvlnvyevXZ6NscH0PuCd504XeGLGBk1IRG8Q+B0n/5XBg=="/>
             </sparkle:deltas>
         </item>
     </channel>
