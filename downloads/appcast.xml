@@ -3,21 +3,32 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.18</title>
+            <pubDate>Sat, 22 Aug 2026 21:07:11 +0900</pubDate>
+            <sparkle:version>50</sparkle:version>
+            <sparkle:shortVersionString>1.5.18</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li><b>Moving files within a NAS share is up to 5× faster.</b> A 232-file (38 GB) same-share move measured 53s before and 11.5s after. Three fixes landed together: the file list no longer restarts a full folder re-enumeration for every single file an operation drops in (refreshes now coalesce, at most one every 3 seconds while an operation runs, 2 seconds on network folders otherwise); per-item path normalization no longer walks the whole path over SMB for every file (the batch's shared parent is resolved once); and thumbnail generation pauses while a copy/move/ delete is in flight, so its large reads can't crowd out the operation's SMB traffic (pending thumbnails render as soon as the operation ends).</li>
+<li>The "already in this folder" paste check now compares paths instead of URLs, so folders whose names differ only in Unicode composition (Korean names on SMB shares) can't slip past it.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.18.dmg" length="4497216" type="application/octet-stream" sparkle:edSignature="hUEVPSzTcverZQ99tx3Cd1hr/LCToMASDQsV7KJGDBIL2OquSe4AIF4pZ8Phbr1tLBQy3mQNCY3DnOFAbfqUCA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-49.delta" sparkle:deltaFrom="49" length="214854" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Xn5IdyZR2WSbJD5QQp3vevtk3lu74/vsG61561PKWK04XSChnYgdfx0tZLoX/mQhtRabkM0OQ9qaEtKruh1rDg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-48.delta" sparkle:deltaFrom="48" length="234770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DAOJ/pe1bVhEj17Vp8zyynOgkvd+A1vx5wfj6YEfYMe3iZj/LXGx5bHonJd9oz7zVyyz9d9RUePCqn/FDOJaDg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-47.delta" sparkle:deltaFrom="47" length="256658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YNYEH1ZBRXTuHWjJmDS7VdtLfvzsAPDGLpY5EFMWhJeNY5baTvvNePVJjZXr1V1oInuBIcwjDU6maRf16nQaCg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-46.delta" sparkle:deltaFrom="46" length="289290" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yck5goZ0YODQ8lQYU2Gv2+MhTJoghvxbGiIgRdrTJUeU0RqchEZZbpXZddTv+VzQLAHLc8lPHVd1p7t29OSsBQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-45.delta" sparkle:deltaFrom="45" length="293242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="E2TGCW8BASgoEyOhyFN6BA9j0qVwSd7i9esFFFePw9r+KqySAuDapZGQa9Mt2qI5mqqy+/1bJRa6iiEcCcBxAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.17</title>
             <pubDate>Thu, 06 Aug 2026 17:57:14 +0900</pubDate>
             <sparkle:version>49</sparkle:version>
             <sparkle:shortVersionString>1.5.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>Pasted files are selected after a paste, like Windows Explorer.</b> After ⌘V finishes, the pasted file(s) become the selection and scroll into view — instant proof the paste landed, even when you pasted while another file's row was highlighted. Works for copy and cut pastes, uses the final names (so a conflict resolved as "keep both" selects "file 2.txt"), and only applies to items that landed in the folder you're viewing.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li>Undo-restore now reselects restored items in icon views too (previously the reselection only worked in List/Details).</li>
-<li>Reselection after refresh no longer misses folders or files whose names differ only in Unicode composition (Korean names on SMB shares).</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.17.dmg" length="4491944" type="application/octet-stream" sparkle:edSignature="6YUPAwhSPpglBcHVqJcdc7jRVFzM88lW5dtCLuPVbtnhDq+nF6iFxGHx5ySawPs0otzhgnOyBlGukBZoi44qCA=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-48.delta" sparkle:deltaFrom="48" length="182198" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jwl+x9MM+EPFqxoTDd5YB986WA2YOs6hvN+n20EsVByAv6Br0e0Fh3SAFdBsfalv4W5hjuDrBqBGfUVkAtNdDA=="/>
@@ -40,21 +51,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer48-45.delta" sparkle:deltaFrom="45" length="244146" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="iC4OLSU5WC+lslQLCZLvVms0mwTe0urEJoXd3vy/SycSZTHXIWs9ChAiIEzOeLUFx3gswR897jUSJXP13WikDA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer48-44.delta" sparkle:deltaFrom="44" length="283634" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SHEnpYCJx6tzGyfSRHKcWkqmGboKU4rLKZH/PoPDTCk5yjidntReT7ToqLS2M9Ef+ep8ThAoYctqKuRqtFs7BA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer48-43.delta" sparkle:deltaFrom="43" length="310162" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="90vItUGb6mvr2x3KXWh79fJA86+k0omT0XCRSc2eTxCRHzdjb/rte71DK7pMObdt4AQ0emlqkJBpp0AnCknoCw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.15</title>
-            <pubDate>Thu, 06 Aug 2026 00:59:49 +0900</pubDate>
-            <sparkle:version>47</sparkle:version>
-            <sparkle:shortVersionString>1.5.15</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.15.dmg" length="4488410" type="application/octet-stream" sparkle:edSignature="ciL+jOx2Zk/hMYJnhEMNzKburaqm9CSzOSL0yjJUN/+oHXXwjqR5PobsnOv4n3ot24KDuPPWTrj8lAQKbiy7CA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-46.delta" sparkle:deltaFrom="46" length="218290" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kXiwtTLQ/TJbU7E76iCvurE0x/CEeo9Gue0+rF6RHt3Uj0nNJ71hTEHF/WN7OL6ysBcKWFelKI4+RJC6Kl57DA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-45.delta" sparkle:deltaFrom="45" length="228726" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="37g0L++XpbyV0PJRLOXL+GNcMznHRLvfmwJxZGfSQLawVoWc9+b/t1/mCgEnYJk9iqtF3prur6WiZSS/Lf/EAQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-44.delta" sparkle:deltaFrom="44" length="274894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tsvXEdlajHTwq+BSDmkdmVUr0bjbkgSYJfrAK97PBym/4XEYP314UKAQ/dsmOCtS5WyWVzCn0P2g/M1rYttOAA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-43.delta" sparkle:deltaFrom="43" length="299170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0+FlmHqUsQVHEWGlF7K8mEIrDmJP8R3BjqqM7ITRqxaMw1xU6g0ovRunKOpxYCO8UkrkrYDJkoOJIdmdpqAKBA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer47-42.delta" sparkle:deltaFrom="42" length="304402" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="x+Sfdt5ea6XKAF1Yn4nrAtNSLEOqTDtllI1/2S8CCQTKeh3f4O5VBi3SaFHkQquKMxjhFysxZ+Qeiqq8A5OwDw=="/>
             </sparkle:deltas>
         </item>
     </channel>
