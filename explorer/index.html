@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.5.18 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.5.19 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -468,6 +468,15 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.5.19 <span class="rn-date">2026-08-27</span></h3>
+      <ul>
+        <li><strong>The tab and address bands are visible again on macOS&nbsp;26 and later.</strong> The new OS draws a glass &ldquo;scroll edge&rdquo; wash over the top of any pane the toolbar hands its own titlebar section, which blurred the tab strip and the address field &mdash; including the path editor &mdash; into an unreadable smear. Explorer no longer claims those sections, so both bands render normally. On macOS&nbsp;26+ the toolbar's command block now sits at the window's leading edge and the redundant window title is hidden; the tab strip already names the current folder.</li>
+        <li><strong>Going up now leaves the folder you came from selected.</strong> The Up button, Go&nbsp;&#9656;&nbsp;Enclosing Folder, and Backspace all reselect and scroll to the child folder in the parent listing, the way a breadcrumb click already did. Previously the selection was whatever happened to be highlighted last, so the folder stayed selected only by coincidence.</li>
+        <li><strong>35&nbsp;mm equivalent focal length in the photo preview.</strong> Photos that record it now show a &ldquo;35&nbsp;mm equiv.&rdquo; row beside the actual focal length. Phone photos often store only the equivalent, so those finally show a focal length at all. Full-frame bodies, where the two numbers agree, don't get a redundant second row.</li>
+        <li><strong>The photo preview panel now lists Size and Created first,</strong> then the camera facts starting with Dimensions, so file information and photo information read as two separate blocks.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.5.18 <span class="rn-date">2026-08-22</span></h3>
       <ul>
