@@ -351,7 +351,7 @@
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
           <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
         </div>
-        <p class="cta-meta reveal d4">Version 1.5.19 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
+        <p class="cta-meta reveal d4">Version 1.5.20 · macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
       </div>
       <div class="hero-visual reveal d3">
         <img src="../images/explorer-icon.png" alt="Explorer for Mac app icon" />
@@ -468,6 +468,12 @@
     <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.5.20 <span class="rn-date">2026-08-27</span></h3>
+      <ul>
+        <li><strong>Opening a folder right after naming it no longer fails on network shares.</strong> New Folder &#9656; type a name &#9656; Enter &#9656; Enter reported &ldquo;&lsquo;untitled folder&rsquo; can't be found&rdquo; on SMB volumes. The rename had already succeeded, but the listing still carried the pre-rename URL until the folder re-read finished &mdash; long enough over SMB for the second Enter to navigate to a name that no longer existed. A completed rename now updates the listing immediately, and an Enter that arrives while the rename is still in flight waits for it instead of opening the old row. A rejected rename (name already taken) reports as before and opens nothing.</li>
+      </ul>
+    </article>
     <article class="rn-version">
       <h3>1.5.19 <span class="rn-date">2026-08-27</span></h3>
       <ul>

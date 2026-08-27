@@ -3,25 +3,31 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.5.20</title>
+            <pubDate>Thu, 27 Aug 2026 20:44:39 +0900</pubDate>
+            <sparkle:version>52</sparkle:version>
+            <sparkle:shortVersionString>1.5.20</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Fixed</h3>
+<ul>
+<li><b>Opening a folder right after naming it no longer fails on network</b> shares.<b> New Folder ▸ type a name ▸ Enter ▸ Enter reported</b> "“untitled folder” can't be found" on SMB volumes. The rename had already succeeded, but the listing still carried the pre-rename URL until the folder re-read finished — long enough over SMB for the second Enter to navigate to a name that no longer existed. A completed rename now updates the listing immediately, and an Enter that arrives while the rename is still in flight waits for it instead of opening the old row. A rejected rename (name already taken) reports as before and opens nothing.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.20.dmg" length="4502192" type="application/octet-stream" sparkle:edSignature="rZY1eaGOEHhpwzMjDq5WePN7ppQ6soWqXCa95YPUq1V2RRyw11dSE5O+1HDZEdoZ4xDrxXUaH5TaKZ6cqBSYDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-51.delta" sparkle:deltaFrom="51" length="196334" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sRurv1xgwjCp687MslzoLOn9i0m0C6LiXhxgcR50DEmP8Ub85dTOyG9D0EqCkXyXySm8u8DyPGxH24AGEwYrAg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-50.delta" sparkle:deltaFrom="50" length="230014" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HY9Rrv3cONOVHVOQgRNOg3aCV7Sdev4huXFaFFn63CMynVH2pc2TTkBE+AEe+Ad1ToH2s9apxSpITLxkxCE0Aw=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-49.delta" sparkle:deltaFrom="49" length="277150" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+YZY2Wky24eGzG9RTf9ouNTnjFBAIS/FZeiQ8BP4fQg7H0VpAMjH152r3L6OL78/YLanUk7x801Dy+5W5XwxDg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-48.delta" sparkle:deltaFrom="48" length="277906" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8PP4YgLg0AsmM5ErTV8DJrRxW61gWcikYW38t5XI8RKopklyaCglLCmh7U+aBuhcXgvAxYdKO88/axBDMDpaCg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-47.delta" sparkle:deltaFrom="47" length="291598" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mM7v5l0Y4gDV+++veCnHhT7e3zA34Ia4v18/iebyhLnXlKAFD/qrxE8AUIvWbzo6vf/pkkHwUsl9STq9oqxuAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.19</title>
             <pubDate>Thu, 27 Aug 2026 19:37:09 +0900</pubDate>
             <sparkle:version>51</sparkle:version>
             <sparkle:shortVersionString>1.5.19</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
-<ul>
-<li><b>The tab and address bands are visible again on macOS 26 and later.</b> The new OS draws a glass "scroll edge" wash over the top of any pane the toolbar hands its own titlebar section, which blurred the tab strip and the address field — including the path editor — into an unreadable smear. Explorer no longer claims those sections, so both bands render normally. On macOS 26+ the toolbar's command block now sits at the window's leading edge and the redundant window title is hidden; the tab strip already names the current folder.</li>
-<li><b>Going up now leaves the folder you came from selected.</b> The Up button, Go ▸ Enclosing Folder, and Backspace all reselect and scroll to the child folder in the parent listing, the way a breadcrumb click already did. Previously the selection was whatever happened to be highlighted last, so the folder stayed selected only by coincidence.</li>
-</ul>
-<h3>Added</h3>
-<ul>
-<li><b>35 mm equivalent focal length in the photo preview.</b> Photos that record it now show a "35 mm equiv." row beside the actual focal length. Phone photos often store only the equivalent, so those finally show a focal length at all. Full-frame bodies, where the two numbers agree, don't get a redundant second row.</li>
-</ul>
-<h3>Changed</h3>
-<ul>
-<li>The photo preview panel now lists <b>Size</b> and <b>Created</b> first, then the camera facts starting with <b>Dimensions</b>, so file information and photo information read as two separate blocks.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.19.dmg" length="4498234" type="application/octet-stream" sparkle:edSignature="Wpjg8h1RX28d9nXDx0jfjUHBbE+PuUKRVCs6onq5CDXbMSOt4hhWP7gNj2uTXhFxBT8rEyKwM9JUgZbzd5hnBw=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer51-50.delta" sparkle:deltaFrom="50" length="185722" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ho8pe0oQKK1xHQcLxVxs/V4hSzfkRs8nvBiDRtMh9XJgevLTkUBYKOIuKxWScipbHSzYXzbiGxT27g4vE8HTDA=="/>
@@ -44,21 +50,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-47.delta" sparkle:deltaFrom="47" length="256658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YNYEH1ZBRXTuHWjJmDS7VdtLfvzsAPDGLpY5EFMWhJeNY5baTvvNePVJjZXr1V1oInuBIcwjDU6maRf16nQaCg=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-46.delta" sparkle:deltaFrom="46" length="289290" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yck5goZ0YODQ8lQYU2Gv2+MhTJoghvxbGiIgRdrTJUeU0RqchEZZbpXZddTv+VzQLAHLc8lPHVd1p7t29OSsBQ=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-45.delta" sparkle:deltaFrom="45" length="293242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="E2TGCW8BASgoEyOhyFN6BA9j0qVwSd7i9esFFFePw9r+KqySAuDapZGQa9Mt2qI5mqqy+/1bJRa6iiEcCcBxAg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.17</title>
-            <pubDate>Thu, 06 Aug 2026 17:57:14 +0900</pubDate>
-            <sparkle:version>49</sparkle:version>
-            <sparkle:shortVersionString>1.5.17</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.17.dmg" length="4491944" type="application/octet-stream" sparkle:edSignature="6YUPAwhSPpglBcHVqJcdc7jRVFzM88lW5dtCLuPVbtnhDq+nF6iFxGHx5ySawPs0otzhgnOyBlGukBZoi44qCA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-48.delta" sparkle:deltaFrom="48" length="182198" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jwl+x9MM+EPFqxoTDd5YB986WA2YOs6hvN+n20EsVByAv6Br0e0Fh3SAFdBsfalv4W5hjuDrBqBGfUVkAtNdDA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-47.delta" sparkle:deltaFrom="47" length="211454" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gwoLM/BcAIpLjIopsFmkpaZyjiUg0/ZVEEN5u2t0j7BokHnrcmTNpqpJ8zSMx4IjCKild/VMV1OKXzsMyo+rBw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-46.delta" sparkle:deltaFrom="46" length="248134" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="EDpUkOocNaTEXTZjIb4IoRJTOu+Ft7gpx/v91TpBfvwne3E1UrX/BJR1iRF67D0tMhqWj/Yas8pzwnuo2WecBA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-45.delta" sparkle:deltaFrom="45" length="251990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1MhaZp5zdRf0tKPfHblUUeKF0nm306gU8SL8jRBCYcI9aNkr/FtwmfA4nkXJjJSqOErc2vxPL/33pOFP1t6+DA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer49-44.delta" sparkle:deltaFrom="44" length="288366" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9/iazrygTP1tdSx8ZhivCv2UBdTp59csmorNa3rJKTbCkCOJXeBbYnvn/LK10cdzh7Q2lcvLxPnBXdgwgxZ4Bg=="/>
             </sparkle:deltas>
         </item>
     </channel>
