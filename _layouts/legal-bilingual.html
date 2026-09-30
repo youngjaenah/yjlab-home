@@ -1,22 +1,27 @@
 ---
 ---
+{%- comment -%} Bilingual legal page shared by products. Front matter: product (display
+name, default YomiClaw), product_slug (URL + _includes dir, default yomiclaw),
+refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
+{%- assign product = page.product | default: "YomiClaw" -%}
+{%- assign slug = page.product_slug | default: "yomiclaw" -%}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ page.title_ko }} — YomiClaw</title>
-<meta name="description" content="{{ page.title_ko }} · YomiClaw / YJLAB" />
+<title>{{ page.title_ko }} — {{ product }}</title>
+<meta name="description" content="{{ page.title_ko }} · {{ product }} / YJLAB" />
 <meta name="robots" content="all" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ page.title_ko }} — YomiClaw" />
-<meta property="og:description" content="{{ page.title_ko }} · YomiClaw / YJLAB" />
+<meta property="og:title" content="{{ page.title_ko }} — {{ product }}" />
+<meta property="og:description" content="{{ page.title_ko }} · {{ product }} / YJLAB" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yjlab.io{{ page.url }}" />
-<meta property="og:image" content="https://www.yjlab.io/images/yomiclaw-icon.png" />
+<meta property="og:image" content="https://www.yjlab.io/images/{{ slug }}-icon.png" />
 
 <link rel="alternate" hreflang="ko" href="https://www.yjlab.io{{ page.url }}" />
 <link rel="alternate" hreflang="en" href="https://www.yjlab.io{{ page.url }}?lang=en" />
@@ -128,20 +133,20 @@
         <a href="?" data-set-lang="ko" aria-label="한국어">KO</a>
         <a href="?lang=en" data-set-lang="en" aria-label="English">EN</a>
       </div>
-      <a class="back" href="/yomiclaw/">← YomiClaw</a>
+      <a class="back" href="/{{ slug }}/">← {{ product }}</a>
     </div>
   </div>
 </header>
 
 <main class="doc">
   <div class="wrap">
-    <p class="eyebrow">YomiClaw</p>
+    <p class="eyebrow">{{ product }}</p>
     <div class="content" data-lang="ko">
-      {% capture ko_md %}{% include yomiclaw/{{ page.doc_ko }} %}{% endcapture %}
+      {% capture ko_md %}{% include {{ slug }}/{{ page.doc_ko }} %}{% endcapture %}
       {{ ko_md | markdownify }}
     </div>
     <div class="content" data-lang="en" hidden>
-      {% capture en_md %}{% include yomiclaw/{{ page.doc_en }} %}{% endcapture %}
+      {% capture en_md %}{% include {{ slug }}/{{ page.doc_en }} %}{% endcapture %}
       {{ en_md | markdownify }}
     </div>
   </div>
@@ -151,8 +156,9 @@
   <div class="wrap foot">
     <span>© 2026 YJLAB</span>
     <span>
-      <a href="/yomiclaw/privacy/" data-lang-text-ko="개인정보처리방침" data-lang-text-en="Privacy Policy">개인정보처리방침</a> ·
-      <a href="/yomiclaw/terms/" data-lang-text-ko="이용약관" data-lang-text-en="Terms of Service">이용약관</a> ·
+      <a href="/{{ slug }}/privacy/" data-lang-text-ko="개인정보처리방침" data-lang-text-en="Privacy Policy">개인정보처리방침</a> ·
+      <a href="/{{ slug }}/terms/" data-lang-text-ko="이용약관" data-lang-text-en="Terms of Service">이용약관</a> ·{% if page.refund_link %}
+      <a href="/{{ slug }}/refund/" data-lang-text-ko="환불정책" data-lang-text-en="Refund Policy">환불정책</a> ·{% endif %}
       <a href="/">yjlab.io →</a>
     </span>
   </div>
@@ -161,8 +167,8 @@
 <script>
 (function () {
   var TITLES = {
-    ko: {{ page.title_ko | jsonify }} + " — YomiClaw",
-    en: {{ page.title_en | jsonify }} + " — YomiClaw"
+    ko: {{ page.title_ko | jsonify }} + " — {{ product }}",
+    en: {{ page.title_en | jsonify }} + " — {{ product }}"
   };
 
   function setLang(lang, opts) {
