@@ -62,8 +62,13 @@
   .nav-links { display: flex; align-items: center; gap: 28px; font-size: 0.9rem; }
   .nav-links a { color: var(--ink-dim); text-decoration: none; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--ink); }
+  .nav-links a { white-space: nowrap; }
   @media (max-width: 560px) {
     .nav-links { gap: 18px; font-size: 0.85rem; }
+  }
+  /* Phones: keep Features / Pro / Contact; the rest is one scroll away. */
+  @media (max-width: 480px) {
+    .nav-links .nav-opt { display: none; }
   }
 
   /* ── hero ── */
@@ -211,6 +216,25 @@
   .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
   .step p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
 
+  /* ── pro ── */
+  .pro-offer {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    border: 1px solid var(--line); border-radius: 12px; background: var(--bg-soft);
+    padding: 24px 28px; margin-bottom: 28px;
+  }
+  .pro-price { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+  .pro-price small { font-size: 0.9rem; font-weight: 500; color: var(--ink-dim); letter-spacing: 0; margin-left: 6px; }
+  .pro-terms { font-size: 0.86rem; color: var(--ink-dim); margin-top: 8px; }
+  .pro-cta { text-align: right; }
+  .pro-cta .btn[aria-disabled="true"] { background: var(--ink-faint); cursor: default; pointer-events: none; }
+  .pro-cta .cta-meta { margin-top: 8px; }
+  @media (max-width: 560px) { .pro-cta { text-align: left; } }
+  .pro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 800px) { .pro-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .pro-grid { grid-template-columns: 1fr; } }
+  .pro-grid .step { padding: 20px 20px; }
+  .pro-note { font-size: 0.88rem; color: var(--ink-faint); margin-top: 24px; max-width: 70ch; line-height: 1.65; }
+
   .install-figure { margin: 36px 0 0; text-align: center; }
   .install-figure figcaption {
     margin-top: 14px; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.6;
@@ -323,9 +347,10 @@
   <div class="wrap nav">
     <a class="brand" href="/explorer/"><span class="mark"></span>Explorer for Mac</a>
     <nav class="nav-links">
-      <a href="/">YJLAB</a>
+      <a class="nav-opt" href="/">YJLAB</a>
       <a href="#features">Features</a>
-      <a href="#install">How to install</a>
+      <a href="#pro">Pro</a>
+      <a class="nav-opt" href="#install">How to install</a>
       <a href="mailto:support@yjlab.io">Contact</a>
     </nav>
   </div>
@@ -389,6 +414,36 @@
           <p>Built-in updates keep Explorer current — check any time from the menu, or let it check for you. An update never interrupts a copy or move in progress, and it waits until your work is safely finished before it installs.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ── PRO ── -->
+  <section class="section" id="pro">
+    <div class="wrap">
+      <h2>Explorer Pro</h2>
+      <p class="section-lead">Power tools for heavy file work, in a one-time upgrade. Everything above stays free — forever. Pro only adds.</p>
+      <div class="pro-offer">
+        <div>
+          <div class="pro-price">$19<small>USD · one-time</small></div>
+          <p class="pro-terms">Perpetual license · no subscription · verified offline on your Mac, no account</p>
+        </div>
+        <div class="pro-cta">
+          <a class="btn btn-primary" aria-disabled="true" role="link">Coming soon</a>
+          <p class="cta-meta">Available late October 2026</p>
+        </div>
+      </div>
+      <div class="pro-grid">
+        <div class="step"><h3>Dual-pane view</h3><p>Two folders side by side in one tab, with copy and move to the other pane in a keystroke.</p></div>
+        <div class="step"><h3>Batch rename</h3><p>Rename hundreds of files at once — find &amp; replace, numbering, case — with a live preview and a single undo.</p></div>
+        <div class="step"><h3>Compare &amp; sync folders</h3><p>See what differs between two folders and bring them in sync, with a preview before anything changes.</p></div>
+        <div class="step"><h3>Disk usage analyzer</h3><p>Find what's eating your disk, folder by folder, and clean it up from the same window.</p></div>
+        <div class="step"><h3>Find duplicates</h3><p>Locate identical files by content across folders and choose which copies to keep.</p></div>
+        <div class="step"><h3>Search subfolders</h3><p>Search a whole folder tree from the address bar (⇧⌘F), and save searches you run often.</p></div>
+        <div class="step"><h3>Browse &amp; create ZIPs</h3><p>Open a .zip like a folder without extracting, copy files out, or compress a selection — optionally with a password.</p></div>
+        <div class="step"><h3>Filter &amp; group</h3><p>Filter the current folder by type, date, or size, and group the Details view like Windows — by type, date, and more.</p></div>
+        <div class="step"><h3>Shelf &amp; tab sessions</h3><p>Park files on a shelf while you browse to their destination, and save sets of tabs to reopen later.</p></div>
+      </div>
+      <p class="pro-note">Your purchase comes with a license file — double-click it once and Pro unlocks. Explorer never contacts a server to check it, and the free app keeps every feature it has today.</p>
     </div>
   </section>
 
