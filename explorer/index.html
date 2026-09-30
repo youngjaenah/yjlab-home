@@ -229,10 +229,23 @@
   .pro-cta .btn[aria-disabled="true"] { background: var(--ink-faint); cursor: default; pointer-events: none; }
   .pro-cta .cta-meta { margin-top: 8px; }
   @media (max-width: 560px) { .pro-cta { text-align: left; } }
-  .pro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  @media (max-width: 800px) { .pro-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 520px) { .pro-grid { grid-template-columns: 1fr; } }
-  .pro-grid .step { padding: 20px 20px; }
+  .pro-feature { margin: 0 0 36px; }
+  .pro-feature img { display: block; width: 100%; height: auto; }
+  .pro-feature figcaption, .pro-also { font-size: 0.93rem; color: var(--ink-dim); line-height: 1.65; }
+  .pro-feature figcaption { text-align: center; margin-top: 4px; }
+  .pro-feature strong, .pro-also strong { color: var(--ink); font-weight: 600; }
+  .pro-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 28px; }
+  @media (max-width: 700px) { .pro-tiles { grid-template-columns: 1fr; } }
+  .pro-tile { margin: 0; }
+  .pro-tile img {
+    display: block; width: 100%; height: auto; border-radius: 10px;
+    border: 1px solid var(--line); box-shadow: 0 10px 28px rgba(0,0,0,.10);
+  }
+  .pro-tile h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; margin: 16px 0 6px; }
+  .pro-tile p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
+  .pro-also { margin-top: 36px; max-width: 76ch; }
+  .shot-gap { margin-top: 40px; }
+  .shot-frame { border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(0,0,0,.14); }
   .pro-note { font-size: 0.88rem; color: var(--ink-faint); margin-top: 24px; max-width: 70ch; line-height: 1.65; }
 
   .install-figure { margin: 36px 0 0; text-align: center; }
@@ -370,7 +383,8 @@
           <li>Undo and Redo for renames, moves, deletes, and copies — ⌘Z to take it back, ⌘⇧Z or ⌘Y to redo</li>
           <li>Editable address bar with typed paths, history, and drag-and-drop</li>
           <li>Folder sizes right in the Details view — visible at a glance, sortable like any column</li>
-          <li>File safety first — Trash by default · fully offline · zero telemetry</li>
+          <li>Map network drives — NAS and SMB shares stay one click away, like drive letters</li>
+          <li>File safety first — Trash by default · zero telemetry · no account</li>
         </ul>
         <div class="hero-cta reveal d4">
           <a class="btn btn-primary" href="/downloads/Explorer-for-Mac.dmg">Free download</a>
@@ -387,7 +401,7 @@
   <!-- ── SHOWCASE ── -->
   <section class="showcase">
     <div class="wrap">
-      <img src="../images/explorer/main-window.png" alt="Explorer for Mac main window showing the folder tree, tabs, address bar, Details view, and preview pane" loading="lazy" />
+      <img src="../images/explorer/main-window.webp" width="2200" height="1336" alt="Explorer for Mac main window: folder tree and Favorites on the left, tabs and an editable address bar above a Details list of documents, and a preview pane showing the selected PDF with its file info" loading="lazy" />
     </div>
   </section>
 
@@ -403,17 +417,35 @@
         </div>
         <div class="step">
           <h3>Windows shortcuts</h3>
-          <p>Cut, copy, and paste with ⌘X / ⌘C / ⌘V, rename with ⌘R, and jump to a typed path with ⌘L. Type-ahead and arrow keys behave the way you expect.</p>
+          <p>Cut, copy, and paste with ⌘X / ⌘C / ⌘V, rename with ⌘R, and jump to a typed path with ⌘L. Pasted files come out selected, and type-ahead and arrow keys behave the way you expect.</p>
         </div>
         <div class="step">
           <h3>Undo anything</h3>
-          <p>Renames, moves, deletes, and copies are all undoable — ⌘Z to take it back, ⌘⇧Z or ⌘Y to redo. Deletes go to the Trash, never silently gone.</p>
+          <p>Renames, moves, deletes, and copies are all undoable — ⌘Z to take it back, ⌘⇧Z or ⌘Y to redo. Deletes go to the Trash, and Restore puts items back where they came from.</p>
         </div>
         <div class="step">
-          <h3>Stays up to date</h3>
-          <p>Built-in updates keep Explorer current — check any time from the menu, or let it check for you. An update never interrupts a copy or move in progress, and it waits until your work is safely finished before it installs.</p>
+          <h3>Views that remember</h3>
+          <p>Details, List, four icon sizes, and a photo Gallery. Each folder keeps its own view, like Windows, and a Compact View toggle packs more rows on screen.</p>
+        </div>
+        <div class="step">
+          <h3>Preview with the details</h3>
+          <p>A preview pane shows images, PDFs, and documents next to everything Get Info would tell you — size, dates, dimensions, and camera details for photos.</p>
+        </div>
+        <div class="step">
+          <h3>Network drives</h3>
+          <p>NAS and SMB shares you connect to are remembered, like mapped drives on Windows, and reconnect with one click from the sidebar.</p>
         </div>
       </div>
+      <img class="shot shot-gap" src="../images/explorer/icons-view.webp" width="2200" height="1336" alt="Explorer for Mac in Large Icons view showing a folder of photo thumbnails, with the selected photo in the preview pane" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ── WORKFLOW ── -->
+  <section class="section" id="workflow">
+    <div class="wrap">
+      <h2>Right-click, like you're used to</h2>
+      <p class="section-lead">Open in a new tab, cut, copy, duplicate, and rename — plus Copy Path, Open in Terminal (with the terminal app you choose), and New Text Document on the folder background. The context menu works the way your muscle memory expects.</p>
+      <img class="shot shot-frame" src="../images/explorer/context-menu.webp" width="1600" height="1214" alt="Explorer for Mac context menu on a folder: Open, Open With, Open in New Tab, Open in New Window, Show in Finder, Open in Terminal, Cut, Copy, Paste, Duplicate, Rename, Move to Trash, Add to Favorites, Share, Copy Path, and Get Info" loading="lazy" />
     </div>
   </section>
 
@@ -432,27 +464,38 @@
           <p class="cta-meta">Available late October 2026</p>
         </div>
       </div>
-      <div class="pro-grid">
-        <div class="step"><h3>Dual-pane view</h3><p>Two folders side by side in one tab, with copy and move to the other pane in a keystroke.</p></div>
-        <div class="step"><h3>Batch rename</h3><p>Rename hundreds of files at once — find &amp; replace, numbering, case — with a live preview and a single undo.</p></div>
-        <div class="step"><h3>Compare &amp; sync folders</h3><p>See what differs between two folders and bring them in sync, with a preview before anything changes.</p></div>
-        <div class="step"><h3>Disk usage analyzer</h3><p>Find what's eating your disk, folder by folder, and clean it up from the same window.</p></div>
-        <div class="step"><h3>Find duplicates</h3><p>Locate identical files by content across folders and choose which copies to keep.</p></div>
-        <div class="step"><h3>Search subfolders</h3><p>Search a whole folder tree from the address bar (⇧⌘F), and save searches you run often.</p></div>
-        <div class="step"><h3>Browse &amp; create ZIPs</h3><p>Open a .zip like a folder without extracting, copy files out, or compress a selection — optionally with a password.</p></div>
-        <div class="step"><h3>Filter &amp; group</h3><p>Filter the current folder by type, date, or size, and group the Details view like Windows — by type, date, and more.</p></div>
-        <div class="step"><h3>Shelf &amp; tab sessions</h3><p>Park files on a shelf while you browse to their destination, and save sets of tabs to reopen later.</p></div>
+      <figure class="pro-feature">
+        <img src="../images/explorer/pro-dual-pane.webp" width="2200" height="1336" alt="Explorer for Mac in Dual-Pane View: Downloads on the left and Documents on the right, side by side in one tab" loading="lazy" />
+        <figcaption><strong>Dual-pane view.</strong> Two folders side by side in one tab — copy or move to the other pane in a keystroke (⌥⌘C / ⌥⌘M).</figcaption>
+      </figure>
+      <div class="pro-tiles">
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-batch-rename.webp" width="1400" height="933" alt="Batch Rename sheet renaming 24 photos from IMG_4103.JPG to Lisbon 2026 01.JPG with a regular expression and sequence numbers, previewed before applying" loading="lazy" />
+          <figcaption><h3>Batch rename</h3><p>Rename hundreds of files at once — find &amp; replace, regular expressions, numbering, and case — with a live preview and a single undo.</p></figcaption>
+        </figure>
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-compare.webp" width="1400" height="933" alt="Compare Folders window grouping files as Only in Left, Only in Right, Newer in Left, and Newer in Right, with a summary of copies and bytes to transfer" loading="lazy" />
+          <figcaption><h3>Compare &amp; sync folders</h3><p>See exactly what differs between two folders, pick a direction, and review every copy and replacement before anything changes.</p></figcaption>
+        </figure>
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-disk-usage.webp" width="1400" height="933" alt="Disk Space Analyzer listing subfolders by size with share bars, and the largest files below" loading="lazy" />
+          <figcaption><h3>Disk usage analyzer</h3><p>Find what's eating your disk, folder by folder, with the largest files listed underneath — and clean up from the same window.</p></figcaption>
+        </figure>
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-group-by.webp" width="1400" height="933" alt="Details view grouped by date modified into Earlier this week, Last week, Earlier this month, Last month, and Earlier this year" loading="lazy" />
+          <figcaption><h3>Group like Windows</h3><p>Group the Details view by date, type, size, or name — Earlier this week, Last month, and the other buckets you know from Windows.</p></figcaption>
+        </figure>
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-zip.webp" width="1400" height="933" alt="Browsing inside Brand Kit.zip: the address bar reads Archives, Brand Kit.zip, Brand Kit, Logos, and the images inside are listed" loading="lazy" />
+          <figcaption><h3>Browse ZIPs like folders</h3><p>Open a .zip without extracting it, preview what's inside, and copy files out. Compress a selection, optionally with a password.</p></figcaption>
+        </figure>
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-filter.webp" width="1400" height="933" alt="Filter bar with the Docs kind selected and Invoice typed in the search field, showing 3 of 13 items" loading="lazy" />
+          <figcaption><h3>Filter as you look</h3><p>Narrow the folder you're in by kind, date, or size in an instant, together with the name search — here, documents named “Invoice”: 3 of 13.</p></figcaption>
+        </figure>
       </div>
+      <p class="pro-also"><strong>Also in Pro:</strong> search all subfolders from the address bar (⇧⌘F) and save searches you run often · find duplicate files by content · a Stash Shelf to park files while you browse to their destination · named tab sessions to reopen a set of tabs later.</p>
       <p class="pro-note">Your purchase comes with a license file — double-click it once and Pro unlocks. Explorer never contacts a server to check it, and the free app keeps every feature it has today.</p>
-    </div>
-  </section>
-
-  <!-- ── WORKFLOW ── -->
-  <section class="section" id="workflow">
-    <div class="wrap">
-      <h2>Right-click, like you're used to</h2>
-      <p class="section-lead">Cut, copy, duplicate, and rename — plus Copy Path and Open in Terminal. The context menu works the way your muscle memory expects.</p>
-      <img class="shot" src="../images/explorer/context-menu.png" alt="Explorer for Mac context menu with Cut, Copy, Duplicate, Rename, Copy Path, and Open in Terminal" loading="lazy" />
     </div>
   </section>
 
@@ -505,7 +548,7 @@
         </span>
         <figcaption>When the DMG opens, drag <strong>Explorer</strong> onto the <strong>Applications</strong> folder.</figcaption>
       </figure>
-      <p class="fineprint"><strong>Privacy.</strong> Explorer for Mac works fully offline and never collects or transmits anything — no file names, no paths, no usage data. The app is notarized by Apple. Found a problem? Use Help ▸ Report a Bug inside the app, or write to <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</p>
+      <p class="fineprint"><strong>Privacy.</strong> Explorer for Mac never collects or transmits your data — no file names, no paths, no usage data. The only time it goes online is to check for updates, which you can turn off in Settings. The app is notarized by Apple. Found a problem? Use Help ▸ Report a Bug inside the app, or write to <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</p>
     </div>
   </section>
 </main>
