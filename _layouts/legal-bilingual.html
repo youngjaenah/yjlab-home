@@ -12,7 +12,7 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ page.title_ko }} — {{ product }}</title>
 <meta name="description" content="{{ page.title_ko }} · {{ product }} / YJLAB" />
-<meta name="robots" content="all" />
+<meta name="robots" content="{{ page.robots | default: "all" }}" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
