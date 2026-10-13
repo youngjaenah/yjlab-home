@@ -2,6 +2,7 @@
 layout: legal-bilingual
 product: Explorer for Mac
 product_slug: explorer
+default_lang: en
 refund_link: true
 robots: noindex
 title_ko: 자주 묻는 질문

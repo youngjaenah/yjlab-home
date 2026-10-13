@@ -2,29 +2,39 @@
 ---
 {%- comment -%} Bilingual legal page shared by products. Front matter: product (display
 name, default YomiClaw), product_slug (URL + _includes dir, default yomiclaw),
-refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
+refund_link (true adds a Refund Policy footer link), default_lang ("ko" or "en",
+default ko: the language shown without a ?lang= parameter; the other one needs
+?lang=xx), robots (default all). {%- endcomment -%}
 {%- assign product = page.product | default: "YomiClaw" -%}
 {%- assign slug = page.product_slug | default: "yomiclaw" -%}
+{%- if page.default_lang == "en" -%}
+  {%- assign dl = "en" -%}{%- assign ol = "ko" -%}
+  {%- assign dl_title = page.title_en -%}
+{%- else -%}
+  {%- assign dl = "ko" -%}{%- assign ol = "en" -%}
+  {%- assign dl_title = page.title_ko -%}
+{%- endif -%}
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ dl }}">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ page.title_ko }} — {{ product }}</title>
-<meta name="description" content="{{ page.title_ko }} · {{ product }} / YJLAB" />
+<title>{{ dl_title }} — {{ product }}</title>
+<meta name="description" content="{{ dl_title }} · {{ product }} / YJLAB" />
 <meta name="robots" content="{{ page.robots | default: "all" }}" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ page.title_ko }} — {{ product }}" />
-<meta property="og:description" content="{{ page.title_ko }} · {{ product }} / YJLAB" />
+<meta property="og:title" content="{{ dl_title }} — {{ product }}" />
+<meta property="og:description" content="{{ dl_title }} · {{ product }} / YJLAB" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yjlab.io{{ page.url }}" />
 <meta property="og:image" content="https://www.yjlab.io/images/{{ slug }}-icon.png" />
 
-<link rel="alternate" hreflang="ko" href="https://www.yjlab.io{{ page.url }}" />
-<link rel="alternate" hreflang="en" href="https://www.yjlab.io{{ page.url }}?lang=en" />
+<link rel="alternate" hreflang="{{ dl }}" href="https://www.yjlab.io{{ page.url }}" />
+<link rel="alternate" hreflang="{{ ol }}" href="https://www.yjlab.io{{ page.url }}?lang={{ ol }}" />
+<link rel="alternate" hreflang="x-default" href="https://www.yjlab.io{{ page.url }}" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -130,8 +140,8 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
     <a class="brand" href="/"><span class="mark"></span>YJLAB</a>
     <div class="nav-right">
       <div class="lang-toggle" role="group" aria-label="Language">
-        <a href="?" data-set-lang="ko" aria-label="한국어">KO</a>
-        <a href="?lang=en" data-set-lang="en" aria-label="English">EN</a>
+        <a href="{% if dl == "ko" %}?{% else %}?lang=ko{% endif %}" data-set-lang="ko" aria-label="한국어">KO</a>
+        <a href="{% if dl == "en" %}?{% else %}?lang=en{% endif %}" data-set-lang="en" aria-label="English">EN</a>
       </div>
       <a class="back" href="/{{ slug }}/">← {{ product }}</a>
     </div>
@@ -141,11 +151,11 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
 <main class="doc">
   <div class="wrap">
     <p class="eyebrow">{{ product }}</p>
-    <div class="content" data-lang="ko">
+    <div class="content" data-lang="ko"{% if dl != "ko" %} hidden{% endif %}>
       {% capture ko_md %}{% include {{ slug }}/{{ page.doc_ko }} %}{% endcapture %}
       {{ ko_md | markdownify }}
     </div>
-    <div class="content" data-lang="en" hidden>
+    <div class="content" data-lang="en"{% if dl != "en" %} hidden{% endif %}>
       {% capture en_md %}{% include {{ slug }}/{{ page.doc_en }} %}{% endcapture %}
       {{ en_md | markdownify }}
     </div>
@@ -156,9 +166,9 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
   <div class="wrap foot">
     <span>© 2026 YJLAB</span>
     <span>
-      <a href="/{{ slug }}/privacy/" data-lang-text-ko="개인정보처리방침" data-lang-text-en="Privacy Policy">개인정보처리방침</a> ·
-      <a href="/{{ slug }}/terms/" data-lang-text-ko="이용약관" data-lang-text-en="Terms of Service">이용약관</a> ·{% if page.refund_link %}
-      <a href="/{{ slug }}/refund/" data-lang-text-ko="환불정책" data-lang-text-en="Refund Policy">환불정책</a> ·{% endif %}
+      <a href="/{{ slug }}/privacy/" data-lang-text-ko="개인정보처리방침" data-lang-text-en="Privacy Policy">{% if dl == "en" %}Privacy Policy{% else %}개인정보처리방침{% endif %}</a> ·
+      <a href="/{{ slug }}/terms/" data-lang-text-ko="이용약관" data-lang-text-en="Terms of Service">{% if dl == "en" %}Terms of Service{% else %}이용약관{% endif %}</a> ·{% if page.refund_link %}
+      <a href="/{{ slug }}/refund/" data-lang-text-ko="환불정책" data-lang-text-en="Refund Policy">{% if dl == "en" %}Refund Policy{% else %}환불정책{% endif %}</a> ·{% endif %}
       <a href="/">yjlab.io →</a>
     </span>
   </div>
@@ -166,6 +176,7 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
 
 <script>
 (function () {
+  var DEFAULT_LANG = "{{ dl }}";
   var TITLES = {
     ko: {{ page.title_ko | jsonify }} + " — {{ product }}",
     en: {{ page.title_en | jsonify }} + " — {{ product }}"
@@ -173,7 +184,7 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
 
   function setLang(lang, opts) {
     opts = opts || {};
-    if (lang !== "en") lang = "ko";
+    if (lang !== "en" && lang !== "ko") lang = DEFAULT_LANG;
 
     document.documentElement.lang = lang;
     document.title = TITLES[lang];
@@ -187,18 +198,26 @@ refund_link (true adds a Refund Policy footer link). {%- endcomment -%}
     document.querySelectorAll("[data-lang-text-" + lang + "]").forEach(function (el) {
       el.textContent = el.getAttribute("data-lang-text-" + lang);
     });
+    // Keep the chosen language across this product's pages: same-site links
+    // carry ?lang= only for the non-default language.
+    document.querySelectorAll('a[href^="/' + "{{ slug }}" + '/"]').forEach(function (a) {
+      var url = new URL(a.getAttribute("href"), location.origin);
+      if (lang === DEFAULT_LANG) url.searchParams.delete("lang");
+      else url.searchParams.set("lang", lang);
+      a.setAttribute("href", url.pathname + url.search + url.hash);
+    });
 
     if (opts.updateUrl) {
       var url = new URL(location.href);
-      if (lang === "en") url.searchParams.set("lang", "en");
-      else url.searchParams.delete("lang");
+      if (lang === DEFAULT_LANG) url.searchParams.delete("lang");
+      else url.searchParams.set("lang", lang);
       history.replaceState(null, "", url.toString());
     }
   }
 
-  // initial language: query param wins; otherwise ko
+  // initial language: query param wins; otherwise the page's default_lang
   var params = new URLSearchParams(location.search);
-  var initial = params.get("lang") === "en" ? "en" : "ko";
+  var initial = params.get("lang") || DEFAULT_LANG;
   setLang(initial);
 
   document.querySelectorAll(".lang-toggle a").forEach(function (a) {
