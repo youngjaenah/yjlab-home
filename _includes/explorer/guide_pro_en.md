@@ -51,13 +51,14 @@ See what differs between two folders, then sync only the items you choose, in on
 
 1. Open **Compare Folders…**. In Dual-Pane View, **Left:** and **Right:** are filled in with the two panes' folders. Otherwise, the active folder is filled in. Use **Choose…** to pick a different folder.
 2. Click **Compare**. Files are compared by size and modified date (**Quick compare (size + date)**), and you can **Cancel** at any time.
-3. The results are sorted into **Only in Left**, **Only in Right**, **Newer in Left**, **Newer in Right**, and **Identical**. Up to this point, nothing has been written to either folder.
+3. The results are sorted into **Only in Left**, **Only in Right**, **Newer in Left**, **Newer in Right**, **File vs. Folder**, and **Identical**. Up to this point, nothing has been written to either folder.
 4. Under **Direction:**, choose **Left → Right**, **Right → Left**, or **Both (newest wins)**. Use the checkboxes next to each item or category to choose what to sync.
 5. Check the summary of copies, replacements, deletions to Trash, and the amount of data to transfer, then click **Run**.
 
 - Files that exist only on the destination side are never deleted unless you check them.
 - Replaced and deleted files go to the Trash. They're never permanently deleted.
 - **Both (newest wins)** copies the newer version of each file to the other side and never deletes anything. **Identical** items are never synced.
+- **File vs. Folder** lists names that are a file on one side and a folder on the other. They're never synced, in any direction. Rename or move one of them yourself, then compare again.
 - If you cancel partway through, no half-written file is left under its final name. Subfolders that can't be read are marked as excluded from the comparison.
 
 ## Analyze Disk Usage
@@ -88,9 +89,10 @@ Find files whose contents are identical, choose which copy to keep, and move the
 4. Check the summary (groups, checked files, and space to be freed), click **Move Duplicates to Trash**, and confirm.
 
 - Files are compared by both size and content, so files that just happen to be the same size aren't grouped. Zero-byte files, hard links, and symbolic links are left out.
+- Hidden files and folders (such as `.git`) and developer folders (`node_modules`, `DerivedData`, `Pods`, `__pycache__`, and the like) aren't scanned, because the apps that own those files expect them to stay where they are. Turn on **Include hidden files** at the bottom of the window to scan hidden items as well; the scan starts over. Developer folders are skipped unless you open Find Duplicates on one of them directly.
 - Every group always keeps at least one copy. You can't check the last remaining copy.
 - Files go to the Trash. To restore them, press ⌘Z in the main window.
-- Just before removing, each checked file is checked again. If it changed or disappeared after the scan, it's skipped and you'll be told.
+- Just before removing, each checked file is checked again. If it changed or disappeared after the scan, it's skipped and you'll be told. The copy you're keeping is checked too: if it changed or disappeared, nothing in that group is removed.
 
 ## Find in All Subfolders
 
@@ -169,10 +171,29 @@ Open a .zip file like a folder, without extracting it. Look through it, preview 
 3. Select a file to see it in the preview pane. Double-click a file to open a read-only copy in its default app.
 4. To copy files out, select them, press ⌘C, go to a regular folder, and press ⌘V. You can also drag them to the other pane or to Finder.
 
-- The inside of a ZIP is read-only. You can't paste, delete, rename, or create folders there, and the original ZIP file is never changed.
+- Browsing never changes the ZIP. To add, delete, or rename files inside it, see **Edit a ZIP** below.
+- If a file or folder with the same name is already there and you choose **Replace**, it's replaced only after everything was extracted. If an item can't be extracted (for example, it's password-protected) or you cancel, the existing file or folder is kept as it was.
 - To open a ZIP in its default app the old way, right-click it ▸ **Open with Default App**.
 - For a password-protected ZIP, you can see the list of files. If you try to open, preview, or copy one, you'll see "Encrypted archives are not supported."
 - Without Pro, double-clicking a .zip opens it in its default app, as before. Find in All Subfolders doesn't search inside ZIP files.
+
+## Edit a ZIP
+
+Add, delete, and rename files inside a ZIP you're browsing, like a regular folder.
+
+**How to open it**: open a .zip with **Browse Archive**, then drag or paste files into it, or use **New Folder**, **Rename** (⌘R), and **Delete**
+
+1. To add files, drag them into the ZIP's file list (or onto a folder inside it), or copy them (⌘C) and paste (⌘V) inside the ZIP. Choose **New Folder** to create an empty folder. To move files in instead, cut them (⌘X) and paste inside the ZIP: once the ZIP is updated, the originals go to the Trash, and one Undo (⌘Z) puts everything back. Dragging into a ZIP always copies.
+2. To rename an item, select it and press ⌘R, or right-click ▸ **Rename**. Renaming a folder renames everything in it.
+3. To delete items, select them and press Delete, then confirm.
+4. A progress window shows each change. You can cancel it, and canceling leaves the ZIP exactly as it was.
+
+- Every change writes a complete new ZIP and then swaps it in. Your original ZIP is moved to the Trash, so Undo (⌘Z) brings it back.
+- On a drive without a Trash (most network shares), you're asked to confirm first, because the previous version can't be kept and the change can't be undone.
+- Files you didn't touch are copied exactly as they were, including password-protected ones. When you add files to a ZIP that has password-protected files, you're asked for a password and the new files are protected with it.
+- Some ZIPs can only be browsed: ones whose file names use an older, non-Unicode encoding (common in ZIPs made on older Korean or Japanese Windows), damaged or split ZIPs, and self-extracting archives. The status bar says why.
+- If the ZIP was changed by another app while you were browsing it, the change is refused and the list reloads.
+- Names you add or rename are saved in the form Windows expects, so Korean and other non-English names show correctly in Windows File Explorer and 7-Zip. ZIPs made with Finder's Compress can be edited too.
 
 ## Compress to ZIP
 
@@ -184,7 +205,7 @@ Compress the selected files and folders into a new .zip file, with optional AES-
 2. Choose **Compress to ZIP**. A new ZIP file appears next to your selection and is selected. For one item, the ZIP takes that item's name. For several items, it takes the name of the folder they're in.
 3. To add a password, choose **Compress with Password…**, enter the same password twice, and click **Compress**.
 
-- If a ZIP with that name already exists, it's never overwritten. The new file gets a name like "name 2.zip". Adding files to an existing ZIP isn't supported.
+- If a ZIP with that name already exists, it's never overwritten. The new file gets a name like "name 2.zip". To add files to an existing ZIP, see **Edit a ZIP**.
 - Your original files aren't changed. You can cancel large jobs from the progress window, and a canceled ZIP isn't left behind.
 - Undo (⌘Z) moves the new ZIP file to the Trash.
 - These commands aren't available in the Trash or inside a ZIP. If the password is empty or the two entries don't match, the window stays open and tells you what to fix.

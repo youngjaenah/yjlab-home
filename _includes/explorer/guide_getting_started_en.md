@@ -182,7 +182,7 @@ The context menu also offers **Open With**, **Open in New Window**, **Duplicate*
 
 ## 6. Going further
 
-Explorer Pro adds Dual-Pane View, Batch Rename, folder compare and sync, a disk usage analyzer, a duplicate finder, a filter bar, grouping, ZIP browsing and compression, subfolder search, the Stash Shelf, and tab sessions. See [Explorer Pro](/explorer/guide/pro/?lang=en). Everything in this guide stays free.
+Explorer Pro adds Dual-Pane View, Batch Rename, folder compare and sync, a disk usage analyzer, a duplicate finder, a filter bar, grouping, ZIP browsing, editing, and compression, subfolder search, the Stash Shelf, and tab sessions. See [Explorer Pro](/explorer/guide/pro/?lang=en). Everything in this guide stays free.
 
 - [Keyboard Shortcuts](/explorer/guide/shortcuts/?lang=en)
 - [FAQ](/explorer/guide/faq/?lang=en)
