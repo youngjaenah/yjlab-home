@@ -236,6 +236,10 @@
   .pro-feature strong, .pro-also strong { color: var(--ink); font-weight: 600; }
   .pro-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 28px; }
   @media (max-width: 700px) { .pro-tiles { grid-template-columns: 1fr; } }
+  /* An odd last tile sits centered at the width of the others. */
+  @media (min-width: 701px) {
+    .pro-tile:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 14px); }
+  }
   .pro-tile { margin: 0; }
   .pro-tile img {
     display: block; width: 100%; height: auto; border-radius: 10px;
@@ -487,12 +491,16 @@
           <figcaption><h3>Group files the Windows way</h3><p>Group the Details view by date, type, size, or name — Earlier this week, Last month, and the other groups you know from Windows.</p></figcaption>
         </figure>
         <figure class="pro-tile">
-          <img src="../images/explorer/pro-zip.webp" width="1400" height="933" alt="Browsing inside Brand Kit.zip: the address bar reads Archives, Brand Kit.zip, Brand Kit, Logos, and the images inside are listed" loading="lazy" />
-          <figcaption><h3>Browse, edit, and create ZIP archives</h3><p>Open a .zip without extracting it, preview what's inside, and copy files out. Add, delete, or rename files inside it — the previous version goes to the Trash. Compress a selection, optionally with a password.</p></figcaption>
+          <img src="../images/explorer/pro-archives.webp" width="1400" height="933" alt="Browsing inside Trip Photos.7z: the address bar reads Archives, Trip Photos.7z, Lisbon 2026, the photos inside are listed, and the selected one is shown in the preview pane" loading="lazy" />
+          <figcaption><h3>Open ZIP, 7z, RAR, and tar archives</h3><p>Walk into an archive like a folder, preview what's inside, and copy out only what you need — no extracting first. Add, delete, or rename files inside a ZIP (the previous version goes to the Trash), and compress a selection, optionally with a password.</p></figcaption>
         </figure>
         <figure class="pro-tile">
           <img src="../images/explorer/pro-filter.webp" width="1400" height="933" alt="Filter bar with the Docs kind selected and Invoice typed in the search field, showing 3 of 13 items" loading="lazy" />
           <figcaption><h3>Find files faster with filters</h3><p>Filter the current folder by file type, date, or size, and combine filters with a filename search. Here, the filters show 3 of 13 items: documents matching “Invoice”.</p></figcaption>
+        </figure>
+        <figure class="pro-tile">
+          <img src="../images/explorer/pro-whats-using.webp" width="1400" height="933" alt="Camera Card couldn't be ejected; the What's Using Camera Card window lists QuickTime Player holding a movie, a command-line process, a shell whose working folder is the card, and Explorer itself, each with Quit and Force Quit" loading="lazy" />
+          <figcaption><h3>What's using this file?</h3><p>When a drive won't eject or a file is “in use”, see which of your apps is holding it, quit it right there, and try again — no guessing, no restarting your Mac.</p></figcaption>
         </figure>
       </div>
       <p class="pro-also"><strong>Also in Pro:</strong> search all subfolders from the address bar (⇧⌘F) and save searches you run often · find duplicate files by content · a Stash Shelf to park files while you browse to their destination · named tab sessions to reopen a set of tabs later.</p>

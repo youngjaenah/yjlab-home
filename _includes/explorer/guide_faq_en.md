@@ -12,7 +12,7 @@ No. Explorer is a separate file manager that runs **alongside** Finder. It doesn
 
 The free version is a complete file manager: folder tree, tabs, Favorites, Details view, copy/move/rename, undo, Trash restore, network drives, and more. Everything that has been free stays free, with no time limits and no upgrade pop-ups.
 
-Pro is a one-time upgrade that adds advanced tools such as batch rename, folder compare & sync, a disk usage analyzer, dual-pane view, and ZIP browsing, editing, and compression. See [Explorer Pro](/explorer/guide/pro/) for details.
+Pro is a one-time upgrade that adds advanced tools such as batch rename, folder compare & sync, a disk usage analyzer, dual-pane view, ZIP browsing, editing, and compression, browsing of 7z, RAR, and tar archives, and finding which app is using a file. See [Explorer Pro](/explorer/guide/pro/) for details.
 
 ### Which Macs does it run on?
 
@@ -163,7 +163,11 @@ Check **Apply to all remaining items** to use the same choice for the rest of th
 
 ### How does Explorer handle ZIP files?
 
-In the free version, double-clicking a ZIP file opens it with the macOS default app (such as Archive Utility). With Pro, you can open a ZIP like a folder without extracting it, preview what's inside, and copy files out. You can also add, delete, and rename files inside it; each change saves a new ZIP and moves the previous one to the Trash, so ⌘Z brings it back (see [Edit a ZIP](/explorer/guide/pro/?lang=en)). You can also compress a selection with **File ▸ Compress to ZIP**, or add an AES-256 password with **Compress with Password…**. Password-protected ZIPs can be opened with apps that support AES encryption, such as Keka or 7-Zip. <!-- TODO 확인: macOS 아카이브 유틸리티 / Windows 11 기본 탐색기에서 AES-256 ZIP 해제 가능 여부 -->
+In the free version, double-clicking a ZIP file opens it with the macOS default app (such as Archive Utility). With Pro, you can open a ZIP like a folder without extracting it, preview what's inside, and copy files out. You can also add, delete, and rename files inside it; each change saves a new ZIP and moves the previous one to the Trash, so ⌘Z brings it back (see [Edit a ZIP](/explorer/guide/pro/?lang=en)). You can also compress a selection with **File ▸ Compress to ZIP**, or add an AES-256 password with **Compress with Password…**. Password-protected ZIPs can be opened with apps that support AES encryption, such as Keka or 7-Zip. Pro also opens 7z, RAR, and tar archives (including .tar.gz) the same way, read-only (see [Browse Archives](/explorer/guide/pro/?lang=en)). <!-- TODO 확인: macOS 아카이브 유틸리티 / Windows 11 기본 탐색기에서 AES-256 ZIP 해제 가능 여부 -->
+
+### A drive won't eject because it's "in use".
+
+An app still has a file on the drive open: often a video or PDF that's still open, or a Terminal window sitting in a folder on the drive. Close that app, or close the file in it, and eject again. macOS doesn't say which app it is. With Pro, click **What's Using This?** in the message to see the apps holding the drive, quit them there, and click **Try Again** (see [What's Using This?](/explorer/guide/pro/?lang=en)).
 
 ## Updates
 

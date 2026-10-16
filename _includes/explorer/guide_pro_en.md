@@ -158,24 +158,27 @@ Split the Details view into groups by date, type, size, or name, as in Windows F
 - Name groups are **0 - 9**, **A - H**, **I - P**, **Q - Z**, **ㄱ - ㅎ** (Korean), and **Other**. Size groups use the same ranges as Windows, from **Empty (0 KB)** to **Gigantic (>4 GB)**. Folders whose size isn't known yet go under **Unknown**.
 - Clicking a column header sorts the items inside each group. The order of the groups stays the same.
 - The name search and the filter bar apply first, and the header counts reflect the filtered list.
-- Each pane has its own grouping. The last one you chose becomes the default for new panes and the next launch. Grouping isn't available in search results or inside a ZIP file.
+- Each pane has its own grouping. The last one you chose becomes the default for new panes and the next launch. Grouping isn't available in search results or inside an archive.
 
-## Browse Archive (ZIP)
+## Browse Archives (ZIP, 7z, RAR, tar)
 
-Open a .zip file like a folder, without extracting it. Look through it, preview files, and copy out only the files you need.
+Open an archive like a folder, without extracting it. Look through it, preview files, and copy out only the files you need. Works with .zip, .7z, .rar, .tar, .tar.gz (.tgz), .tar.bz2, .tar.xz, and single .gz, .bz2, and .xz files.
 
-**How to open it**: double-click a .zip file, or right-click it ▸ **Browse Archive**
+**How to open it**: double-click the archive, or right-click it ▸ **Browse Archive**
 
-1. Double-click a .zip file to open it like a folder. The address bar shows `…/name.zip`.
-2. Open subfolders, and use Back or Up to leave. Going Up from the top level of the ZIP returns you to the folder that contains it.
+1. Double-click an archive to open it like a folder. The address bar shows `…/name.zip` (or `…/name.7z`, and so on).
+2. Open subfolders, and use Back or Up to leave. Going Up from the top level of the archive returns you to the folder that contains it.
 3. Select a file to see it in the preview pane. Double-click a file to open a read-only copy in its default app.
 4. To copy files out, select them, press ⌘C, go to a regular folder, and press ⌘V. You can also drag them to the other pane or to Finder.
 
-- Browsing never changes the ZIP. To add, delete, or rename files inside it, see **Edit a ZIP** below.
+- Browsing never changes the archive. A ZIP can also be edited, see **Edit a ZIP** below. 7z, RAR, and tar archives are read-only: the status bar says "Only ZIP archives can be edited."
+- A .tar.gz, .tar.bz2, or .tar.xz file has no table of contents, so a large one is read from start to end before the list appears. The status bar shows "Reading … %". Press Esc to stop and go back.
 - If a file or folder with the same name is already there and you choose **Replace**, it's replaced only after everything was extracted. If an item can't be extracted (for example, it's password-protected) or you cancel, the existing file or folder is kept as it was.
-- To open a ZIP in its default app the old way, right-click it ▸ **Open with Default App**.
-- For a password-protected ZIP, you can see the list of files. If you try to open, preview, or copy one, you'll see "Encrypted archives are not supported."
-- Without Pro, double-clicking a .zip opens it in its default app, as before. Find in All Subfolders doesn't search inside ZIP files.
+- To open an archive in its default app the old way, right-click it ▸ **Open with Default App**.
+- For a password-protected archive, you can see the list of files. If you try to open, preview, or copy one, you'll see "Password-protected files in this archive can't be opened here." A 7z or RAR whose file names are encrypted too, and the parts of a split archive (.7z.001, .part1.rar, …), can't be browsed. Explorer tells you so and offers **Open with Default App**.
+- Links inside a tar archive are listed but not copied out, and the skip is reported.
+- Other formats, such as .tar.zst, open in their default app as before.
+- Without Pro, double-clicking an archive opens it in its default app, as before. Find in All Subfolders doesn't search inside archives.
 
 ## Edit a ZIP
 
@@ -208,7 +211,7 @@ Compress the selected files and folders into a new .zip file, with optional AES-
 - If a ZIP with that name already exists, it's never overwritten. The new file gets a name like "name 2.zip". To add files to an existing ZIP, see **Edit a ZIP**.
 - Your original files aren't changed. You can cancel large jobs from the progress window, and a canceled ZIP isn't left behind.
 - Undo (⌘Z) moves the new ZIP file to the Trash.
-- These commands aren't available in the Trash or inside a ZIP. If the password is empty or the two entries don't match, the window stays open and tells you what to fix.
+- These commands aren't available in the Trash or inside an archive. If the password is empty or the two entries don't match, the window stays open and tells you what to fix.
 
 ## Stash Shelf
 
@@ -225,7 +228,7 @@ Collect files from several folders in one place, then copy or move them all at o
 - The shelf only remembers where your files are. Adding a file to it doesn't copy or move anything. **Remove from Shelf** and **Clear Shelf** don't affect the files themselves.
 - Copying and moving work like any other copy or move: you get progress, the name-conflict prompt, and Undo. Items that were moved successfully are removed from the shelf.
 - All windows share one shelf, and its contents are kept after you restart the app. Whether the shelf is shown is set separately for each window.
-- If a file is deleted or moved elsewhere, its shelf item is dimmed and skipped. You can't add items from inside a ZIP file.
+- If a file is deleted or moved elsewhere, its shelf item is dimmed and skipped. You can't add items from inside an archive.
 
 ## Tab Sessions
 
@@ -242,6 +245,23 @@ Save the current window's tabs under a name, then reopen them later in a new win
 - Tabs for folders that no longer exist are skipped. If none of the folders exist, the session opens with a single Home tab.
 - You can save more than one session with the same name. Deleting asks for confirmation and can't be undone.
 - Reopening your last tabs automatically when the app starts is a separate free feature.
+
+## What's Using This?
+
+See which of your apps is holding a file, folder, or drive open, and close it, like PowerToys File Locksmith on Windows.
+
+**How to open it**: when a drive won't eject or a file is "in use", click **What's Using This?** in the message. Or right-click a file, folder, or drive in the sidebar ▸ **What's Using This?**, or choose **Tools ▸ What's Using This?**
+
+1. The window lists each app or process that holds the item: its name, process ID (PID), and the files it has open (or, for a shell, that it's sitting in the folder).
+2. Click **Quit** to close an app normally. The app may ask you to save first. If it doesn't quit, the row says "Still running."
+3. **Force Quit** closes an app immediately, for example one that doesn't respond. Explorer asks first, because unsaved changes in that app are lost.
+4. If you opened the window from a failed eject or operation, click **Try Again** to repeat it. The window closes once it works.
+
+- Only your own apps are shown. System services, other users, or other computers on a network may also be using the item, and the window says so. Explorer never asks for an administrator password.
+- If Explorer itself is listed (for example, a PDF shown in the preview pane, or a drive you're browsing), click **Release Explorer's Holds**.
+- Command-line processes, such as a Terminal shell sitting in the folder, can only be force-quit.
+- Click **Refresh** to look again.
+- Without Pro, "in use" messages work as before. **Tools ▸ What's Using This?** shows a **PRO** badge.
 
 ## If your license is removed
 
