@@ -12,7 +12,7 @@ No. Explorer is a separate file manager that runs **alongside** Finder. It doesn
 
 The free version is a complete file manager: folder tree, tabs, Favorites, Details view, copy/move/rename, undo, Trash restore, network drives, and more. Everything that has been free stays free, with no time limits and no upgrade pop-ups.
 
-Pro is a one-time upgrade that adds advanced tools such as batch rename, folder compare & sync, a disk usage analyzer, dual-pane view, ZIP browsing, editing, and compression, browsing of 7z, RAR, and tar archives, and finding which app is using a file. See [Explorer Pro](/explorer/guide/pro/) for details.
+Pro is a one-time upgrade that adds advanced tools such as batch rename, folder compare & sync, a disk usage analyzer, dual-pane view, ZIP browsing, editing, and compression, browsing of 7z, RAR, and tar archives, finding which app is using a file, and browsing and copying the photos on an iPhone or iPad. See [Explorer Pro](/explorer/guide/pro/) for details.
 
 ### Which Macs does it run on?
 
@@ -168,6 +168,24 @@ In the free version, double-clicking a ZIP file opens it with the macOS default 
 ### A drive won't eject because it's "in use".
 
 An app still has a file on the drive open: often a video or PDF that's still open, or a Terminal window sitting in a folder on the drive. Close that app, or close the file in it, and eject again. macOS doesn't say which app it is. With Pro, click **What's Using This?** in the message to see the apps holding the drive, quit them there, and click **Try Again** (see [What's Using This?](/explorer/guide/pro/?lang=en)).
+
+## iPhone & iPad (Pro)
+
+### My iPhone doesn't appear in the sidebar.
+
+Connect it with a cable (Wi-Fi connections aren't shown), unlock it, and tap **Trust** if the phone asks. If it says "Locked", unlock the phone and the photos appear. Browsing the phone needs Pro; without it, the phone shows a **PRO** badge. It's fine if Photos or Image Capture opens at the same time. See [iPhone and iPad Photos](/explorer/guide/pro/?lang=en).
+
+### Can I copy photos from my Mac to my iPhone?
+
+No. Like Windows, Explorer can read photos from the phone and delete them, but it can't add files to the phone or rename them. To put photos on your iPhone, use AirDrop, iCloud Photos, or syncing in Finder.
+
+### Can I get back photos I deleted from my iPhone in Explorer?
+
+No. Photos deleted over the cable don't go to the phone's "Recently Deleted" album, which is why Explorer asks for confirmation every time. Copy anything you want to keep before deleting it.
+
+### Some photos on my iPhone are missing from the list.
+
+Photos kept only in iCloud (with "Optimize iPhone Storage" on) aren't stored on the phone, so they aren't listed. They appear after the phone downloads them, or you can get them from iCloud Photos.
 
 ## Updates
 

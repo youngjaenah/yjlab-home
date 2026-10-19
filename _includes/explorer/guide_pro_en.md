@@ -13,7 +13,7 @@ This guide walks through each feature included in Explorer Pro. If you haven't a
 
 Open two folders side by side in one tab, then copy or move files from one side to the other.
 
-**How to open it**: **View ▸ Dual-Pane View** (⌘\\), or the **Dual-Pane View** button on the right side of the toolbar
+**How to open it**: **View ▸ Dual-Pane View** (⌘\\), or the **Dual-Pane View** button on the right side of the toolbar (the button appears once Pro is active)
 
 1. Go to your starting folder and choose **View ▸ Dual-Pane View**. Your current view stays in the left pane, and a new pane opens on the right.
 2. Click the right pane to make it active, then go to the destination folder. The address bar, sidebar, status bar, and preview always follow the active pane.
@@ -262,6 +262,27 @@ See which of your apps is holding a file, folder, or drive open, and close it, l
 - Command-line processes, such as a Terminal shell sitting in the folder, can only be force-quit.
 - Click **Refresh** to look again.
 - Without Pro, "in use" messages work as before. **Tools ▸ What's Using This?** shows a **PRO** badge.
+
+## iPhone and iPad Photos
+
+Browse the photos and videos on an iPhone or iPad connected with a cable, then copy them to your Mac or delete them from the phone, like **This PC ▸ Apple iPhone** on Windows. Nothing needs to be installed on the phone.
+
+**How to open it**: connect the phone with a cable, unlock it, and tap **Trust** if the phone asks. The phone appears under **Locations** in the sidebar.
+
+1. Click the phone in the sidebar, then open **Internal Storage ▸ DCIM**. The camera roll is in monthly folders such as `202610_a`, just as Windows shows them.
+2. The list shows each photo and video with its name, the date it was taken, its type, and its size. Thumbnails appear as you scroll. Sorting, the filter bar, and the Details, List, and Icons views work as in any folder.
+3. Select a photo to see it in the preview pane, press Space for Quick Look, or double-click to open it in its default app.
+4. To copy to your Mac, drag the files to a folder, the Desktop, the sidebar, Finder, or a web page's upload area. You can also press ⌘C and then ⌘V in a regular folder. Files arrive exactly as they're stored on the phone, with the date they were taken.
+5. To copy everything you haven't imported yet, right-click the phone in the sidebar ▸ **Import Pictures and Videos…** and choose a folder (Pictures by default). Photos go into a folder named after the phone. Files that are already there with the same name and size are skipped, so you can run it again after taking new photos.
+6. To delete photos from the phone, select them and press Delete, then click **Delete** in the confirmation. Pressing Return cancels.
+
+- **Deleting from the phone can't be undone.** Photos deleted over the cable don't go to the phone's "Recently Deleted" album, so the confirmation asks every time. Copy anything you want to keep first.
+- Nothing is ever added to or renamed on the phone. New Folder, Rename, Paste, and dropping files onto the phone aren't available. To put photos on your iPhone, use AirDrop, iCloud Photos, or syncing in Finder.
+- If the phone is locked, the window says "Unlock your iPhone and tap Trust if asked." and the list appears as soon as you unlock it. After that, you can keep browsing and copying even if the phone locks again, until you unplug it.
+- If you unplug the phone, its tab says the phone isn't connected and reloads when you plug it back in. A copy in progress stops and tells you how many items were copied, with no half-copied files left behind.
+- Photos kept only in iCloud (with "Optimize iPhone Storage" on) aren't on the phone, so they aren't shown.
+- Files are copied in their original format. Photos taken as HEIC stay HEIC, which macOS opens normally. Edited photos appear as a separate file (for example `IMG_E1234.JPG`) next to the original, and a Live Photo appears as a photo plus a short video.
+- Without Pro, the phone appears in the sidebar with a **PRO** badge, and clicking it shows a short notice with **Learn More**.
 
 ## If your license is removed
 
