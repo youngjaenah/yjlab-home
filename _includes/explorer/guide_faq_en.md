@@ -183,6 +183,10 @@ No. Like Windows, Explorer can read photos from the phone and delete them, but i
 
 No. Photos deleted over the cable don't go to the phone's "Recently Deleted" album, which is why Explorer asks for confirmation every time. Copy anything you want to keep before deleting it.
 
+### Can I see documents from the iPhone "Files" app?
+
+Over the cable, only the camera roll is available (see [iPhone and iPad Photos](/explorer/guide/pro/?lang=en)). Apple doesn't let other apps read the iPhone "Files" app's storage that way. Instead, save the documents to **iCloud Drive** in the Files app. They appear in Explorer's sidebar under **Locations ▸ iCloud Drive** (free), and the Mac keeps them in sync.
+
 ### Some photos on my iPhone are missing from the list.
 
 Photos kept only in iCloud (with "Optimize iPhone Storage" on) aren't stored on the phone, so they aren't listed. They appear after the phone downloads them, or you can get them from iCloud Photos.

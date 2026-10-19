@@ -35,7 +35,8 @@ The left sidebar works like Windows' navigation pane and is always visible:
 - **Home**: a landing page with your **Favorites**, **Recent locations** (the folders you visited most recently), and **Drives**. A new window with nothing to restore opens here.
 - **Gallery**: the photos and videos in your chosen folders as a thumbnail grid, newest first. Pictures is the default source. Use **Add Source…** in the Gallery's source menu to include more folders.
 - **Favorites**: Desktop, Downloads, Documents, Pictures, Music, and Videos are pinned by default, along with any folders you pin yourself. Drag favorites to reorder them.
-- **Locations**: your home folder, Macintosh HD, external drives, and network shares as an expandable folder tree. Removable drives have an eject button.
+- **Locations**: your home folder, Macintosh HD, **iCloud Drive**, external drives, and network shares as an expandable folder tree. Removable drives have an eject button.
+- **iCloud Drive** appears when iCloud Drive is turned on in System Settings. It opens as a folder named "iCloud Drive", and the address bar reads `iCloud Drive › …` instead of a Library path. It holds what the iPhone "Files" app shows under iCloud Drive, so it's the easiest way to move documents between your iPhone and your Mac. Files that are stored only in iCloud aren't downloaded just to show previews; macOS downloads one when you open it. To remove the item, right-click it ▸ **Hide from Sidebar**, or turn it off in **Settings ▸ Folder Tree**.
 
 Two options in **View** control how the tree follows you: **Expand to Open Folder** and **Show All Folders ("Expand Opened Folder")**, matching Windows' navigation pane options.
 
@@ -163,7 +164,7 @@ The context menu also offers **Open With**, **Open in New Window**, **Duplicate*
 - **Settings** (**⌘,**):
   - **General**: date format, **Always show file extensions**, and **Always show folders first**.
   - **Terminal**: the app that **Open in Terminal** uses.
-  - **Folder Tree**: the tree-following options.
+  - **Folder Tree**: the tree-following options, and **Show iCloud Drive in the sidebar**.
   - **Privacy**: typed-address history.
   - **Updates**: automatic update checks.
 

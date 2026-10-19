@@ -35,7 +35,8 @@ Explorer에는 자체 설정 마법사나 권한 요청 창이 없습니다. 홈
 - **Home**: **Favorites**, **Recent locations**(최근에 방문한 폴더), **Drives**를 모아 보여 주는 시작 화면입니다. 복원할 위치가 없는 새 창은 이 화면으로 열립니다.
 - **Gallery**: 지정한 폴더의 사진과 동영상을 최신순 썸네일로 보여 줍니다. 기본 소스는 Pictures 폴더이며, Gallery의 소스 메뉴에서 **Add Source…**를 선택해 폴더를 더 추가할 수 있습니다.
 - **Favorites**: Desktop, Downloads, Documents, Pictures, Music, Videos가 기본으로 고정되어 있고, 직접 고정한 폴더도 함께 표시됩니다. 드래그로 순서를 바꿀 수 있습니다.
-- **Locations**: 홈 폴더, Macintosh HD, 외장 드라이브, 네트워크 공유가 펼칠 수 있는 폴더 트리로 표시됩니다. 꺼낼 수 있는 드라이브에는 추출 버튼이 있습니다.
+- **Locations**: 홈 폴더, Macintosh HD, **iCloud Drive**, 외장 드라이브, 네트워크 공유가 펼칠 수 있는 폴더 트리로 표시됩니다. 꺼낼 수 있는 드라이브에는 추출 버튼이 있습니다.
+- **iCloud Drive**는 시스템 설정에서 iCloud Drive를 켜 둔 경우에 나타납니다. "iCloud Drive"라는 이름의 폴더로 열리며, 주소 표시줄에도 Library 경로 대신 `iCloud Drive › …`로 표시됩니다. iPhone "파일" 앱의 iCloud Drive와 같은 내용이라, iPhone과 Mac 사이에서 문서를 주고받는 가장 쉬운 방법입니다. iCloud에만 있는 파일은 미리보기를 위해 내려받지 않으며, 파일을 열 때만 macOS가 내려받습니다. 항목을 없애려면 오른쪽 클릭 ▸ **Hide from Sidebar**를 선택하거나 **Settings ▸ Folder Tree**에서 끄면 됩니다.
 
 트리가 현재 위치를 따라가는 방식은 **View** 메뉴의 **Expand to Open Folder**와 **Show All Folders ("Expand Opened Folder")**로 정합니다. Windows 탐색 창의 같은 옵션에 해당합니다.
 
@@ -163,7 +164,7 @@ NAS나 SMB 공유는 Finder의 **이동 ▸ 서버에 연결…** 등으로 한 
 - **Settings**(**⌘,**):
   - **General**: 날짜 형식, **Always show file extensions**, **Always show folders first**
   - **Terminal**: **Open in Terminal**에 사용할 앱
-  - **Folder Tree**: 트리가 현재 위치를 따라가는 방식
+  - **Folder Tree**: 트리가 현재 위치를 따라가는 방식, **Show iCloud Drive in the sidebar**
   - **Privacy**: 입력한 주소 기록
   - **Updates**: 업데이트 자동 확인
 
