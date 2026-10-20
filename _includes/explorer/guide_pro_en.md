@@ -269,12 +269,12 @@ Browse the photos and videos on an iPhone or iPad connected with a cable, then c
 
 **How to open it**: connect the phone with a cable, unlock it, and tap **Trust** if the phone asks. The phone appears under **Locations** in the sidebar.
 
-1. Click the phone in the sidebar, then open **Internal Storage ▸ DCIM**. The camera roll is in monthly folders such as `202610_a`, just as Windows shows them.
+1. Click the phone in the sidebar, then open **Internal Storage ▸ DCIM**. The camera roll is in monthly folders such as `202610_a`, just as Windows shows them. Each folder shows the date of its newest photo and its total size.
 2. The list shows each photo and video with its name, the date it was taken, its type, and its size. Thumbnails appear as you scroll. Sorting, the filter bar, and the Details, List, and Icons views work as in any folder.
 3. Select a photo to see it in the preview pane, press Space for Quick Look, or double-click to open it in its default app.
 4. To copy to your Mac, drag the files to a folder, the Desktop, the sidebar, Finder, or a web page's upload area. You can also press ⌘C and then ⌘V in a regular folder. Files arrive exactly as they're stored on the phone, with the date they were taken.
 5. To copy everything you haven't imported yet, right-click the phone in the sidebar ▸ **Import Pictures and Videos…** and choose a folder (Pictures by default). Photos go into a folder named after the phone. Files that are already there with the same name and size are skipped, so you can run it again after taking new photos.
-6. To delete photos from the phone, select them and press Delete, then click **Delete** in the confirmation. Pressing Return cancels.
+6. To delete photos from the phone, select them and press Delete, then click **Delete** in the confirmation. Pressing Return cancels. Deleting a folder deletes every photo and video in it, and the confirmation says how many; the folder then disappears from the list.
 
 - **Deleting from the phone can't be undone.** Photos deleted over the cable don't go to the phone's "Recently Deleted" album, so the confirmation asks every time. Copy anything you want to keep first.
 - Nothing is ever added to or renamed on the phone. New Folder, Rename, Paste, and dropping files onto the phone aren't available. To put photos on your iPhone, use AirDrop, iCloud Photos, or syncing in Finder.
