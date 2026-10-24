@@ -32,7 +32,7 @@ Explorer에는 자체 설정 마법사나 권한 요청 창이 없습니다. 홈
 
 왼쪽 사이드바는 Windows의 탐색 창에 해당하며 항상 표시됩니다.
 
-- **Home**: **Favorites**, **Recent locations**(최근에 방문한 폴더), **Drives**를 모아 보여 주는 시작 화면입니다. 복원할 위치가 없는 새 창은 이 화면으로 열립니다.
+- **Home**: **Favorites**, **Recent locations**(최근에 방문한 폴더), **Drives**, **Recent files**를 모아 보여 주는 시작 화면으로, Windows의 내 PC·즐겨찾기 화면에 해당합니다. 드라이브마다 사용량 막대와 남은 용량이 표시되며, 남은 공간이 10% 미만이면 막대가 빨간색으로 바뀝니다. **Recent files**에는 최근 30일 동안 연 파일이 최신순으로 최대 20개 표시됩니다. 더블클릭하면 열리고, 오른쪽 클릭하면 **Open File Location**, **Show in Finder**, **Remove from Recent files**를 선택할 수 있습니다. 섹션 머리글의 **Clear**를 누르면 목록이 비워지며, 지운 파일은 다시 열어야 목록에 돌아옵니다. 복원할 위치가 없는 새 창은 이 화면으로 열립니다.
 - **Gallery**: 지정한 폴더의 사진과 동영상을 최신순 썸네일로 보여 줍니다. 기본 소스는 Pictures 폴더이며, Gallery의 소스 메뉴에서 **Add Source…**를 선택해 폴더를 더 추가할 수 있습니다.
 - **Favorites**: Desktop, Downloads, Documents, Pictures, Music, Videos가 기본으로 고정되어 있고, 직접 고정한 폴더도 함께 표시됩니다. 드래그로 순서를 바꿀 수 있습니다.
 - **Locations**: 홈 폴더, Macintosh HD, **iCloud Drive**, **Google Drive**·**OneDrive**·**Dropbox** 같은 클라우드 저장소, 외장 드라이브, 네트워크 공유가 펼칠 수 있는 폴더 트리로 표시됩니다. 꺼낼 수 있는 드라이브에는 추출 버튼이 있습니다.
@@ -46,7 +46,7 @@ Explorer에는 자체 설정 마법사나 권한 요청 창이 없습니다. 홈
 창마다 탭 막대가 있으며, 탭이 하나뿐이어도 표시됩니다. 탭마다 폴더, 방문 기록, 선택 항목, 정렬, 검색 상태가 따로 유지됩니다.
 
 - **+** 버튼을 누르거나 **⌘T**를 누르면 현재 폴더로 새 탭이 열립니다.
-- 폴더를 오른쪽 클릭하고 **Open in New Tab**을 선택하면 백그라운드 탭으로 열립니다.
+- 폴더를 오른쪽 클릭하고 **Open in New Tab**을 선택하거나 마우스 휠로 클릭(가운데 클릭)하면 백그라운드 탭으로 열립니다. 파일 목록, 사이드바, 주소창, Home에서 모두 됩니다.
 - 탭을 드래그해 순서를 바꾸거나, 탭 막대 밖으로 끌어내 별도 창으로 분리할 수 있습니다.
 - 탭을 가운데 클릭하거나 오른쪽 클릭 후 **Close Tab**을 선택하면 닫힙니다. 같은 메뉴에 **Move Tab to New Window**도 있습니다.
 
@@ -58,7 +58,7 @@ Explorer에는 자체 설정 마법사나 권한 요청 창이 없습니다. 홈
 
 ### 주소창
 
-주소창은 현재 경로를 클릭할 수 있는 구간(브레드크럼)으로 보여 줍니다. 구간을 클릭하면 그 폴더로 이동합니다.
+주소창은 현재 경로를 클릭할 수 있는 구간(브레드크럼)으로 보여 줍니다. 구간을 클릭하면 그 폴더로 이동합니다. 구간 뒤의 **›**를 클릭하면 Windows처럼 그 폴더의 하위 폴더 목록이 열려 바로 이동할 수 있습니다. 첫 구간 앞의 **›**는 사이드바의 위치 목록을 보여 줍니다.
 
 경로를 직접 입력하는 방법은 다음과 같습니다.
 
@@ -100,7 +100,7 @@ Details 보기에서는 **Size** 열에 폴더 크기가 자동으로 채워지�
 
 - 폴더를 더블클릭하거나 **Return**을 누르면 열립니다. 파일은 기본 앱으로 열립니다. Windows처럼 **Return**은 '열기'이며, Finder처럼 이름 바꾸기가 시작되지 않습니다.
 - 상위 폴더로 이동하려면 **Backspace(⌫)**나 **⌘↑**를 누르거나 도구 막대의 **Up**을 클릭합니다. 방금 나온 폴더가 선택된 상태로 남습니다.
-- 뒤로/앞으로는 **⌘[** / **⌘]**입니다.
+- 뒤로/앞으로는 **⌘[** / **⌘]**이며, 마우스의 뒤로·앞으로 사이드 버튼도 됩니다. Dual-Pane View에서는 포인터 아래의 페인이 이동합니다.
 - 이름의 첫 글자들을 입력하면 해당 항목으로 바로 이동합니다.
 - 폴더를 가리키는 가상본(alias)과 심볼릭 링크는 Explorer 안에서 열립니다. 앱 같은 패키지는 파일처럼 열리며, 안을 보려면 오른쪽 클릭 후 **Show Package Contents**를 선택합니다.
 
@@ -121,7 +121,7 @@ Details 보기에서는 **Size** 열에 폴더 크기가 자동으로 채워지�
 
 ### 이름 바꾸기
 
-항목 하나를 선택하고 **⌘R**을 누르거나 **Edit ▸ Rename**을 선택합니다. 확장자를 뺀 이름 부분만 선택되며, **Return**을 누르면 확정되고 **Esc**를 누르면 취소됩니다.
+항목 하나를 선택하고 **⌘R**을 누르거나 **Edit ▸ Rename**을 선택합니다. 확장자를 뺀 이름 부분만 선택되며, **Return**을 누르면 확정되고 **Esc**를 누르면 취소됩니다. Windows처럼 **Tab**을 누르면 이름을 저장하고 다음 항목의 이름 바꾸기로 넘어가며, **⇧Tab**은 이전 항목으로 갑니다.
 
 ### 삭제와 복원
 
@@ -161,13 +161,15 @@ NAS나 SMB 공유는 Finder의 **이동 ▸ 서버에 연결…** 등으로 한 
 - **폴더 먼저 표시**: 기본적으로 폴더는 항상 파일보다 위에 표시됩니다. **Settings ▸ General ▸ Always show folders first**를 끄면 Windows 규칙을 따릅니다. 폴더끼리는 계속 모여 있지만, 내림차순으로 정렬하면 맨 아래로 이동합니다.
 - **열 선택**: Details 보기에서 열 머리글을 오른쪽 클릭해 표시할 열을 선택합니다. **Date Modified**, **Date Created**, **Date Accessed**, **Date Added**, **Type**, **Extension**, **Size** 중에서 고를 수 있으며, **Name** 열은 항상 표시됩니다. 머리글을 드래그하면 순서가 바뀌고, 경계를 드래그하면 너비가 바뀝니다. 이 설정은 모든 창에 적용됩니다.
 - **Compact View**: 기본 행 간격은 Windows 11처럼 여유 있게 설정되어 있습니다. 도구 막대의 **View** 메뉴에서 **Compact View**를 선택하면 List와 Details의 행이 촘촘해집니다.
+- **마우스로 보기 바꾸기**: 파일 목록 위에서 **⌘**를 누른 채 스크롤하거나 트랙패드를 핀치하면 Extra Large·Large·Medium·Small Icons, List, Details 순으로 바뀝니다. Windows의 Ctrl+스크롤과 같으며, 마지막에 고른 보기를 폴더가 기억합니다.
+- **선택 해제와 선택 반전**: **Edit** 메뉴의 **Select All** 바로 아래에 **Select None**(**⌥⌘A**)과 **Invert Selection**이 있습니다.
 - **숨김 파일**: **⇧⌘.**을 누르거나 **View ▸ Show Hidden Files**를 선택합니다.
 - **Settings**(**⌘,**):
   - **General**: 날짜 형식, **Always show file extensions**, **Always show folders first**
   - **Terminal**: **Open in Terminal**에 사용할 앱
   - **Folder Tree**: 트리가 현재 위치를 따라가는 방식
   - **Locations**: 사이드바에 iCloud Drive와 각 클라우드 저장소를 표시할지 여부
-  - **Privacy**: 입력한 주소 기록
+  - **Privacy**: 입력한 주소 기록, Home의 최근 파일 표시(**Show recent files on Home**)
   - **Updates**: 업데이트 자동 확인
 
 ## 5. Windows 탐색기와 다른 점
@@ -185,7 +187,7 @@ NAS나 SMB 공유는 Finder의 **이동 ▸ 서버에 연결…** 등으로 한 
 
 ## 6. 더 알아보기
 
-Explorer Pro에는 Dual-Pane View, Batch Rename, 폴더 비교·동기화, 디스크 사용량 분석, 중복 파일 찾기, 필터 막대, 그룹화, ZIP 탐색·편집·압축, 7z·RAR·tar 열람, 사용 중인 앱 확인(What's Using This?), iPhone·iPad 사진 탐색, 하위 폴더 검색, Stash Shelf, 탭 세션이 추가됩니다. 자세한 내용은 [Explorer Pro](/explorer/guide/pro/)를 참고하세요. 이 가이드의 기능은 모두 계속 무료입니다.
+Explorer Pro에는 Dual-Pane View, Batch Rename, 폴더 비교·동기화, 디스크 사용량 분석, 중복 파일 찾기, 필터 막대, 그룹화, ZIP 탐색·편집·압축, 7z·RAR·tar 열람, 사용 중인 앱 확인(What's Using This?), iPhone·iPad 사진 탐색, 하위 폴더 검색, Stash Shelf, 탭 세션, 속성 창, 클라우드 파일 상태, 바로 가기 만들기, 항목 체크박스가 추가됩니다. 자세한 내용은 [Explorer Pro](/explorer/guide/pro/)를 참고하세요. 이 가이드의 기능은 모두 계속 무료입니다.
 
 - [키보드 단축키](/explorer/guide/shortcuts/)
 - [자주 묻는 질문](/explorer/guide/faq/)

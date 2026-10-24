@@ -20,6 +20,8 @@ Explorer for Mac은 Windows 탐색기에서 익숙한 단축키를 그대로 쓰
 | 주소창: 추천 목록 열기·선택 | ↓ / ↑ | ↓ / ↑ |
 | 주소창: 편집 취소 | Esc | Esc |
 | 이름으로 항목 찾아가기 | 이름 첫 글자 입력 | 이름 첫 글자 입력 |
+| 마우스로 뒤로 / 앞으로 | 마우스 사이드 버튼 | 마우스 사이드 버튼 |
+| 주소창에서 하위 폴더로 이동 | 구간 뒤의 **›** 클릭 | 구간 뒤의 **›** 클릭 |
 
 ## 탭과 창
 
@@ -32,6 +34,7 @@ Explorer for Mac은 Windows 탐색기에서 익숙한 단축키를 그대로 쓰
 | 이전 탭 | ⌃⇧⇥ | Ctrl+Shift+Tab |
 | 1~9번째 탭으로 이동 | ⌘1 ~ ⌘9 | Ctrl+1 ~ Ctrl+9 <!-- TODO 확인: Windows 11 탐색기 탭의 Ctrl+숫자 지원 여부 --> |
 | 마우스로 탭 닫기 | 탭 가운데 클릭 | 탭 가운데 클릭 |
+| 마우스로 폴더를 새 탭에서 열기 | 폴더 가운데 클릭 | 폴더 가운데 클릭 |
 | 창 최소화 | ⌘M | Win+↓ |
 | 설정 | ⌘, | — |
 | Explorer 종료 | ⌘Q | — |
@@ -47,11 +50,15 @@ Explorer for Mac은 Windows 탐색기에서 익숙한 단축키를 그대로 쓰
 | 새 폴더 | ⇧⌘N | Ctrl+Shift+N |
 | 이름 바꾸기 | ⌘R | F2 |
 | 이름 바꾸기: 확정 / 취소 | ↩ / Esc | Enter / Esc |
+| 이름 바꾸기: 저장하고 다음 / 이전 항목으로 | ⇥ / ⇧⇥ | Tab / Shift+Tab |
 | 휴지통으로 이동 | ⌘⌫ 또는 ⌦ | Delete 또는 Ctrl+D |
 | 즉시 삭제(휴지통 안에서) | ⌘⌫ 또는 ⌦ 후 확인 | Shift+Delete |
 | 실행 취소 | ⌘Z | Ctrl+Z |
 | 다시 실행 | ⇧⌘Z 또는 ⌘Y | Ctrl+Y |
 | 경로 복사 | ⌥⌘C | Ctrl+Shift+C |
+| 속성 **(Pro)** (Pro가 없으면 Get Info) | ⌥↩ 또는 ⌘I | Alt+Enter |
+| 바로 가기 만들기 **(Pro)** | ⌃⌘A | — |
+| 끌어서 바로 가기 만들기 **(Pro)** | 놓을 때 ⌥⌘ 누르기 | 놓을 때 Alt 누르기 |
 | 드래그할 때 이동 대신 복사 | 놓을 때 ⌥ 누르기 | 놓을 때 Ctrl 누르기 |
 | 다른 패널로 복사 **(Pro)** | ⇧⌥⌘C(Dual-Pane View 사용 중) | — |
 | 다른 패널로 이동 **(Pro)** | ⇧⌥⌘M(Dual-Pane View 사용 중) | — |
@@ -63,11 +70,14 @@ Explorer for Mac은 Windows 탐색기에서 익숙한 단축키를 그대로 쓰
 | 동작 | Explorer for Mac | Windows 탐색기 |
 |---|---|---|
 | 모두 선택 | ⌘A | Ctrl+A |
+| 선택 해제(**Edit ▸ Select None**) | ⌥⌘A | — |
+| 선택 반전 | **Edit ▸ Invert Selection** | **더 보기(…) ▸ 선택 영역 반전** |
 | 선택 이동 | ↑ ↓ (아이콘 보기에서는 ← →도) | 화살표 키 |
 | 선택 범위 넓히기 | ⇧ + 화살표 키 또는 ⇧-클릭 | Shift + 화살표 키 또는 Shift+클릭 |
 | 항목 하나씩 추가·해제 | ⌘-클릭 | Ctrl+클릭 |
 | 선택한 파일 Quick Look | Space | — |
 | 숨김 파일 표시·숨기기 | ⇧⌘. | — |
+| 아이콘 크게·작게, 그다음 List·Details | ⌘ + 스크롤 또는 핀치 | Ctrl + 스크롤 |
 | 미리 보기 창 표시·숨기기 | ⇧⌘P | Alt+P |
 | Dual-Pane View **(Pro)** | ⌘\ | — |
 | Show Stash Shelf **(Pro)** | ⇧⌘Y | — |

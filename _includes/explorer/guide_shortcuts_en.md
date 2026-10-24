@@ -20,6 +20,8 @@ Shortcuts marked **(Pro)** require [Explorer Pro](/explorer/guide/pro/?lang=en).
 | Address bar: open or move through suggestions | ↓ / ↑ | ↓ / ↑ |
 | Address bar: stop editing | Esc | Esc |
 | Jump to an item by name | Type the first letters | Type the first letters |
+| Back / Forward with the mouse | Mouse side buttons | Mouse side buttons |
+| Jump to a subfolder from the address bar | Click **›** after a segment | Click **›** after a segment |
 
 ## Tabs & windows
 
@@ -32,6 +34,7 @@ Shortcuts marked **(Pro)** require [Explorer Pro](/explorer/guide/pro/?lang=en).
 | Previous tab | ⌃⇧⇥ | Ctrl+Shift+Tab |
 | Go to tab 1–9 | ⌘1 – ⌘9 | Ctrl+1 – Ctrl+9 <!-- TODO 확인: Windows 11 탐색기 탭의 Ctrl+숫자 지원 여부 --> |
 | Close a tab with the mouse | Middle-click the tab | Middle-click the tab |
+| Open a folder in a new tab with the mouse | Middle-click the folder | Middle-click the folder |
 | Minimize window | ⌘M | Win+↓ |
 | Settings | ⌘, | — |
 | Quit Explorer | ⌘Q | — |
@@ -47,11 +50,15 @@ Shortcuts marked **(Pro)** require [Explorer Pro](/explorer/guide/pro/?lang=en).
 | New folder | ⇧⌘N | Ctrl+Shift+N |
 | Rename | ⌘R | F2 |
 | Rename: confirm / cancel | ↩ / Esc | Enter / Esc |
+| Rename: save and rename the next / previous item | ⇥ / ⇧⇥ | Tab / Shift+Tab |
 | Move to Trash | ⌘⌫ or ⌦ | Delete or Ctrl+D |
 | Delete immediately (inside the Trash) | ⌘⌫ or ⌦, then confirm | Shift+Delete |
 | Undo | ⌘Z | Ctrl+Z |
 | Redo | ⇧⌘Z or ⌘Y | Ctrl+Y |
 | Copy path | ⌥⌘C | Ctrl+Shift+C |
+| Properties **(Pro)** (Get Info without Pro) | ⌥↩ or ⌘I | Alt+Enter |
+| Create Shortcut **(Pro)** | ⌃⌘A | — |
+| Create shortcuts by dragging **(Pro)** | Hold ⌥⌘ when dropping | Hold Alt when dropping |
 | Copy instead of move while dragging | Hold ⌥ when dropping | Hold Ctrl when dropping |
 | Copy to Other Pane **(Pro)** | ⇧⌥⌘C (while Dual-Pane View is on) | — |
 | Move to Other Pane **(Pro)** | ⇧⌥⌘M (while Dual-Pane View is on) | — |
@@ -63,11 +70,14 @@ Shortcuts marked **(Pro)** require [Explorer Pro](/explorer/guide/pro/?lang=en).
 | Action | Explorer for Mac | Windows Explorer equivalent |
 |---|---|---|
 | Select all | ⌘A | Ctrl+A |
+| Select none (**Edit ▸ Select None**) | ⌥⌘A | — |
+| Invert selection | **Edit ▸ Invert Selection** | **See more (…) ▸ Invert selection** |
 | Move the selection | ↑ ↓ (and ← → in icon views) | Arrow keys |
 | Extend the selection | ⇧ + arrow keys, or ⇧-click | Shift + arrow keys, or Shift+click |
 | Add or remove one item | ⌘-click | Ctrl+click |
 | Quick Look the selected file | Space | — |
 | Show or hide hidden files | ⇧⌘. | — |
+| Bigger or smaller icons, then List and Details | ⌘ + scroll, or pinch | Ctrl + scroll |
 | Show or hide the preview pane | ⇧⌘P | Alt+P |
 | Dual-Pane View **(Pro)** | ⌘\ | — |
 | Show Stash Shelf **(Pro)** | ⇧⌘Y | — |

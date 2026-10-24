@@ -32,7 +32,7 @@ Choose **Explorer ▸ Check for Updates…** to update at any time. Automatic ch
 
 The left sidebar works like Windows' navigation pane and is always visible:
 
-- **Home**: a landing page with your **Favorites**, **Recent locations** (the folders you visited most recently), and **Drives**. A new window with nothing to restore opens here.
+- **Home**: a landing page with your **Favorites**, **Recent locations** (the folders you visited most recently), **Drives**, and **Recent files**, like This PC and Quick access on Windows. Each drive shows a usage bar and how much space is free; the bar turns red when less than 10% is left. **Recent files** lists up to 20 files you opened in the last 30 days, newest first. Double-click one to open it, or right-click it for **Open File Location**, **Show in Finder**, and **Remove from Recent files**. **Clear** in the section header empties the list; a removed file comes back only when you open it again. A new window with nothing to restore opens here.
 - **Gallery**: the photos and videos in your chosen folders as a thumbnail grid, newest first. Pictures is the default source. Use **Add Source…** in the Gallery's source menu to include more folders.
 - **Favorites**: Desktop, Downloads, Documents, Pictures, Music, and Videos are pinned by default, along with any folders you pin yourself. Drag favorites to reorder them.
 - **Locations**: your home folder, Macintosh HD, **iCloud Drive**, cloud storage such as **Google Drive**, **OneDrive**, and **Dropbox**, external drives, and network shares as an expandable folder tree. Removable drives have an eject button.
@@ -46,7 +46,7 @@ Two options in **View** control how the tree follows you: **Expand to Open Folde
 Each window has a tab bar, even with a single tab. Every tab keeps its own folder, history, selection, sort order, and search.
 
 - Click **+** or press **⌘T** to open a new tab at the current folder.
-- Right-click a folder and choose **Open in New Tab** to open it in the background.
+- Right-click a folder and choose **Open in New Tab**, or click it with the mouse wheel (middle-click), to open it in a background tab. This works in the file list, the sidebar, the address bar, and Home.
 - Drag a tab to reorder it, or drag it out of the bar to give it its own window.
 - Middle-click a tab, or right-click it and choose **Close Tab**, to close it. The same menu has **Move Tab to New Window**.
 
@@ -58,7 +58,7 @@ The toolbar sits right above the file list, like Windows 11's command bar: **Bac
 
 ### Address bar
 
-The address bar shows the current path as clickable segments (a breadcrumb). Click a segment to jump to that folder.
+The address bar shows the current path as clickable segments (a breadcrumb). Click a segment to jump to that folder. Click the **›** after a segment to list its subfolders and jump to one, as on Windows. The **›** before the first segment lists the places in the sidebar.
 
 To type a path:
 
@@ -100,7 +100,7 @@ The status bar at the bottom shows how many items are in the folder. With a sele
 
 - Double-click a folder or press **Return** to open it. Files open in their default app. Explorer uses **Return** for opening, as Windows does; it does not start renaming the way it does in Finder.
 - Go up one level with **Backspace (⌫)**, **⌘↑**, or **Up** in the toolbar. The folder you came from stays selected.
-- Go back and forward with **⌘[** and **⌘]**.
+- Go back and forward with **⌘[** and **⌘]**, or with the back and forward side buttons on your mouse. In Dual-Pane View, the pane under the pointer moves.
 - Type the first letters of a name to jump to it.
 - Aliases and symbolic links to folders open inside Explorer. Apps and other packages open like files. Right-click and choose **Show Package Contents** to browse inside one.
 
@@ -121,7 +121,7 @@ Press **Esc** to cancel a pending cut. If a name is already taken, you can choos
 
 ### Rename
 
-Select one item and press **⌘R** (or choose **Edit ▸ Rename**). Only the name is selected, not the extension. Press **Return** to confirm or **Esc** to cancel.
+Select one item and press **⌘R** (or choose **Edit ▸ Rename**). Only the name is selected, not the extension. Press **Return** to confirm or **Esc** to cancel. Press **Tab** to save the name and start renaming the next item, or **⇧Tab** for the previous one, as in Windows.
 
 ### Delete and restore
 
@@ -161,13 +161,15 @@ The context menu also offers **Open With**, **Open in New Window**, **Duplicate*
 - **Folders first**: by default, folders always stay above files. If you turn off **Settings ▸ General ▸ Always show folders first**, Explorer follows the Windows rule: folders stay grouped together but move to the bottom when you sort in descending order.
 - **Columns**: in Details, right-click any column header and check the columns you want. You can choose from **Date Modified**, **Date Created**, **Date Accessed**, **Date Added**, **Type**, **Extension**, and **Size**. **Name** is always shown. Drag headers to reorder columns and drag their edges to resize them. Your layout applies to every window.
 - **Compact View**: Explorer uses roomier Windows 11-style rows by default. Choose **Compact View** in the toolbar's **View** menu for denser List and Details rows.
+- **Change the view with the mouse**: hold **⌘** and scroll, or pinch on the trackpad, over the file list to step through Extra Large, Large, Medium, and Small Icons, List, and Details, like Ctrl+scroll on Windows. The folder remembers the view you stop at.
+- **Select None and Invert Selection**: in the **Edit** menu, right below **Select All**. Select None is **⌥⌘A**.
 - **Hidden files**: press **⇧⌘.** or choose **View ▸ Show Hidden Files**.
 - **Settings** (**⌘,**):
   - **General**: date format, **Always show file extensions**, and **Always show folders first**.
   - **Terminal**: the app that **Open in Terminal** uses.
   - **Folder Tree**: how the tree follows the folder you open.
   - **Locations**: show or hide iCloud Drive and each cloud storage location in the sidebar.
-  - **Privacy**: typed-address history.
+  - **Privacy**: typed-address history, and **Show recent files on Home**.
   - **Updates**: automatic update checks.
 
 ## 5. Differences from Windows Explorer
@@ -185,7 +187,7 @@ The context menu also offers **Open With**, **Open in New Window**, **Duplicate*
 
 ## 6. Going further
 
-Explorer Pro adds Dual-Pane View, Batch Rename, folder compare and sync, a disk usage analyzer, a duplicate finder, a filter bar, grouping, ZIP browsing, editing, and compression, 7z/RAR/tar browsing, What's Using This?, iPhone and iPad photo browsing, subfolder search, the Stash Shelf, and tab sessions. See [Explorer Pro](/explorer/guide/pro/?lang=en). Everything in this guide stays free.
+Explorer Pro adds Dual-Pane View, Batch Rename, folder compare and sync, a disk usage analyzer, a duplicate finder, a filter bar, grouping, ZIP browsing, editing, and compression, 7z/RAR/tar browsing, What's Using This?, iPhone and iPad photo browsing, subfolder search, the Stash Shelf, tab sessions, the Properties window, cloud file status, Create Shortcut, and item check boxes. See [Explorer Pro](/explorer/guide/pro/?lang=en). Everything in this guide stays free.
 
 - [Keyboard Shortcuts](/explorer/guide/shortcuts/?lang=en)
 - [FAQ](/explorer/guide/faq/?lang=en)

@@ -284,6 +284,70 @@ Browse the photos and videos on an iPhone or iPad connected with a cable, then c
 - Files are copied in their original format. Photos taken as HEIC stay HEIC, which macOS opens normally. Edited photos appear as a separate file (for example `IMG_E1234.JPG`) next to the original, and a Live Photo appears as a photo plus a short video.
 - Without Pro, the phone appears in the sidebar with a **PRO** badge, and clicking it shows a short notice with **Learn More**.
 
+## Properties
+
+See everything about a file, folder, or selection in one window, and change its name and attributes, like **Properties** (Alt+Enter) on Windows.
+
+**How to open it**: select items and press **⌥↩** or **⌘I**, choose **File ▸ Properties**, or right-click ▸ **Properties**
+
+1. For a file, the window shows its type (for example "JPEG image (.jpg)"), the app it opens with, its location, its **Size** and **Size on disk** in exact bytes, and when it was created, modified, and last opened.
+2. For a folder, **Contains** counts its files and folders ("1,204 Files, 37 Folders") along with the total size. The numbers climb while Explorer counts in the background, and counting stops when you close the window. An app or other package counts as one file.
+3. With several items selected, the window shows the number of items, their shared type (or "Multiple types"), the folder they're in (or "Various"), and their combined size.
+4. To make changes, edit the name, check or clear **Read-only**, **Hidden**, or **Hide extension**, or click **Change…** next to **Opens with:** to pick the app for every file of that type.
+5. Click **Apply** to apply the changes and keep the window open, **OK** to apply and close, or **Cancel** to close without changes.
+
+- A rename made here works like any other: ⌘Z undoes it. If the name is taken, Explorer says so and keeps what you typed so you can fix it.
+- Attribute changes can't be undone with ⌘Z. Open Properties again to change them back.
+- **Read-only** is the macOS Locked flag. A name that starts with a dot is always hidden, so its **Hidden** box can't be cleared.
+- Items in the Trash, inside an archive, or on a phone can be viewed but not changed. The button reads **Close**.
+- You can open several Properties windows at once.
+- Without Pro, **File ▸ Get Info** (⌘I or ⌥↩) shows the free, read-only info panel for one item, as before.
+
+## Cloud File Status
+
+See which files in iCloud Drive, Google Drive, OneDrive, and Dropbox are stored only online and which are on your Mac, and switch between the two, like the status column in OneDrive on Windows.
+
+**How to use it**: open a folder in iCloud Drive or a cloud storage location in the sidebar. A small badge follows each file name (in icon views, it sits at the bottom left of the icon).
+
+1. A cloud outline means the file is online only. A green check means it's on this Mac. A cloud with a down arrow means it's downloading, and a cloud with an up arrow means it hasn't finished uploading.
+2. To keep files on your Mac, select them and right-click ▸ **Download**, or choose **File ▸ Download**.
+3. To free up space, select files and right-click ▸ **Free Up Space**, or choose **File ▸ Free Up Space**. The files stay in the cloud and in the list, and download again when you open them.
+4. Selecting a folder includes every file inside it.
+
+- Free Up Space only removes the copy on your Mac, and only for files that have finished uploading. Anything not uploaded yet is skipped, and Explorer tells you how many were skipped. Nothing is ever deleted from the cloud.
+- A file that's open in another app, or shown in the preview pane, may not be freed. Close it and try again.
+- The provider's own app does the downloading and uploading. Explorer only asks macOS to do it.
+- Folders have no badge, and Google Docs, Sheets, and Slides files always show the cloud badge because they live online.
+- Without Pro, cloud folders browse normally without badges. **File ▸ Download** and **File ▸ Free Up Space** show a **PRO** badge.
+
+## Create Shortcut
+
+Make a shortcut to a file or folder, like **Create shortcut** on Windows. Explorer makes a Finder alias, which opens the original wherever it moves.
+
+**How to use it**: select items and press **⌃⌘A**, choose **File ▸ Create Shortcut**, or right-click ▸ **Create Shortcut**
+
+1. A shortcut named "*name* - Shortcut" appears next to each item and is selected. If that name is taken, Explorer adds (2), (3), and so on.
+2. To make shortcuts somewhere else, hold **⌥⌘** while you drag items onto a folder or onto the empty area of a list. The pointer shows the alias arrow.
+3. ⌘Z moves the new shortcuts to the Trash, and ⇧⌘Z makes them again.
+
+- Shortcuts can't be made in the Trash, inside an archive, or on a phone, or dropped into a folder you can't write to.
+- Double-clicking a shortcut to a folder opens the folder in Explorer.
+
+## Item Check Boxes
+
+Show a check box on each item and select files by clicking their boxes, like **View ▸ Item check boxes** on Windows. This is handy on a trackpad, where ⌘-clicking is awkward.
+
+**How to turn it on**: **View ▸ Item Check Boxes**, or the toolbar's **View** menu. The setting applies to every window and tab.
+
+1. A box appears on the item under the pointer and on every selected item. In Details and List it's at the start of the row; in icon views it's at the top-left corner of the icon.
+2. Click a box to add that item to the selection, or click it again to remove it. The rest of the selection stays as it is, so there's no need to hold ⌘.
+3. Clicking an item's name or icon still selects only that item, as usual.
+4. In Details, the box in the **Name** header selects every item, or clears the selection when everything is already selected. It shows a dash when only some items are selected.
+
+- Double-clicking a box never opens the item.
+- If some groups are collapsed in **Group by**, the header box selects only the items you can see.
+- Choose **View ▸ Item Check Boxes** again to turn the boxes off.
+
 ## If your license is removed
 
 If you remove your license, for example after a refund, your saved searches, tab sessions, and Stash Shelf items stay on this Mac. They come back if you activate a license again. Free features keep working normally. For other questions, see the [FAQ](/explorer/guide/faq/?lang=en) or email support@yjlab.io.
