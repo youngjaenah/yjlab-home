@@ -301,7 +301,7 @@ See everything about a file, folder, or selection in one window, and change its 
 - **Read-only** is the macOS Locked flag. A name that starts with a dot is always hidden, so its **Hidden** box can't be cleared.
 - Items in the Trash, inside an archive, or on a phone can be viewed but not changed. The button reads **Close**.
 - You can open several Properties windows at once.
-- Without Pro, **File ▸ Get Info** (⌘I or ⌥↩) shows the free, read-only info panel for one item, as before.
+- Without Pro, **File ▸ Get Info** (⌘I or ⌥↩) shows the free, read-only info panel for one item: kind, the app that opens it, location, size, created, modified, and accessed dates, and whether it's Read-only or Hidden. Changing them, several items at once, size on disk, and a folder's contents count are what Pro adds.
 
 ## Cloud File Status
 

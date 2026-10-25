@@ -117,7 +117,7 @@ These work the Windows way, with **⌘** in place of **Ctrl**:
 2. Open the destination folder and press **⌘V**.
 3. The pasted items end up selected, so you can see where they landed.
 
-Press **Esc** to cancel a pending cut. If a name is already taken, you can choose **Replace**, **Keep Both**, or **Skip**, and check **Apply to all remaining items** to use the same choice for the rest. Large copies show a progress window with speed, time remaining, and a cancel button.
+Press **Esc** to cancel a pending cut. If a name is already taken, the dialog shows both items side by side (size, date, location, and which one is newer) so you can choose **Replace**, **Keep Both**, or **Skip**; **Compare Contents** checks whether two files are really the same. Check **Apply to all remaining items** to use the same choice for the rest. Large copies show a progress window with speed, time remaining, and a cancel button.
 
 ### Rename
 

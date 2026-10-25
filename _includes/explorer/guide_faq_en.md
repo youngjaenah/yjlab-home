@@ -161,6 +161,8 @@ A dialog lets you choose one of three options:
 
 Check **Apply to all remaining items** to use the same choice for the rest of the conflicts.
 
+To help you choose, the dialog shows the incoming item and the existing one side by side: size (with the exact byte count, or the number of items in a folder), modified date, location, and a thumbnail for pictures and documents. A line underneath says which one is newer and whether the sizes differ. Matching size and date don't prove the files are the same, so for two files you can click **Compare Contents**: it reads both and tells you whether the contents are the same. You can cancel it, and if a file changes while it's being read, it asks you to compare again. Online-only cloud files don't get a thumbnail, so nothing is downloaded until you ask.
+
 ### How does Explorer handle ZIP files?
 
 In the free version, double-clicking a ZIP file opens it with the macOS default app (such as Archive Utility). With Pro, you can open a ZIP like a folder without extracting it, preview what's inside, and copy files out. You can also add, delete, and rename files inside it; each change saves a new ZIP and moves the previous one to the Trash, so ⌘Z brings it back (see [Edit a ZIP](/explorer/guide/pro/?lang=en)). You can also compress a selection with **File ▸ Compress to ZIP**, or add an AES-256 password with **Compress with Password…**. Password-protected ZIPs can be opened with apps that support AES encryption, such as Keka or 7-Zip. Pro also opens 7z, RAR, and tar archives (including .tar.gz) the same way, read-only (see [Browse Archives](/explorer/guide/pro/?lang=en)). <!-- TODO 확인: macOS 아카이브 유틸리티 / Windows 11 기본 탐색기에서 AES-256 ZIP 해제 가능 여부 -->
