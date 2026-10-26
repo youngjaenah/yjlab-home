@@ -217,10 +217,10 @@ Compress the selected files and folders into a new .zip file, with optional AES-
 
 Collect files from several folders in one place, then copy or move them all at once into the destination folder.
 
-**How to open it**: **View ▸ Show Stash Shelf** (⇧⌘Y), or right-click files ▸ **Add to Stash Shelf**
+**How to open it**: **View ▸ Show Stash Shelf** (⇧⌘Y)
 
-1. Choose **View ▸ Show Stash Shelf**. A thin shelf strip appears between the file list and the status bar.
-2. Drag files or folders onto the shelf, or right-click them ▸ **Add to Stash Shelf**. If the shelf is hidden, it appears automatically.
+1. Choose **View ▸ Show Stash Shelf**. A thin shelf strip appears between the file list and the status bar, and the menu item is checked. Choose it again to hide the shelf.
+2. Drag files or folders onto the shelf, or right-click them ▸ **Add to Stash Shelf**. That menu item appears only while the shelf is shown.
 3. Go to the destination folder.
 4. Right-click an item on the shelf and choose **Copy All to Current Folder** or **Move All to Current Folder**. You can also drag a single shelf item to the file list or to Finder to copy it.
 5. When you're done, right-click ▸ **Remove from Shelf** (one item) or **Clear Shelf** (everything).
@@ -295,12 +295,14 @@ See everything about a file, folder, or selection in one window, and change its 
 3. With several items selected, the window shows the number of items, their shared type (or "Multiple types"), the folder they're in (or "Various"), and their combined size.
 4. To make changes, edit the name, check or clear **Read-only**, **Hidden**, or **Hide extension**, or click **Change…** next to **Opens with:** to pick the app for every file of that type.
 5. Click **Apply** to apply the changes and keep the window open, **OK** to apply and close, or **Cancel** to close without changes.
+6. To check a file's integrity, click **Calculate** next to **SHA-256:**. Explorer reads the file in the background and shows the progress; click **Cancel** to stop. When it's done, click **Copy** to put the checksum on the clipboard and compare it with the one the download page publishes. It's the same value as `shasum -a 256` in Terminal.
 
 - A rename made here works like any other: ⌘Z undoes it. If the name is taken, Explorer says so and keeps what you typed so you can fix it.
 - Attribute changes can't be undone with ⌘Z. Open Properties again to change them back.
 - **Read-only** is the macOS Locked flag. A name that starts with a dot is always hidden, so its **Hidden** box can't be cleared.
 - Items in the Trash, inside an archive, or on a phone can be viewed but not changed. The button reads **Close**.
 - You can open several Properties windows at once.
+- **SHA-256** is shown for a single file. Folders, apps and other packages, symbolic links, and several selected items don't have it. If the file changes while it's being read, no checksum is shown. Click **Calculate** again. A file that's only in iCloud or other cloud storage is downloaded to compute it.
 - Without Pro, **File ▸ Get Info** (⌘I or ⌥↩) shows the free, read-only info panel for one item: kind, the app that opens it, location, size, created, modified, and accessed dates, and whether it's Read-only or Hidden. Changing them, several items at once, size on disk, and a folder's contents count are what Pro adds.
 
 ## Cloud File Status

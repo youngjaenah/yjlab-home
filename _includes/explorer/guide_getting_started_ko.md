@@ -187,7 +187,7 @@ NAS나 SMB 공유는 Finder의 **이동 ▸ 서버에 연결…** 등으로 한 
 
 ## 6. 더 알아보기
 
-Explorer Pro에는 Dual-Pane View, Batch Rename, 폴더 비교·동기화, 디스크 사용량 분석, 중복 파일 찾기, 필터 막대, 그룹화, ZIP 탐색·편집·압축, 7z·RAR·tar 열람, 사용 중인 앱 확인(What's Using This?), iPhone·iPad 사진 탐색, 하위 폴더 검색, Stash Shelf, 탭 세션, 속성 창, 클라우드 파일 상태, 바로 가기 만들기, 항목 체크박스가 추가됩니다. 자세한 내용은 [Explorer Pro](/explorer/guide/pro/)를 참고하세요. 이 가이드의 기능은 모두 계속 무료입니다.
+Explorer Pro에는 Dual-Pane View, Batch Rename, 폴더 비교·동기화, 디스크 사용량 분석, 중복 파일 찾기, 필터 막대, 그룹화, ZIP 탐색·편집·압축, 7z·RAR·tar 열람, 사용 중인 앱 확인(What's Using This?), iPhone·iPad 사진 탐색, 하위 폴더 검색, Stash Shelf, 탭 세션, 속성 창(SHA-256 체크섬 포함), 클라우드 파일 상태, 바로 가기 만들기, 항목 체크박스가 추가됩니다. 자세한 내용은 [Explorer Pro](/explorer/guide/pro/)를 참고하세요. 이 가이드의 기능은 모두 계속 무료입니다.
 
 - [키보드 단축키](/explorer/guide/shortcuts/)
 - [자주 묻는 질문](/explorer/guide/faq/)
