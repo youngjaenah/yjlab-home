@@ -94,7 +94,7 @@ No. Explorer never asks for or stores passwords. When reconnecting, macOS uses t
 
 ### Network folders are slow.
 
-Network folders take longer to list than a local disk; a **Loading…** indicator appears while a folder loads. A few things to check:
+Network folders take longer to list than a local disk. In a folder with thousands of files, the first files appear right away and the rest fill in as the server sends them; **Loading…** shows until the list is complete. A few things to check:
 
 - Update to the latest version. Moves within the same share and list refreshes during large operations have been made much faster over several releases.
 - A wired connection is far more reliable than Wi‑Fi.
