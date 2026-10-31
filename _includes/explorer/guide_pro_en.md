@@ -362,6 +362,7 @@ Copy the whole contents of a text file to the clipboard without opening it.
 
 - The button appears for files the pane shows as text: plain text, Markdown, RTF, source code, JSON, XML, CSV, HTML, and logs.
 - Files larger than 32 MB can't be copied this way.
+- RTF files larger than 10 MB are shown through Quick Look, without the copy button or **Show Source**.
 - To copy only part of the text, select it in the preview and press ⌘C.
 
 ## If your license is removed

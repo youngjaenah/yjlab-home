@@ -88,7 +88,7 @@ In Details, folder sizes fill in automatically in the **Size** column. Finder co
 
 Press **⇧⌘P**, choose **View ▸ Show Preview Pane**, or click **Preview** in the toolbar. The pane on the right previews the selected item (images, PDFs, text, Markdown, RTF, video, and Office documents through Quick Look) and shows its details: size, dates, image dimensions, and camera information. Drag the divider to resize it.
 
-Markdown and RTF files appear formatted. Turn on **Show Source** above the preview to see the raw text instead; Explorer remembers the choice separately for each.
+Markdown and RTF files appear formatted. Turn on **Show Source** above the preview to see the raw text instead; Explorer remembers the choice separately for each. RTF files larger than 10 MB are shown through Quick Look, without **Show Source**.
 
 Press **Space** to open a selected file in the full-size Quick Look window.
 

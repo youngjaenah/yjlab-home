@@ -88,7 +88,7 @@ Details 보기에서는 **Size** 열에 폴더 크기가 자동으로 채워지�
 
 **⇧⌘P**를 누르거나, **View ▸ Show Preview Pane**을 선택하거나, 도구 막대의 **Preview**를 클릭합니다. 오른쪽 창에 선택한 항목의 미리 보기(이미지, PDF, 텍스트, Markdown, RTF, 동영상, Quick Look을 통한 Office 문서)와 함께 크기, 날짜, 이미지 해상도, 카메라 정보 같은 세부 정보가 표시됩니다. 구분선을 드래그해 너비를 조절할 수 있습니다.
 
-Markdown과 RTF 파일은 서식이 적용된 모습으로 보입니다. 미리 보기 위의 **Show Source**를 켜면 원본 텍스트가 보이며, 이 설정은 Markdown과 RTF에 따로 기억됩니다.
+Markdown과 RTF 파일은 서식이 적용된 모습으로 보입니다. 미리 보기 위의 **Show Source**를 켜면 원본 텍스트가 보이며, 이 설정은 Markdown과 RTF에 따로 기억됩니다. 10MB가 넘는 RTF 파일은 Quick Look으로 표시되며 **Show Source**가 나타나지 않습니다.
 
 파일을 선택하고 **Space**를 누르면 큰 Quick Look 창으로 볼 수 있습니다.
 

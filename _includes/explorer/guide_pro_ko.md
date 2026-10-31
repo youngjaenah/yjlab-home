@@ -362,6 +362,7 @@ iCloud Drive, Google Drive, OneDrive, Dropbox에서 어떤 파일이 온라인�
 
 - 미리 보기 창이 텍스트로 보여 주는 파일에 버튼이 나타납니다: 일반 텍스트, Markdown, RTF, 소스 코드, JSON, XML, CSV, HTML, 로그.
 - 32MB가 넘는 파일은 이 방법으로 복사할 수 없습니다.
+- 10MB가 넘는 RTF 파일은 Quick Look으로 표시되며, 복사 버튼과 **Show Source**가 나타나지 않습니다.
 - 일부만 복사하려면 미리 보기에서 텍스트를 선택하고 ⌘C를 누릅니다.
 
 ## 라이선스가 해제되면
