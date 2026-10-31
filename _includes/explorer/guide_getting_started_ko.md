@@ -86,7 +86,9 @@ Details 보기에서는 **Size** 열에 폴더 크기가 자동으로 채워지�
 
 ### 미리 보기 창
 
-**⇧⌘P**를 누르거나, **View ▸ Show Preview Pane**을 선택하거나, 도구 막대의 **Preview**를 클릭합니다. 오른쪽 창에 선택한 항목의 미리 보기(이미지, PDF, 텍스트, Markdown, 동영상, Quick Look을 통한 Office 문서)와 함께 크기, 날짜, 이미지 해상도, 카메라 정보 같은 세부 정보가 표시됩니다. 구분선을 드래그해 너비를 조절할 수 있습니다.
+**⇧⌘P**를 누르거나, **View ▸ Show Preview Pane**을 선택하거나, 도구 막대의 **Preview**를 클릭합니다. 오른쪽 창에 선택한 항목의 미리 보기(이미지, PDF, 텍스트, Markdown, RTF, 동영상, Quick Look을 통한 Office 문서)와 함께 크기, 날짜, 이미지 해상도, 카메라 정보 같은 세부 정보가 표시됩니다. 구분선을 드래그해 너비를 조절할 수 있습니다.
+
+Markdown과 RTF 파일은 서식이 적용된 모습으로 보입니다. 미리 보기 위의 **Show Source**를 켜면 원본 텍스트가 보이며, 이 설정은 Markdown과 RTF에 따로 기억됩니다.
 
 파일을 선택하고 **Space**를 누르면 큰 Quick Look 창으로 볼 수 있습니다.
 
@@ -187,7 +189,7 @@ NAS나 SMB 공유는 Finder의 **이동 ▸ 서버에 연결…** 등으로 한 
 
 ## 6. 더 알아보기
 
-Explorer Pro에는 Dual-Pane View, Batch Rename, 폴더 비교·동기화, 디스크 사용량 분석, 중복 파일 찾기, 필터 막대, 그룹화, ZIP 탐색·편집·압축, 7z·RAR·tar 열람, 사용 중인 앱 확인(What's Using This?), iPhone·iPad 사진 탐색, 하위 폴더 검색, Stash Shelf, 탭 세션, 속성 창(SHA-256 체크섬 포함), 클라우드 파일 상태, 바로 가기 만들기, 항목 체크박스가 추가됩니다. 자세한 내용은 [Explorer Pro](/explorer/guide/pro/)를 참고하세요. 이 가이드의 기능은 모두 계속 무료입니다.
+Explorer Pro에는 Dual-Pane View, Batch Rename, 폴더 비교·동기화, 디스크 사용량 분석, 중복 파일 찾기, 필터 막대, 그룹화, ZIP 탐색·편집·압축, 7z·RAR·tar 열람, 사용 중인 앱 확인(What's Using This?), iPhone·iPad 사진 탐색, 하위 폴더 검색, Stash Shelf, 탭 세션, 속성 창(SHA-256 체크섬 포함), 클라우드 파일 상태, 바로 가기 만들기, 항목 체크박스, 미리 보기 창의 텍스트 복사(Copy Text)가 추가됩니다. 자세한 내용은 [Explorer Pro](/explorer/guide/pro/)를 참고하세요. 이 가이드의 기능은 모두 계속 무료입니다.
 
 - [키보드 단축키](/explorer/guide/shortcuts/)
 - [자주 묻는 질문](/explorer/guide/faq/)

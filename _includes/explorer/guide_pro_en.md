@@ -350,6 +350,20 @@ Show a check box on each item and select files by clicking their boxes, like **V
 - If some groups are collapsed in **Group by**, the header box selects only the items you can see.
 - Choose **View ▸ Item Check Boxes** again to turn the boxes off.
 
+## Copy Text from the Preview
+
+Copy the whole contents of a text file to the clipboard without opening it.
+
+**How to use it**: select a text, Markdown, or RTF file with the preview pane open, then click the copy button at the right end of the file name above the preview
+
+1. The button turns into a check mark for a moment once the text is on the clipboard.
+2. The whole file is copied, even when the preview shows only the first part of a large file.
+3. Markdown is copied as its source text. RTF is copied with its formatting, so it pastes formatted into Pages, Word, or Mail and as plain text elsewhere. With **Show Source** on, the raw RTF is copied instead.
+
+- The button appears for files the pane shows as text: plain text, Markdown, RTF, source code, JSON, XML, CSV, HTML, and logs.
+- Files larger than 32 MB can't be copied this way.
+- To copy only part of the text, select it in the preview and press ⌘C.
+
 ## If your license is removed
 
 If you remove your license, for example after a refund, your saved searches, tab sessions, and Stash Shelf items stay on this Mac. They come back if you activate a license again. Free features keep working normally. For other questions, see the [FAQ](/explorer/guide/faq/?lang=en) or email support@yjlab.io.

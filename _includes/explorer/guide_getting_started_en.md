@@ -86,7 +86,9 @@ In Details, folder sizes fill in automatically in the **Size** column. Finder co
 
 ### Preview pane
 
-Press **⇧⌘P**, choose **View ▸ Show Preview Pane**, or click **Preview** in the toolbar. The pane on the right previews the selected item (images, PDFs, text, Markdown, video, and Office documents through Quick Look) and shows its details: size, dates, image dimensions, and camera information. Drag the divider to resize it.
+Press **⇧⌘P**, choose **View ▸ Show Preview Pane**, or click **Preview** in the toolbar. The pane on the right previews the selected item (images, PDFs, text, Markdown, RTF, video, and Office documents through Quick Look) and shows its details: size, dates, image dimensions, and camera information. Drag the divider to resize it.
+
+Markdown and RTF files appear formatted. Turn on **Show Source** above the preview to see the raw text instead; Explorer remembers the choice separately for each.
 
 Press **Space** to open a selected file in the full-size Quick Look window.
 
@@ -187,7 +189,7 @@ The context menu also offers **Open With**, **Open in New Window**, **Duplicate*
 
 ## 6. Going further
 
-Explorer Pro adds Dual-Pane View, Batch Rename, folder compare and sync, a disk usage analyzer, a duplicate finder, a filter bar, grouping, ZIP browsing, editing, and compression, 7z/RAR/tar browsing, What's Using This?, iPhone and iPad photo browsing, subfolder search, the Stash Shelf, tab sessions, the Properties window with SHA-256 checksums, cloud file status, Create Shortcut, and item check boxes. See [Explorer Pro](/explorer/guide/pro/?lang=en). Everything in this guide stays free.
+Explorer Pro adds Dual-Pane View, Batch Rename, folder compare and sync, a disk usage analyzer, a duplicate finder, a filter bar, grouping, ZIP browsing, editing, and compression, 7z/RAR/tar browsing, What's Using This?, iPhone and iPad photo browsing, subfolder search, the Stash Shelf, tab sessions, the Properties window with SHA-256 checksums, cloud file status, Create Shortcut, item check boxes, and Copy Text in the preview pane. See [Explorer Pro](/explorer/guide/pro/?lang=en). Everything in this guide stays free.
 
 - [Keyboard Shortcuts](/explorer/guide/shortcuts/?lang=en)
 - [FAQ](/explorer/guide/faq/?lang=en)
