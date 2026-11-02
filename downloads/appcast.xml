@@ -3,16 +3,92 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.6.0</title>
+            <pubDate>Mon, 02 Nov 2026 16:05:16 +0900</pubDate>
+            <sparkle:version>53</sparkle:version>
+            <sparkle:shortVersionString>1.6.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Explorer Pro</h3>
+<p>Explorer Pro is a one-time purchase that adds the tools below. Everything</p>
+<p>that was free stays free. The purchase comes with a license file: double-click</p>
+<p>it once and Pro unlocks. Explorer never contacts a server to check it.</p>
+<ul>
+<li><b>Batch rename:</b> rename hundreds of files at once with find &amp; replace, regular expressions, numbering, and case changes, with a live preview and a single undo.</li>
+<li><b>Dual-pane view:</b> split a tab into two independent panes.</li>
+<li><b>Compare &amp; sync folders:</b> see what differs between two folders, pick a direction, and review every copy and replacement before anything changes.</li>
+<li><b>Disk usage analyzer:</b> see what's taking up space, folder by folder, with the largest files underneath, and clean up from the same window.</li>
+<li><b>Filter bar:</b> filter the current folder by type, date, or size, combined with a filename search.</li>
+<li><b>Search all subfolders (⇧⌘F)</b>, by name or contents, and <b>saved</b> searches<b> in the sidebar.</b></li>
+<li><b>Find duplicate files</b> by content, with keep rules and a check of every copy before it's removed.</li>
+<li><b>Archives:</b> walk into ZIP, 7z, RAR, and tar archives like folders, preview and copy out what you need; compress a selection to a ZIP (optionally encrypted); add, delete, or rename files inside a ZIP (the previous version goes to the Trash).</li>
+<li><b>What's Using This?:</b> when a drive won't eject or a file is "in use", see which app holds it and quit it right there.</li>
+<li><b>Group by</b> in Details view: date, type, size, or name, with the groups you know from Windows.</li>
+<li><b>Stash Shelf:</b> park files while you browse to their destination.</li>
+<li><b>Named tab sessions:</b> save a set of tabs and reopen it later.</li>
+<li><b>iPhone and iPad photos over USB.</b> Connect an iPhone or iPad with a cable and it appears under Locations, the way Windows shows "Apple iPhone".</li>
+<li><b>Browse:</b> open *Internal Storage › DCIM* to browse the camera roll with names, capture dates, sizes, and thumbnails.</li>
+<li><b>Preview and open:</b> preview with Space or open a photo or video in its default app.</li>
+<li><b>Copy to the Mac:</b> drag photos to Finder, the Desktop, other windows, or a browser upload area, or copy them with ⌘C/⌘V. Files arrive exactly as stored on the phone, with their capture dates.</li>
+<li><b>Import Pictures and Videos…:</b> copies everything not already imported.</li>
+<li><b>Delete from the phone:</b> asks every time and says plainly that it can't be undone, because photos deleted over the cable skip the phone's "Recently Deleted" album.</li>
+<li>Nothing is ever added to or renamed on the phone. No app is needed on the phone, and nothing leaves the Mac.</li>
+<li><b>Cloud file status:</b> in iCloud Drive, Google Drive, OneDrive, and Dropbox, a badge shows which files are only online; Download and Free Up Space are in the right-click menu.</li>
+<li><b>Properties (⌥↩):</b> a Windows-style Properties window with exact size and size on disk, live folder totals, dates, and editable name, Read-only, Hidden, and opens-with, applied with OK / Apply.</li>
+<li><b>SHA-256 checksum in Properties.</b> A file's Properties window has a SHA-256 row: click Calculate to check a download or copy against a published checksum, then Copy to put it on the clipboard. It reads in the background with a percentage and Cancel, and never shows a value for a file that changed while it was being read.</li>
+<li><b>Create Shortcut (⌃⌘A, or ⌥⌘-drag):</b> makes "&lt;name&gt; - Shortcut" beside an item or in the drop folder, like Windows.</li>
+<li><b>Item check boxes</b> (View ▸ Item Check Boxes): pick files by clicking their box, no ⌘ needed; the Name header's box selects all.</li>
+<li><b>Copy Text</b> in the preview pane copies a whole text, Markdown, or RTF file with one click.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><b>Windows mouse habits.</b> The mouse's side buttons go Back and Forward, a wheel click opens a folder in a new background tab, and the › between address-bar segments drops down the subfolders to jump to.</li>
+<li><b>Home, like This PC.</b> Drive tiles show a usage bar and "X free of Y", and Recent files lists what you opened in the last 30 days.</li>
+<li><b>Rename with Tab.</b> While renaming, Tab saves the name and moves to the next item, ⇧Tab to the previous one.</li>
+<li><b>⌘-scroll or pinch</b> steps through icon sizes and views; Edit gains Select None (⌥⌘A) and Invert Selection.</li>
+<li><b>Know before you replace.</b> When a copy or move hits an item with the same name, the dialog shows both side by side — thumbnail, size, and date — so you can pick which to keep.</li>
+<li><b>A fuller Get Info (⌘I)</b> shows the app that opens the item, Accessed date, and whether it's Read-only or Hidden.</li>
+<li><b>Photo and video miniatures in List and Details</b>, in place of the generic icon (on for local disks, off for network drives by default).</li>
+<li><b>Details column chooser:</b> right-click a column header to show Date Created, Date Accessed, Date Added, or Extension.</li>
+<li><b>Always show folders first</b> (optional), sorted by Windows Explorer's rules.</li>
+<li><b>RTF files preview with their formatting</b>, with a Show Source toggle.</li>
+<li><b>Explorer Help (⌘?)</b> opens the online guide.</li>
+<li><b>Remembered network shares reconnect</b> when you click them in the sidebar or restore a window that was showing one.</li>
+<li><b>iCloud Drive in the sidebar.</b> When iCloud Drive is on, it appears under Locations, after your home folder and the startup disk. It opens as a folder named "iCloud Drive": the address bar and titles say iCloud Drive instead of a Library path, and Up from the top goes to Home. Files that live only in iCloud aren't downloaded just to show previews. Hide it with right-click ▸ Hide from Sidebar, or in Settings ▸ Locations. Free.</li>
+<li><b>Google Drive, OneDrive, Dropbox, and other cloud storage in the</b> sidebar.<b> Cloud storage apps that sync through macOS appear under</b> Locations, right after iCloud Drive, under friendly names ("Google Drive", "OneDrive - Personal"); a second account of the same service adds its email. Install or sign in to one and it shows up the next time you switch back to Explorer. Online-only files aren't downloaded for previews, and undoing or redoing a rename or move inside these folders works even though the service rewrites dates on its own. Hide any of them with right-click ▸ Hide from Sidebar, or in Settings ▸ Locations. Free.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><b>A network share that stops answering no longer freezes the window.</b> Explorer asks only the system's mount table on the main thread, and online-only cloud files are never downloaded just to show a preview.</li>
+<li><b>Safer file operations.</b> A move between disks never deletes a source it failed to copy, Replace keeps the original recoverable until the new item is in place, and quitting during a copy or move asks first.</li>
+<li><b>A full file list ends in blank space</b>, so there's always room to right-click for New Folder or Paste.</li>
+<li><b>The progress sheet no longer flashes in</b> right after you answer a name-conflict question.</li>
+<li><b>The toolbar View button shows the current view's icon</b>, column headers show the sort arrow at launch, and a quick second header click re-sorts.</li>
+<li><b>Clicking a tab</b> no longer makes the tabs after it flash one place left.</li>
+<li><b>A very long file name</b> truncates in the preview header instead of widening the preview pane.</li>
+<li><b>Rare crashes fixed:</b> typing quickly in the address bar's suggestions, closing a video preview on macOS 26 and later, and closing a window while a folder watcher was shutting down.</li>
+<li><b>Delete works after drag-selecting.</b> Selecting files by dragging from empty space in the list and then pressing Delete only beeped when the folder tree or the other pane had keyboard focus; the drag now moves focus to the list, as a click does.</li>
+<li><b>Large folders on a NAS show files right away.</b> Opening a folder with thousands of files on a network share no longer sits on "Loading…" until the first thousand are read: rows appear within a fraction of a second and keep filling in. The folder is also read once instead of twice (the list and the sidebar tree share the read), so a slow server answers sooner.</li>
+<li><b>Opening a big folder on a NAS is many times faster.</b> macOS slows to a crawl when the same network folder is read twice at once, and selecting a folder then opening it did exactly that (the preview's item count and size, then the file list): a 1,840-photo folder took half a minute. Explorer now reads a network folder once at a time, and the preview stops reading as soon as you move on.</li>
+<li><b>The address bar's › menu for the current folder opens instantly</b>, even in a folder with thousands of files: its subfolders come from the list already on screen instead of reading the folder again. Folders you've opened before also show their subfolders at once while a fresh read checks for changes.</li>
+<li><b>Changing the sort while a slow folder loads</b> re-sorts the files already shown and keeps loading, instead of starting the listing over. Sorted by Size, folders whose sizes are measured during the load move to their place right away, and the list ends in the correct size order.</li>
+<li><b>Clicking a favorite, Home, Gallery, or a connected iPhone while a slow</b> folder was still opening<b> no longer jumps the sidebar back to the folder</b> you left once that folder finishes loading.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.0.dmg" length="7612943" type="application/octet-stream" sparkle:edSignature="Wel51Cpk7ar+bgCDwXPf/AED0N+x9ZUZY3v+CTh8+1hEpAKcRC0gwqk4ZuipoUqaZmoXIx7IALUzf1Db/hjZBg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-52.delta" sparkle:deltaFrom="52" length="4301238" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="liwPHvIsGC/odnnMHN0ZceIsv1strJwzYaR+WlJjapcXYXKDobSndN1Hg/gpWlQXee+gZyOrlJsaxB74Ulb0DQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-51.delta" sparkle:deltaFrom="51" length="4301834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MFCWJW/fq0sAzfRcCkGtnq6RRtjOZDjMsYLr6QHBLRSdYiU2J/x9gfkzXdGAb2o+oMMp8ZP4LoropTu1lJj3DQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-50.delta" sparkle:deltaFrom="50" length="4299898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1kEydEpEul38cvK5NSRid4kkKvEHVMuTV4UhZ0SBqasyUjFQ0fPciTOZdaVlPeOJdUvVXGXN+6BOMQQDCOhADg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-49.delta" sparkle:deltaFrom="49" length="4308566" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21TIn36HqqLzUU7gtli+0rgIokkQv6sl4IdvCMK/HtlLo68xBDlJAUNjWcSliWxunC++mKi3PqkqJAKTi/S8DA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-48.delta" sparkle:deltaFrom="48" length="4311090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Opp962LqMJsmtE2DUpiCIYWALxPTcKuoVmSx492cxlkhIFepOvqyZntacVnTo9a1rHQLaoqfFVsNGZn1Ar3mDg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.20</title>
             <pubDate>Thu, 27 Aug 2026 20:44:39 +0900</pubDate>
             <sparkle:version>52</sparkle:version>
             <sparkle:shortVersionString>1.5.20</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
-<ul>
-<li><b>Opening a folder right after naming it no longer fails on network</b> shares.<b> New Folder ▸ type a name ▸ Enter ▸ Enter reported</b> "“untitled folder” can't be found" on SMB volumes. The rename had already succeeded, but the listing still carried the pre-rename URL until the folder re-read finished — long enough over SMB for the second Enter to navigate to a name that no longer existed. A completed rename now updates the listing immediately, and an Enter that arrives while the rename is still in flight waits for it instead of opening the old row. A rejected rename (name already taken) reports as before and opens nothing.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.20.dmg" length="4502192" type="application/octet-stream" sparkle:edSignature="rZY1eaGOEHhpwzMjDq5WePN7ppQ6soWqXCa95YPUq1V2RRyw11dSE5O+1HDZEdoZ4xDrxXUaH5TaKZ6cqBSYDA=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-51.delta" sparkle:deltaFrom="51" length="196334" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sRurv1xgwjCp687MslzoLOn9i0m0C6LiXhxgcR50DEmP8Ub85dTOyG9D0EqCkXyXySm8u8DyPGxH24AGEwYrAg=="/>
@@ -35,21 +111,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer51-48.delta" sparkle:deltaFrom="48" length="263006" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="25iIRwzsrUEvh2UjHElgPLAy9GR54F5s+v9vc1vDEJRJT41syXrPWQ+SGqJYR/dzQDvHV/0zElkC3Fum0QYmCw=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer51-47.delta" sparkle:deltaFrom="47" length="278890" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oQ/NCksamDodwSHeMcirffTmX98XQg2lIINRv+2oG246Xb+1k9pTjh9Sr/WfbHs6CgAg504e+x45yETmpQ9wAw=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer51-46.delta" sparkle:deltaFrom="46" length="304566" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4eNzv97CKZwMy4kP6d8x7fuv3EGtWOPkh1MENOHzMOSW/B1+pAFO/Mg6cKvSj2jt1W827JfoxVK2qqO2Sz6uCg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.18</title>
-            <pubDate>Sat, 22 Aug 2026 21:07:11 +0900</pubDate>
-            <sparkle:version>50</sparkle:version>
-            <sparkle:shortVersionString>1.5.18</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.18.dmg" length="4497216" type="application/octet-stream" sparkle:edSignature="hUEVPSzTcverZQ99tx3Cd1hr/LCToMASDQsV7KJGDBIL2OquSe4AIF4pZ8Phbr1tLBQy3mQNCY3DnOFAbfqUCA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-49.delta" sparkle:deltaFrom="49" length="214854" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Xn5IdyZR2WSbJD5QQp3vevtk3lu74/vsG61561PKWK04XSChnYgdfx0tZLoX/mQhtRabkM0OQ9qaEtKruh1rDg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-48.delta" sparkle:deltaFrom="48" length="234770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DAOJ/pe1bVhEj17Vp8zyynOgkvd+A1vx5wfj6YEfYMe3iZj/LXGx5bHonJd9oz7zVyyz9d9RUePCqn/FDOJaDg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-47.delta" sparkle:deltaFrom="47" length="256658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YNYEH1ZBRXTuHWjJmDS7VdtLfvzsAPDGLpY5EFMWhJeNY5baTvvNePVJjZXr1V1oInuBIcwjDU6maRf16nQaCg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-46.delta" sparkle:deltaFrom="46" length="289290" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yck5goZ0YODQ8lQYU2Gv2+MhTJoghvxbGiIgRdrTJUeU0RqchEZZbpXZddTv+VzQLAHLc8lPHVd1p7t29OSsBQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer50-45.delta" sparkle:deltaFrom="45" length="293242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="E2TGCW8BASgoEyOhyFN6BA9j0qVwSd7i9esFFFePw9r+KqySAuDapZGQa9Mt2qI5mqqy+/1bJRa6iiEcCcBxAg=="/>
             </sparkle:deltas>
         </item>
     </channel>
