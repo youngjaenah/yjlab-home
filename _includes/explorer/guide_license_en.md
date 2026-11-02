@@ -8,7 +8,7 @@ You don't have to buy Pro to keep using Explorer: the free version keeps every f
 
 1. Click the buy button on the [Explorer Pro page](/explorer/#pro). From inside the app, you can also choose **Help ▸ Upgrade to Explorer Pro…** or **Explorer ▸ Settings… ▸ Explorer Pro ▸ Upgrade to Pro**.
 2. The checkout opens in your browser. Payment is handled by **Lemon Squeezy**, our Merchant of Record. Nothing is ever paid inside the app.
-3. When the payment is complete, your **license key** is sent in your purchase confirmation email. <!-- TODO 확인: Lemon Squeezy 구매 확인 이메일에 라이선스 키가 포함되는지 실제 주문으로 확인 -->
+3. When the payment is complete, your **license key** is sent in your purchase confirmation email.
 
 A license key looks like `XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX`. You'll need it if you ever download your license file again, so keep that email.
 
@@ -64,7 +64,7 @@ Sharing your license file or key with other people isn't allowed. If several peo
 
 ## 5. Moving to a new Mac or reinstalling
 
-- **Updating or reinstalling the app**: the license is stored on your Mac separately from the app, so you usually don't need to import it again. <!-- TODO 확인: 앱 삭제 후 재설치 시 ~/Library/Application Support/io.yjlab.Explorer/license 유지되어 Pro 상태가 복원되는지 실제 확인 -->
+- **Updating or reinstalling the app**: the license is stored on your Mac separately from the app, so you don't need to import it again.
 - **Moving to a new Mac**: install Explorer on the new Mac, then double-click your license file or import it with **Import License…**.
 - **Can't find the license file?** Download it again from the [activation page](/explorer/activate.html) with the same license key.
 
