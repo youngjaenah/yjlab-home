@@ -13,5 +13,5 @@ Explorer for Mac은 Windows 파일 탐색기에 익숙한 분들을 위한 macOS
 ## 도움이 더 필요하신가요?
 
 - **이메일**: support@yjlab.io
-- 앱에서 **Help ▸ Report a Bug…** 로 문제를 알려 주실 수 있습니다.
+- 앱에서 **도움말 ▸ 버그 제보…** 로 문제를 알려 주실 수 있습니다.
 - 관련 문서: [이용약관](/explorer/terms/) · [개인정보처리방침](/explorer/privacy/) · [환불정책](/explorer/refund/)

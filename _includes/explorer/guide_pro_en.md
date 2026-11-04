@@ -52,12 +52,12 @@ See what differs between two folders, then sync only the items you choose, in on
 1. Open **Compare Folders…**. In Dual-Pane View, **Left:** and **Right:** are filled in with the two panes' folders. Otherwise, the active folder is filled in. Use **Choose…** to pick a different folder.
 2. Click **Compare**. Files are compared by size and modified date (**Quick compare (size + date)**), and you can **Cancel** at any time.
 3. The results are sorted into **Only in Left**, **Only in Right**, **Newer in Left**, **Newer in Right**, **File vs. Folder**, and **Identical**. Up to this point, nothing has been written to either folder.
-4. Under **Direction:**, choose **Left → Right**, **Right → Left**, or **Both (newest wins)**. Use the checkboxes next to each item or category to choose what to sync.
+4. Under **Direction:**, choose **Left → Right**, **Right → Left**, or **Both (newer wins)**. Use the checkboxes next to each item or category to choose what to sync.
 5. Check the summary of copies, replacements, deletions to Trash, and the amount of data to transfer, then click **Run**.
 
 - Files that exist only on the destination side are never deleted unless you check them.
 - Replaced and deleted files go to the Trash. They're never permanently deleted.
-- **Both (newest wins)** copies the newer version of each file to the other side and never deletes anything. **Identical** items are never synced.
+- **Both (newer wins)** copies the newer version of each file to the other side and never deletes anything. **Identical** items are never synced.
 - **File vs. Folder** lists names that are a file on one side and a folder on the other. They're never synced, in any direction. Rename or move one of them yourself, then compare again.
 - If you cancel partway through, no half-written file is left under its final name. Subfolders that can't be read are marked as excluded from the comparison.
 
@@ -258,7 +258,7 @@ See which of your apps is holding a file, folder, or drive open, and close it, l
 4. If you opened the window from a failed eject or operation, click **Try Again** to repeat it. The window closes once it works.
 
 - Only your own apps are shown. System services, other users, or other computers on a network may also be using the item, and the window says so. Explorer never asks for an administrator password.
-- If Explorer itself is listed (for example, a PDF shown in the preview pane, or a drive you're browsing), click **Release Explorer's Holds**.
+- If Explorer itself is listed (for example, a PDF shown in the preview pane, or a drive you're browsing), click **Stop Using in Explorer**.
 - Command-line processes, such as a Terminal shell sitting in the folder, can only be force-quit.
 - Click **Refresh** to look again.
 - Without Pro, "in use" messages work as before. **Tools ▸ What's Using This?** shows a **PRO** badge.

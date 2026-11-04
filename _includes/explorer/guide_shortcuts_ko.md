@@ -11,11 +11,11 @@ Explorer for Mac은 Windows 탐색기에서 익숙한 단축키를 그대로 쓰
 | 동작 | Explorer for Mac | Windows 탐색기 |
 |---|---|---|
 | 선택한 폴더·파일 열기 | ↩ 또는 ⌘O | Enter |
-| 상위 폴더로 이동(**Go ▸ Enclosing Folder**) | ⌘↑ | Alt+↑ |
+| 상위 폴더로 이동(**이동 ▸ 상위 폴더**) | ⌘↑ | Alt+↑ |
 | 상위 폴더로 이동 | ⌫ | Alt+↑ (Windows에서 Backspace는 '뒤로') |
 | 뒤로 | ⌘[ | Alt+← |
 | 앞으로 | ⌘] | Alt+→ |
-| 주소창에 경로 입력(**Go ▸ Edit Path**) | ⌘L | Ctrl+L 또는 Alt+D |
+| 주소창에 경로 입력(**이동 ▸ 주소 편집**) | ⌘L | Ctrl+L 또는 Alt+D |
 | 주소창: 입력한 경로로 이동 | ↩ | Enter |
 | 주소창: 추천 목록 열기·선택 | ↓ / ↑ | ↓ / ↑ |
 | 주소창: 편집 취소 | Esc | Esc |
@@ -56,54 +56,54 @@ Explorer for Mac은 Windows 탐색기에서 익숙한 단축키를 그대로 쓰
 | 실행 취소 | ⌘Z | Ctrl+Z |
 | 다시 실행 | ⇧⌘Z 또는 ⌘Y | Ctrl+Y |
 | 경로 복사 | ⌥⌘C | Ctrl+Shift+C |
-| 속성 **(Pro)** (Pro가 없으면 Get Info) | ⌥↩ 또는 ⌘I | Alt+Enter |
+| 속성 **(Pro)** (Pro가 없으면 정보 가져오기) | ⌥↩ 또는 ⌘I | Alt+Enter |
 | 바로 가기 만들기 **(Pro)** | ⌃⌘A | — |
 | 끌어서 바로 가기 만들기 **(Pro)** | 놓을 때 ⌥⌘ 누르기 | 놓을 때 Alt 누르기 |
 | 드래그할 때 이동 대신 복사 | 놓을 때 ⌥ 누르기 | 놓을 때 Ctrl 누르기 |
-| 다른 패널로 복사 **(Pro)** | ⇧⌥⌘C(Dual-Pane View 사용 중) | — |
-| 다른 패널로 이동 **(Pro)** | ⇧⌥⌘M(Dual-Pane View 사용 중) | — |
+| 반대쪽 창으로 복사 **(Pro)** | ⇧⌥⌘C(듀얼 창 보기 사용 중) | — |
+| 반대쪽 창으로 이동 **(Pro)** | ⇧⌥⌘M(듀얼 창 보기 사용 중) | — |
 
-**New Text Document**에는 Windows와 마찬가지로 단축키가 없습니다. **File ▸ New Text Document**나 오른쪽 클릭 메뉴를 이용하세요.
+**새 텍스트 문서**에는 Windows와 마찬가지로 단축키가 없습니다. **파일 ▸ 새 텍스트 문서**나 오른쪽 클릭 메뉴를 이용하세요.
 
 ## 선택과 보기
 
 | 동작 | Explorer for Mac | Windows 탐색기 |
 |---|---|---|
 | 모두 선택 | ⌘A | Ctrl+A |
-| 선택 해제(**Edit ▸ Select None**) | ⌥⌘A | — |
-| 선택 반전 | **Edit ▸ Invert Selection** | **더 보기(…) ▸ 선택 영역 반전** |
+| 선택 해제(**편집 ▸ 선택 안 함**) | ⌥⌘A | — |
+| 선택 반전 | **편집 ▸ 선택 영역 반전** | **더 보기(…) ▸ 선택 영역 반전** |
 | 선택 이동 | ↑ ↓ (아이콘 보기에서는 ← →도) | 화살표 키 |
 | 선택 범위 넓히기 | ⇧ + 화살표 키 또는 ⇧-클릭 | Shift + 화살표 키 또는 Shift+클릭 |
 | 항목 하나씩 추가·해제 | ⌘-클릭 | Ctrl+클릭 |
-| 선택한 파일 Quick Look | Space | — |
+| 선택한 파일 훑어보기 | Space | — |
 | 숨김 파일 표시·숨기기 | ⇧⌘. | — |
-| 아이콘 크게·작게, 그다음 List·Details | ⌘ + 스크롤 또는 핀치 | Ctrl + 스크롤 |
+| 아이콘 크게·작게, 그다음 목록·자세히 | ⌘ + 스크롤 또는 핀치 | Ctrl + 스크롤 |
 | 미리 보기 창 표시·숨기기 | ⇧⌘P | Alt+P |
-| Dual-Pane View **(Pro)** | ⌘\ | — |
-| Show Stash Shelf **(Pro)** | ⇧⌘Y | — |
+| 듀얼 창 보기 **(Pro)** | ⌘\ | — |
+| 임시 보관함 표시 **(Pro)** | ⇧⌘Y | — |
 
 ## 검색
 
 | 동작 | Explorer for Mac | Windows 탐색기 |
 |---|---|---|
-| 검색 상자로 이동(**Edit ▸ Find**) | ⌘F | Ctrl+F 또는 Ctrl+E |
+| 검색 상자로 이동(**편집 ▸ 찾기**) | ⌘F | Ctrl+F 또는 Ctrl+E |
 | 검색 확정 | ↩ | Enter |
 | 검색 지우고 전체 항목 표시 | Esc | Esc |
-| Find in All Subfolders **(Pro)** | ⇧⌘F | Ctrl+F (Windows는 기본적으로 하위 폴더까지 검색) |
+| 모든 하위 폴더에서 찾기… **(Pro)** | ⇧⌘F | Ctrl+F (Windows는 기본적으로 하위 폴더까지 검색) |
 
 ## 기타
 
 | 동작 | Explorer for Mac | Windows 탐색기 |
 |---|---|---|
-| Home·Gallery 항목 열기 | ↩ | Enter |
+| 홈·갤러리 항목 열기 | ↩ | Enter |
 | 대화상자를 변경 없이 닫기 | Esc | Esc |
-| 사용 가이드 열기 (**Help ▸ Explorer Help**) | ⇧⌘/ (⌘?) | F1 |
+| 사용 가이드 열기 (**도움말 ▸ Explorer 도움말**) | ⇧⌘/ (⌘?) | F1 |
 
 ## Windows와 다르게 동작하는 키
 
 - **F2(이름 바꾸기)**: **⌘R**을 사용하세요. Mac 키보드에서는 F2가 화면 밝기 키여서 앱에 전달되지 않습니다.
 - **Backspace**: 상위 폴더로 이동하며, 절대 삭제하지 않습니다. 뒤로 가려면 **⌘[**를 누르세요.
 - **Delete**: **⌘⌫** 또는 **⌦**(노트북에서는 fn + Delete)를 사용하세요.
-- **F5(새로 고침)**: 폴더가 자동으로 갱신되므로 필요하지 않습니다. 오른쪽 클릭 메뉴에 **Refresh**도 있습니다.
+- **F5(새로 고침)**: 폴더가 자동으로 갱신되므로 필요하지 않습니다. 오른쪽 클릭 메뉴에 **새로 고침**도 있습니다.
 
 함께 보기: [시작하기](/explorer/guide/getting-started/) · [자주 묻는 질문](/explorer/guide/faq/)
