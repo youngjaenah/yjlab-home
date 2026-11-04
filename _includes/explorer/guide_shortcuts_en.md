@@ -14,6 +14,7 @@ Shortcuts marked **(Pro)** require [Explorer Pro](/explorer/guide/pro/?lang=en).
 | Go up to the parent folder (**Go ▸ Enclosing Folder**) | ⌘↑ | Alt+↑ |
 | Go up to the parent folder | ⌫ | Alt+↑ (Backspace means Back in Windows) |
 | Open the selected folder / go up (Details and List views) | → / ← | — |
+| Move focus: folder tree → file list → search box (backward with Shift) | ⇥ / ⇧⇥ | Tab / Shift+Tab |
 | Back | ⌘[ | Alt+← |
 | Forward | ⌘] | Alt+→ |
 | Type a path in the address bar (**Go ▸ Edit Path**) | ⌘L | Ctrl+L or Alt+D |
