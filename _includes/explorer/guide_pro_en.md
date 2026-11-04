@@ -133,7 +133,7 @@ Filter the current folder by file type, modified date, or size. Filters work tog
 
 **How to open it**: once Pro is active, the filter bar always appears just below the address bar, above the file list.
 
-1. Click one or more type buttons: **Folders**, **Images**, **Docs**, **Audio**, **Video**, or **Archives**. If you select more than one, items of any selected type are shown.
+1. Click one or more type buttons: **Folders**, **Images**, **Docs**, **Audio**, **Video**, **Archives**, or **Other** (anything that isn't one of the others, such as apps, disk images, or source code). If you select more than one, items of any selected type are shown.
 2. In the date menu, choose **Any date**, **Today**, **Last 7 days**, **Last 30 days**, or **This year**.
 3. In the size menu, choose **Any size**, **Smaller than 1 MB**, **1 MB – 100 MB**, **Larger than 100 MB**, or **Larger than 1 GB**.
 4. Check **Showing X of Y** at the right end of the bar to see how many items remain. To clear every filter, including the name search, click **Clear**.
