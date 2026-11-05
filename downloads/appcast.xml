@@ -3,33 +3,32 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.6.2</title>
+            <pubDate>Thu, 05 Nov 2026 12:25:18 +0900</pubDate>
+            <sparkle:version>55</sparkle:version>
+            <sparkle:shortVersionString>1.6.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>Comments column (설명):</b> right-click a Details column header and turn on <b>Comments</b> to see the comments you wrote in Finder's Get Info. The cell shows the comment on one line, and hovering shows all of it. Click the header to sort by comment; items without one come last. Comments fill in after the files appear, so even a big folder on a NAS opens as fast as before, and Refresh reads them again. Free.</li>
+<li>Get Info (⌘I) and the Properties window show the item's Finder comment too.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.2.dmg" length="7708203" type="application/octet-stream" sparkle:edSignature="XDX1MWlzlrKv055W/dkB9adIl/GAoVlNfKlR9ILWF6ST+Oa4dVty/LnOUZAB6VOnYsQnDEJuO+3/GCBjGsCtCQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-54.delta" sparkle:deltaFrom="54" length="713742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PlylUgGoesDQlwgDCLoQ7x+oId7VBfZn2XMb0nW4ecaKja2hv0954FXzsJ5tEV/Skl8C8vkbtqqPV7GGTUNSCQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-53.delta" sparkle:deltaFrom="53" length="872658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mNcdRhmqHEc8gr78GtdjTmbl7vwvix1vv4kaUrE7rHMEYuo3xVjrm/F3WEFkq7D1JwFUbaUkqvKWn3rDK3N8DQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-52.delta" sparkle:deltaFrom="52" length="4372526" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dZwjLjM8ERCsqXSTa6e9c/jDj9xrJCNSVXC3PHT1tJA/BRo4dmayokyccuM0ozROgtAUP1E19/2VbXn7a82VAg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-51.delta" sparkle:deltaFrom="51" length="4372650" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="m8+b8oPBpNQPNKSMDZGgSVIY8ViLn5C5mlTlSp4zDKso6Eb+jQVUX7yzfaSRKtrJt9n34+hxTmJpOqbcgksaAg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-50.delta" sparkle:deltaFrom="50" length="4375090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TKZ7DSlV84u6SVRuTSX71wqzbXzYb5T8Dhpx4YnAm7I8CqgDM5jQDD+EHpDve72sGKh00bX7A8AN1x5fI+Q0DQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.6.1</title>
             <pubDate>Wed, 04 Nov 2026 14:39:48 +0900</pubDate>
             <sparkle:version>54</sparkle:version>
             <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>Korean:</b> Explorer now speaks Korean on a Mac set to Korean, using the same words as the Windows 11 File Explorer (숨긴 항목, 미리 보기 창, 속성…).</li>
-<li>Toolbar buttons show their name and shortcut when you hover over them.</li>
-<li>In Details and List views, <b>→</b> opens the selected folder and <b>←</b> goes up to the parent folder. Opening a folder from the keyboard (<b>→</b> or <b>Return</b>) selects its first item, so you can keep going with the arrows.</li>
-<li><b>Tab</b> moves the focus folder tree → file list → search box and around again (<b>Shift-Tab</b> goes back). Tabbing into a list with nothing selected selects the first item, so you can see where you are; an empty folder is skipped.</li>
-<li>Icon views show whether they have the keyboard focus: the selection is in the accent color while focused and grey otherwise, like the Details list.</li>
-<li>Filter bar: a new <b>Other</b> kind button for files that aren't folders, images, documents, audio, video, or archives (apps, disk images, source code…), so turning on every kind button shows every item.</li>
-</ul>
-<h3>Changed</h3>
-<ul>
-<li>View menu: the Pro toggles (Item Check Boxes, Stash Shelf, Group by, Dual-Pane View) now sit together below the free ones.</li>
-<li>The folder-tree option "Show All Folders" is now <b>Show Subfolders of</b> Opened Folder<b>, named for what it does; Settings explains both tree</b> options.</li>
-<li>Home: the recent lists' button reads <b>Clear History</b>.</li>
-<li>Pinned Desktop, Downloads and the other standard folders show the names macOS uses in your language.</li>
-<li>Clearer wording in places: the license note, folder-access prompts, What's Using This (<b>Items in Use</b>, <b>Stop Using in Explorer</b>), and two-way sync (<b>Both (newer wins)</b>).</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li>At Macintosh HD, ←, Backspace or Go ▸ Enclosing Folder reloaded the drive and dropped the selection; they now do nothing there.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.1.dmg" length="7655727" type="application/octet-stream" sparkle:edSignature="WLJfbQuWTJkNNhSoh0govlP4SHQ4IroGU2eQP6rxYMqtLF0vR8G1QL0OljpzIJZxU/+MvO7NzKYBB8V2xfeBCA=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-53.delta" sparkle:deltaFrom="53" length="718094" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+NjbjCrKwZeA95TDSqFKrBfPv7mDgNJbwru3jADtWG0rxtlAP+Y8oPMB8thloxTxjDqPY4g0AoRVz++LmX6vBQ=="/>
@@ -52,21 +51,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-50.delta" sparkle:deltaFrom="50" length="4299898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1kEydEpEul38cvK5NSRid4kkKvEHVMuTV4UhZ0SBqasyUjFQ0fPciTOZdaVlPeOJdUvVXGXN+6BOMQQDCOhADg=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-49.delta" sparkle:deltaFrom="49" length="4308566" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21TIn36HqqLzUU7gtli+0rgIokkQv6sl4IdvCMK/HtlLo68xBDlJAUNjWcSliWxunC++mKi3PqkqJAKTi/S8DA=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-48.delta" sparkle:deltaFrom="48" length="4311090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Opp962LqMJsmtE2DUpiCIYWALxPTcKuoVmSx492cxlkhIFepOvqyZntacVnTo9a1rHQLaoqfFVsNGZn1Ar3mDg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.5.20</title>
-            <pubDate>Thu, 27 Aug 2026 20:44:39 +0900</pubDate>
-            <sparkle:version>52</sparkle:version>
-            <sparkle:shortVersionString>1.5.20</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.5.20.dmg" length="4502192" type="application/octet-stream" sparkle:edSignature="rZY1eaGOEHhpwzMjDq5WePN7ppQ6soWqXCa95YPUq1V2RRyw11dSE5O+1HDZEdoZ4xDrxXUaH5TaKZ6cqBSYDA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-51.delta" sparkle:deltaFrom="51" length="196334" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sRurv1xgwjCp687MslzoLOn9i0m0C6LiXhxgcR50DEmP8Ub85dTOyG9D0EqCkXyXySm8u8DyPGxH24AGEwYrAg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-50.delta" sparkle:deltaFrom="50" length="230014" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HY9Rrv3cONOVHVOQgRNOg3aCV7Sdev4huXFaFFn63CMynVH2pc2TTkBE+AEe+Ad1ToH2s9apxSpITLxkxCE0Aw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-49.delta" sparkle:deltaFrom="49" length="277150" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+YZY2Wky24eGzG9RTf9ouNTnjFBAIS/FZeiQ8BP4fQg7H0VpAMjH152r3L6OL78/YLanUk7x801Dy+5W5XwxDg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-48.delta" sparkle:deltaFrom="48" length="277906" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8PP4YgLg0AsmM5ErTV8DJrRxW61gWcikYW38t5XI8RKopklyaCglLCmh7U+aBuhcXgvAxYdKO88/axBDMDpaCg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer52-47.delta" sparkle:deltaFrom="47" length="291598" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mM7v5l0Y4gDV+++veCnHhT7e3zA34Ia4v18/iebyhLnXlKAFD/qrxE8AUIvWbzo6vf/pkkHwUsl9STq9oqxuAw=="/>
             </sparkle:deltas>
         </item>
     </channel>
