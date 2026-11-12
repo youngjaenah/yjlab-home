@@ -3,17 +3,35 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.6.3</title>
+            <pubDate>Thu, 12 Nov 2026 18:26:54 +0900</pubDate>
+            <sparkle:version>56</sparkle:version>
+            <sparkle:shortVersionString>1.6.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li><b>View ▸ Refresh</b> (<b>⌥⌘R</b>, or <b>F5</b> like Windows) reads the current folder again. Handy on WebDAV shares, which don't tell the Mac when files change on the server.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Sorting by <b>Size</b> with "Always show folders first" turned off now orders folders and files together by size, so a 9 GB folder no longer sits below a 16 KB file. Folders whose size hasn't been measured yet go to the small end.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.3.dmg" length="7709317" type="application/octet-stream" sparkle:edSignature="IppvMdqmM4kNANUEQDLJxfr5BtDiuqqHlDDeuEmrxpfdoozjnMu5XXgu4H/jQTQUzUxYWfMVBvKg7+/fpPc0Dw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer56-55.delta" sparkle:deltaFrom="55" length="463778" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GSZttU4KXMbC1/NBlkMsEawzTFlr7wywhffnRlEh56pYvvjdcxfMzs2hVTSZtuAFO6j78W2RM/S+JGkFDMgRDg=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer56-54.delta" sparkle:deltaFrom="54" length="734610" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="NlnWdk66aRMizV/SfNIslSGClIirw1QjQ8OpJCrV9CEcO9q0KX/6T0Jo9SlvDMVNtLUtLy7OulhykwqbHhLzDA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer56-53.delta" sparkle:deltaFrom="53" length="882554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Y0bgXVB384Jps4K5unouM5WmIkgxNXgDQh3F2WI8JM7zq1a1OOwhF0wT4+/2GZoXORgFDKs6A7ELt4DYYAJIBA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer56-52.delta" sparkle:deltaFrom="52" length="4364926" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3wQQrWSriFm6sZUYN/jry4iJcRPMlFxHnEa/U4e9LawcKZryPSClzUZFNkoXz9bBP4b4qwnHA9fsDOeeQwnLCQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer56-51.delta" sparkle:deltaFrom="51" length="4376422" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8o0HLDnMCRG1cGQDY4r3vDUgWotRuyOgph//8/jtge7WNAmLfpPNoqDBwxHhoWpK4T+pLNpekbSYBHtWyeufDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.6.2</title>
             <pubDate>Thu, 05 Nov 2026 12:25:18 +0900</pubDate>
             <sparkle:version>55</sparkle:version>
             <sparkle:shortVersionString>1.6.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>Comments column (설명):</b> right-click a Details column header and turn on <b>Comments</b> to see the comments you wrote in Finder's Get Info. The cell shows the comment on one line, and hovering shows all of it. Click the header to sort by comment; items without one come last. Comments fill in after the files appear, so even a big folder on a NAS opens as fast as before, and Refresh reads them again. Free.</li>
-<li>Get Info (⌘I) and the Properties window show the item's Finder comment too.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.2.dmg" length="7708203" type="application/octet-stream" sparkle:edSignature="XDX1MWlzlrKv055W/dkB9adIl/GAoVlNfKlR9ILWF6ST+Oa4dVty/LnOUZAB6VOnYsQnDEJuO+3/GCBjGsCtCQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-54.delta" sparkle:deltaFrom="54" length="713742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PlylUgGoesDQlwgDCLoQ7x+oId7VBfZn2XMb0nW4ecaKja2hv0954FXzsJ5tEV/Skl8C8vkbtqqPV7GGTUNSCQ=="/>
@@ -36,21 +54,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-51.delta" sparkle:deltaFrom="51" length="4340534" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ptm/+hpNbPjt59scnvBC8mdfYhfhGMAAOJ8RnIMw/rd1C5VWofgI9ztL/mCZ5w+W88ufYJXT7bH7QG2j54O+AQ=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-50.delta" sparkle:deltaFrom="50" length="4341186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dEBv8eX/sqZoQAC4QCsGeXs4d8dDt+y/RdoN4Q/A14XJAHJnEFcagri5OpwqBYbV4LvjTu9qpRukX47N6moJAg=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-49.delta" sparkle:deltaFrom="49" length="4342990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="elPSA2dbdDRr6DtD60oEckuujSiE4aEsEfPJOxgFTeGOP+Kqr97jGj7WLZIUadJ5oJghCGL3m4UEVpD+cPxCCw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.6.0</title>
-            <pubDate>Mon, 02 Nov 2026 16:05:16 +0900</pubDate>
-            <sparkle:version>53</sparkle:version>
-            <sparkle:shortVersionString>1.6.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.0.dmg" length="7612943" type="application/octet-stream" sparkle:edSignature="Wel51Cpk7ar+bgCDwXPf/AED0N+x9ZUZY3v+CTh8+1hEpAKcRC0gwqk4ZuipoUqaZmoXIx7IALUzf1Db/hjZBg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-52.delta" sparkle:deltaFrom="52" length="4301238" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="liwPHvIsGC/odnnMHN0ZceIsv1strJwzYaR+WlJjapcXYXKDobSndN1Hg/gpWlQXee+gZyOrlJsaxB74Ulb0DQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-51.delta" sparkle:deltaFrom="51" length="4301834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MFCWJW/fq0sAzfRcCkGtnq6RRtjOZDjMsYLr6QHBLRSdYiU2J/x9gfkzXdGAb2o+oMMp8ZP4LoropTu1lJj3DQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-50.delta" sparkle:deltaFrom="50" length="4299898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1kEydEpEul38cvK5NSRid4kkKvEHVMuTV4UhZ0SBqasyUjFQ0fPciTOZdaVlPeOJdUvVXGXN+6BOMQQDCOhADg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-49.delta" sparkle:deltaFrom="49" length="4308566" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="21TIn36HqqLzUU7gtli+0rgIokkQv6sl4IdvCMK/HtlLo68xBDlJAUNjWcSliWxunC++mKi3PqkqJAKTi/S8DA=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer53-48.delta" sparkle:deltaFrom="48" length="4311090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Opp962LqMJsmtE2DUpiCIYWALxPTcKuoVmSx492cxlkhIFepOvqyZntacVnTo9a1rHQLaoqfFVsNGZn1Ar3mDg=="/>
             </sparkle:deltas>
         </item>
     </channel>
