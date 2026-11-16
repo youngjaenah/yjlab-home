@@ -1,9 +1,9 @@
 # Explorer for Mac 이용약관
 
 **시행일: 2026-10-01**
-**최종 수정일: 2026-10-01**
+**최종 수정일: 2026-11-17**
 
-본 약관은 나영재(Youngjae Nah, 이하 "운영자")가 제공하는 macOS 앱 **Explorer for Mac**(이하 "앱")과 유료 업그레이드 **Explorer Pro**(이하 "Pro")의 이용 조건을 정합니다. 앱을 설치·사용하거나 Pro를 구매하면 본 약관에 동의한 것으로 봅니다.
+본 약관은 YJLAB 대표 나영재(Youngjae Nah, 이하 "운영자")가 제공하는 macOS 앱 **Explorer for Mac**(이하 "앱")과 유료 업그레이드 **Explorer Pro**(이하 "Pro")의 이용 조건을 정합니다. 앱을 설치·사용하거나 Pro를 구매하면 본 약관에 동의한 것으로 봅니다.
 
 ## 제1조 (용어의 정의)
 
@@ -20,8 +20,10 @@
 ## 제3조 (Pro 구매와 결제)
 
 1. Pro는 **1회 결제, 영구 라이선스** 상품이며 구독이 아닙니다.
-2. 결제는 판매 대행사(Merchant of Record)인 **Lemon Squeezy**를 통해 이루어지며, 결제·세금·영수증 처리에는 Lemon Squeezy의 구매 약관이 함께 적용됩니다.
-3. 구매 후 받은 라이선스 키로 [라이선스 발급 페이지](https://www.yjlab.io/explorer/activate.html)에서 라이선스 파일을 내려받을 수 있으며, 같은 키로 언제든 다시 받을 수 있습니다.
+2. Pro는 판매 대행사(Merchant of Record)가 이용자에게 판매하며, 판매 대행사가 결제·세금·인보이스·영수증을 처리합니다.
+   - **Paddle.com**: Paddle 결제 페이지로 구매한 경우. 구매에는 Paddle의 [구매자 약관](https://www.paddle.com/legal/checkout-buyer-terms)이 함께 적용됩니다.
+   - **Lemon Squeezy**: Lemon Squeezy 결제 페이지(2027년 3월 31일까지 운영)로 구매한 경우. 해당 구매에는 Lemon Squeezy의 구매 약관이 함께 적용됩니다.
+3. 구매 후 라이선스 파일을 받습니다. Lemon Squeezy로 구매한 경우 라이선스 키로 [라이선스 발급 페이지](https://www.yjlab.io/explorer/activate.html)에서 내려받을 수 있으며, 같은 키로 언제든 다시 받을 수 있습니다. Paddle로 구매한 경우 결제 완료 화면과 이메일로 전달되며, 구매한 이메일 주소로 언제든 다시 받을 수 있습니다.
 4. 환불은 별도의 [환불정책](/explorer/refund/)을 따릅니다.
 
 ## 제4조 (라이선스의 범위)
@@ -77,6 +79,6 @@
 
 ## 제13조 (문의)
 
-- **운영자**: 나영재 (Youngjae Nah)
+- **운영자**: YJLAB 대표 나영재 (Youngjae Nah)
 - **이메일**: support@yjlab.io
 - **웹사이트**: https://www.yjlab.io/explorer/

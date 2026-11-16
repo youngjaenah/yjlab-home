@@ -1,9 +1,9 @@
 # Explorer for Mac Terms of Service
 
 **Effective date: 2026-10-01**
-**Last updated: 2026-10-01**
+**Last updated: 2026-11-17**
 
-These Terms of Service (the "Terms") govern your use of the macOS app **Explorer for Mac** (the "App") and its paid upgrade **Explorer Pro** ("Pro"), provided by 나영재 (Youngjae Nah) (the "Operator"). By installing or using the App, or by purchasing Pro, you agree to these Terms.
+These Terms of Service (the "Terms") govern your use of the macOS app **Explorer for Mac** (the "App") and its paid upgrade **Explorer Pro** ("Pro"), provided by 나영재 (Youngjae Nah), doing business as YJLAB (the "Operator"). By installing or using the App, or by purchasing Pro, you agree to these Terms.
 
 ## 1. Definitions
 
@@ -20,8 +20,10 @@ These Terms of Service (the "Terms") govern your use of the macOS app **Explorer
 ## 3. Purchasing Pro
 
 1. Pro is a **one-time purchase with a perpetual license**. It is not a subscription.
-2. Payments are processed by **Lemon Squeezy**, which acts as the Merchant of Record. Lemon Squeezy's buyer terms also apply to payment, taxes, and receipts.
-3. After purchase, you can download your license file from the [activation page](https://www.yjlab.io/explorer/activate.html) using your license key, and download it again at any time with the same key.
+2. Payments are processed by a reseller acting as the Merchant of Record, which sells Pro to you and handles payment, taxes, invoices, and receipts:
+   - **Paddle.com** for purchases made through the Paddle checkout. Paddle's [Buyer Terms](https://www.paddle.com/legal/checkout-buyer-terms) also apply to your purchase.
+   - **Lemon Squeezy** for purchases made through the Lemon Squeezy checkout, which is available until March 31, 2027. Lemon Squeezy's buyer terms also apply to those purchases.
+3. After purchase you receive a license file. For Lemon Squeezy purchases, you can download it from the [activation page](https://www.yjlab.io/explorer/activate.html) using your license key, and download it again at any time with the same key. For Paddle purchases, it is delivered on the checkout completion page and by email, and can be sent again to the email address you purchased with.
 4. Refunds are governed by the separate [Refund Policy](/explorer/refund/?lang=en).
 
 ## 4. License scope
@@ -77,6 +79,6 @@ These Terms are governed by the laws of the Republic of Korea. Any dispute relat
 
 ## 13. Contact
 
-- **Operator**: 나영재 (Youngjae Nah)
+- **Operator**: 나영재 (Youngjae Nah), doing business as YJLAB
 - **Email**: support@yjlab.io
 - **Website**: https://www.yjlab.io/explorer/

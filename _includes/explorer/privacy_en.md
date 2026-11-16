@@ -1,9 +1,9 @@
 # Explorer for Mac Privacy Policy
 
 **Effective date: 2026-10-01**
-**Last updated: 2026-10-01**
+**Last updated: 2026-11-17**
 
-나영재 (Youngjae Nah) (the "Operator") provides the macOS app **Explorer for Mac** (the "App") and its paid upgrade **Explorer Pro** ("Pro"), and processes personal information in accordance with the Personal Information Protection Act of the Republic of Korea and other applicable laws.
+나영재 (Youngjae Nah), doing business as YJLAB (the "Operator") provides the macOS app **Explorer for Mac** (the "App") and its paid upgrade **Explorer Pro** ("Pro"), and processes personal information in accordance with the Personal Information Protection Act of the Republic of Korea and other applicable laws.
 
 > **Summary** — The App does not collect your files, folders, or usage history, and contains no analytics or tracking (telemetry). The only time the App goes online is to check for updates. Minimal information is processed only when you buy Pro and get your license, through our payment provider.
 
@@ -30,11 +30,12 @@ The Operator does not provide your personal information to third parties, except
 
 ## 4. Processors and international transfers
 
-The following companies process personal information to provide the service. All are located outside Korea (in the United States). By purchasing, requesting a license, or contacting support, you consent to these transfers; if you do not, you cannot use those services (such as buying Pro). Using the free version is unaffected.
+The following companies process personal information to provide the service. All are located outside Korea (in the United Kingdom or the United States). By purchasing, requesting a license, or contacting support, you consent to these transfers; if you do not, you cannot use those services (such as buying Pro). Using the free version is unaffected.
 
 | Recipient | Country | Items | Purpose | When / how | Retention |
 |---|---|---|---|---|---|
-| Lemon Squeezy, LLC (a Stripe company) | USA | Name, email, country, payment information | Payment processing as Merchant of Record, taxes, license key issuance | At purchase, via the checkout page | Per the provider's policy and applicable law |
+| Paddle.com Market Limited | UK | Name, email, country, payment information | Payment processing as Merchant of Record, taxes, invoices | At purchase, via the Paddle checkout | Per the provider's policy and applicable law |
+| Lemon Squeezy, LLC (a Stripe company) | USA | Name, email, country, payment information | Payment processing as Merchant of Record, taxes, license key issuance (Lemon Squeezy purchases, until March 31, 2027) | At purchase, via the checkout page | Per the provider's policy and applicable law |
 | Cloudflare, Inc. | USA | License key, IP address | Running the license issuance server | When you request a license file, over the network | Discarded after the request (except the provider's short-lived security logs) |
 | GitHub, Inc. | USA | IP address, App version | Hosting the website and update files | When you visit the website or the App checks for updates, over the network | Per the provider's policy |
 
