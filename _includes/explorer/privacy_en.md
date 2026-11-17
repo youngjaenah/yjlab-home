@@ -1,7 +1,9 @@
 # Explorer for Mac Privacy Policy
 
-**Effective date: 2026-10-01**
+**Effective date: 2026-11-24**
 **Last updated: 2026-11-17**
+
+> **Notice of changes (announced 2026-11-17, effective 2026-11-24)** — We are adding a way to get your license file re-sent by email. This adds Resend, Inc. (USA) as an email-delivery processor, and the license server now briefly keeps a request counter per email address to prevent abuse. Until 2026-11-24, the [previous version](https://github.com/youngjaenah/yjlab-home/blob/fb6e104/_includes/explorer/privacy_en.md) applies.
 
 나영재 (Youngjae Nah), doing business as YJLAB (the "Operator") provides the macOS app **Explorer for Mac** (the "App") and its paid upgrade **Explorer Pro** ("Pro"), and processes personal information in accordance with the Personal Information Protection Act of the Republic of Korea and other applicable laws.
 
@@ -20,6 +22,7 @@
 |---|---|---|---|
 | Pro purchase | Name, email, country, order number, amount paid (the Operator never receives payment card details) | Order confirmation, license issuance, refunds and support, tax compliance | As required by law (e.g. 5 years for e-commerce payment records in Korea) |
 | License issuance | License key, IP address | Verifying the purchase and generating the license file; abuse prevention | Not stored (discarded once the request is handled) |
+| License delivery and re-sending by email | Email address, name, order number, IP address | Finding your purchase and emailing your license file; abuse prevention | Not stored, except a request counter per email address kept for 1 hour to prevent abuse |
 | Support requests | Email address, message content | Responding to inquiries | 1 year after the inquiry is resolved |
 
 The license file contains the name, email address, and order number from your purchase. It is delivered to you and is not kept separately on the Operator's servers.
@@ -36,7 +39,8 @@ The following companies process personal information to provide the service. All
 |---|---|---|---|---|---|
 | Paddle.com Market Limited | UK | Name, email, country, payment information | Payment processing as Merchant of Record, taxes, invoices | At purchase, via the Paddle checkout | Per the provider's policy and applicable law |
 | Lemon Squeezy, LLC (a Stripe company) | USA | Name, email, country, payment information | Payment processing as Merchant of Record, taxes, license key issuance (Lemon Squeezy purchases, until March 31, 2027) | At purchase, via the checkout page | Per the provider's policy and applicable law |
-| Cloudflare, Inc. | USA | License key, IP address | Running the license issuance server | When you request a license file, over the network | Discarded after the request (except the provider's short-lived security logs) |
+| Cloudflare, Inc. | USA | License key, email address, IP address | Running the license issuance server | When you request a license file or a re-send, over the network | Discarded after the request (except a 1-hour per-email request counter and the provider's short-lived security logs) |
+| Resend, Inc. | USA | Email address, name, order number, license file | Sending license emails | When a license is issued or re-sent by email, over the network | Per the provider's policy |
 | GitHub, Inc. | USA | IP address, App version | Hosting the website and update files | When you visit the website or the App checks for updates, over the network | Per the provider's policy |
 
 The website (yjlab.io) uses Google Fonts to display text, which may send your IP address to Google.
@@ -53,7 +57,7 @@ Information stored inside the App (settings, license, and so on) can be deleted 
 
 ## 7. Security measures
 
-The Operator's principle is to process as little personal information as possible. The App does not send your data anywhere, the license server stores no personal information, and licenses are digitally signed to prevent forgery.
+The Operator's principle is to process as little personal information as possible. The App does not send your data anywhere, the license server stores no personal information beyond a 1-hour request counter per email address, and licenses are digitally signed to prevent forgery.
 
 ## 8. Children
 
