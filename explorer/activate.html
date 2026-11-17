@@ -115,7 +115,8 @@
 
     <section class="method" id="by-email" hidden>
       <h2>Email me my license</h2>
-      <p class="sub">Enter the email address you purchased with. We'll send the license file there.</p>
+      <p class="sub">Lost your license key or file? Enter the email address you purchased with,
+        and we'll send the license file there.</p>
       <form id="resend">
         <label for="email">Purchase email</label>
         <div class="row">
@@ -130,8 +131,8 @@
 
     <section class="method" id="by-key">
     <h2 id="by-key-title" hidden>Have a license key?</h2>
-    <p class="sub" id="by-key-sub" hidden>Bought through Lemon Squeezy (before March 2027)? Paste the
-      license key from that purchase email to download the file.</p>
+    <p class="sub" id="by-key-sub" hidden>If your purchase email has a license key, paste it here to
+      download the file right away.</p>
     <form id="activate">
       <label for="key">License key</label>
       <div class="row">
@@ -162,15 +163,16 @@
 </footer>
 
 <script>
-  // ---- Flip together with explorer/buy/ PROVIDER when Paddle goes live ------
-  const PADDLE_LIVE = false;
+  // ---- Turn on once the production Worker can send mail (RESEND_API_KEY +
+  // LS_API_KEY / KV): resend-by-email covers Lemon Squeezy AND Paddle buyers.
+  const EMAIL_RESEND = false;
   // ---------------------------------------------------------------------------
   const sandbox = new URLSearchParams(location.search).get("paddle") === "sandbox";
   const RESEND_ENDPOINT = sandbox
     ? "https://yjlab-license-worker-staging.youngjae-nah.workers.dev/v1/paddle/resend"
     : "https://license.yjlab.io/v1/paddle/resend";
 
-  if (PADDLE_LIVE || sandbox) {
+  if (EMAIL_RESEND || sandbox) {
     for (const id of ["by-email", "lead-both", "by-key-title", "by-key-sub"]) {
       document.getElementById(id).hidden = false;
     }
