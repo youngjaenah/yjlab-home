@@ -115,8 +115,8 @@
   const LS_CHECKOUT = "https://yjlab.lemonsqueezy.com/checkout/buy/63e91ce4-7611-4135-b44e-e3d7fde2b71c";
   const PADDLE = {
     live: {
-      token: "",   // live_… client-side token (after Paddle approval)
-      priceId: "", // live pri_…
+      token: "live_79f01d7cc8aa7d4dae30e73f6e2",
+      priceId: "pri_01m7ma6fwmjsp9ghr5qmvvcarq",
       worker: "https://license.yjlab.io",
     },
     sandbox: {
@@ -130,8 +130,10 @@
 
   const params = new URLSearchParams(location.search);
   const sandbox = params.get("paddle") === "sandbox";
+  // ?paddle=live: real Paddle checkout before PROVIDER flips (owner test buy)
+  const livePreview = params.get("paddle") === "live";
 
-  if (PROVIDER !== "paddle" && !sandbox) {
+  if (PROVIDER !== "paddle" && !sandbox && !livePreview) {
     location.replace(LS_CHECKOUT);
   } else {
     startPaddle(sandbox ? PADDLE.sandbox : PADDLE.live);
