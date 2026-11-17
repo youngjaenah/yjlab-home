@@ -122,8 +122,8 @@
     sandbox: {
       token: "test_0b6b395fb66b9ca041201c9de7a",
       priceId: "pri_01m7kd63emqakg9x8h3pjxv3ry",
-      // staging Worker (wrangler deploy --env staging); local wrangler dev on localhost
-      worker: location.hostname === "localhost" ? "http://localhost:8787" : "",
+      // staging Worker (wrangler deploy --env staging), signs with a THROWAWAY key
+      worker: "https://yjlab-license-worker-staging.youngjae-nah.workers.dev",
     },
   };
   // ---------------------------------------------------------------------------
