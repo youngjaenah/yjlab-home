@@ -3,20 +3,36 @@
     <channel>
         <title>Explorer</title>
         <item>
+            <title>1.6.4</title>
+            <pubDate>Wed, 25 Nov 2026 00:39:34 +0900</pubDate>
+            <sparkle:version>57</sparkle:version>
+            <sparkle:shortVersionString>1.6.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li><b>Upgrade to Pro</b> now opens the Explorer buy page on yjlab.io. Pro is sold through Paddle: the license file downloads right after checkout and is also emailed to you. In Korea you can pay ₩25,000 with a card, Naver Pay or Kakao Pay.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Deleting a big folder on a NAS (or anywhere without a Trash) now shows real progress: the bar moves file by file instead of sitting still until the end, and <b>Cancel</b> stops right away, even inside the folder.</li>
+<li>Files dragged out of a zip can be dropped onto a folder in the address bar, just like onto the folder tree. Files dragged from other apps, like Mail attachments, work there too.</li>
+</ul>
+]]></description>
+            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.4.dmg" length="7726510" type="application/octet-stream" sparkle:edSignature="wIjzsCfL0bT9Apz+OOAqnCaXmMaezu1IypI6M6xNvhe31B+HgKsmFekx/AP5Z6pZmzhkfjV9wE6Ilxm0WxXvDg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer57-56.delta" sparkle:deltaFrom="56" length="555330" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GFsO9x5Eim2u5Fk3fVBjTP3sGFA0A2evI8ekl6elbNJPfoPjlJG5TUIpDjq/ieTD2Fks94IUHf1l4ld1Pp5HDA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer57-55.delta" sparkle:deltaFrom="55" length="620010" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jKRV7/Go8xi2HDnwyPPX3JPm4j17RG2L2cNdPWTJtmze/jEPMf80Qavpun4YjJFCh4PbziI8JQZEfdOsEuB8BA=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer57-54.delta" sparkle:deltaFrom="54" length="807214" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TCsI4dtaY8S+lQtdAN0W7liyk0YwpO7ZPkklZAcSY+d1ym1l/p15x3y6FRUtbbUw3POw7bi4t8RgFdEHCNtfCQ=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer57-53.delta" sparkle:deltaFrom="53" length="929666" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MyW+FjY8T83npTUdkZoV54k6+N6cbQ4GIUJUTzxGPZNxX7wcka31hsS3B0l8DEa9GwVJPCqtDdHvOnf1wKj/Ag=="/>
+                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer57-52.delta" sparkle:deltaFrom="52" length="4384014" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3GzpO2dD1lViYltwiY0vqXwwUfTLL4EwRD3isD2WVDrZ5UUG5jdx5gjuJQxm/ETVcWpw25Kin2p/EbQQqgtbCQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.6.3</title>
             <pubDate>Thu, 12 Nov 2026 18:26:54 +0900</pubDate>
             <sparkle:version>56</sparkle:version>
             <sparkle:shortVersionString>1.6.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li><b>View ▸ Refresh</b> (<b>⌥⌘R</b>, or <b>F5</b> like Windows) reads the current folder again. Handy on WebDAV shares, which don't tell the Mac when files change on the server.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li>Sorting by <b>Size</b> with "Always show folders first" turned off now orders folders and files together by size, so a 9 GB folder no longer sits below a 16 KB file. Folders whose size hasn't been measured yet go to the small end.</li>
-</ul>
-]]></description>
             <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.3.dmg" length="7709317" type="application/octet-stream" sparkle:edSignature="IppvMdqmM4kNANUEQDLJxfr5BtDiuqqHlDDeuEmrxpfdoozjnMu5XXgu4H/jQTQUzUxYWfMVBvKg7+/fpPc0Dw=="/>
             <sparkle:deltas>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer56-55.delta" sparkle:deltaFrom="55" length="463778" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GSZttU4KXMbC1/NBlkMsEawzTFlr7wywhffnRlEh56pYvvjdcxfMzs2hVTSZtuAFO6j78W2RM/S+JGkFDMgRDg=="/>
@@ -39,21 +55,6 @@
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-52.delta" sparkle:deltaFrom="52" length="4372526" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dZwjLjM8ERCsqXSTa6e9c/jDj9xrJCNSVXC3PHT1tJA/BRo4dmayokyccuM0ozROgtAUP1E19/2VbXn7a82VAg=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-51.delta" sparkle:deltaFrom="51" length="4372650" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="m8+b8oPBpNQPNKSMDZGgSVIY8ViLn5C5mlTlSp4zDKso6Eb+jQVUX7yzfaSRKtrJt9n34+hxTmJpOqbcgksaAg=="/>
                 <enclosure url="https://www.yjlab.io/downloads/updates/Explorer55-50.delta" sparkle:deltaFrom="50" length="4375090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TKZ7DSlV84u6SVRuTSX71wqzbXzYb5T8Dhpx4YnAm7I8CqgDM5jQDD+EHpDve72sGKh00bX7A8AN1x5fI+Q0DQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.6.1</title>
-            <pubDate>Wed, 04 Nov 2026 14:39:48 +0900</pubDate>
-            <sparkle:version>54</sparkle:version>
-            <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://www.yjlab.io/downloads/updates/Explorer-for-Mac-1.6.1.dmg" length="7655727" type="application/octet-stream" sparkle:edSignature="WLJfbQuWTJkNNhSoh0govlP4SHQ4IroGU2eQP6rxYMqtLF0vR8G1QL0OljpzIJZxU/+MvO7NzKYBB8V2xfeBCA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-53.delta" sparkle:deltaFrom="53" length="718094" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+NjbjCrKwZeA95TDSqFKrBfPv7mDgNJbwru3jADtWG0rxtlAP+Y8oPMB8thloxTxjDqPY4g0AoRVz++LmX6vBQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-52.delta" sparkle:deltaFrom="52" length="4328330" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zCDZEdJn0KZJz5wjtnRqtECm+f3dFLSb30d5+TtH9QcXWWPA918LLiiQS6ogRgopNnwID8Fu83IjUEuk84nlDw=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-51.delta" sparkle:deltaFrom="51" length="4340534" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ptm/+hpNbPjt59scnvBC8mdfYhfhGMAAOJ8RnIMw/rd1C5VWofgI9ztL/mCZ5w+W88ufYJXT7bH7QG2j54O+AQ=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-50.delta" sparkle:deltaFrom="50" length="4341186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dEBv8eX/sqZoQAC4QCsGeXs4d8dDt+y/RdoN4Q/A14XJAHJnEFcagri5OpwqBYbV4LvjTu9qpRukX47N6moJAg=="/>
-                <enclosure url="https://www.yjlab.io/downloads/updates/Explorer54-49.delta" sparkle:deltaFrom="49" length="4342990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="elPSA2dbdDRr6DtD60oEckuujSiE4aEsEfPJOxgFTeGOP+Kqr97jGj7WLZIUadJ5oJghCGL3m4UEVpD+cPxCCw=="/>
             </sparkle:deltas>
         </item>
     </channel>
