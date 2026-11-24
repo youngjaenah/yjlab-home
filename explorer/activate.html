@@ -165,7 +165,7 @@
 <script>
   // ---- Turn on once the production Worker can send mail (RESEND_API_KEY +
   // LS_API_KEY / KV): resend-by-email covers Lemon Squeezy AND Paddle buyers.
-  const EMAIL_RESEND = false;
+  const EMAIL_RESEND = true;
   // ---------------------------------------------------------------------------
   const sandbox = new URLSearchParams(location.search).get("paddle") === "sandbox";
   const RESEND_ENDPOINT = sandbox
