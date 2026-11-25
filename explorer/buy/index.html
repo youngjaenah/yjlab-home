@@ -132,6 +132,10 @@
   const sandbox = params.get("paddle") === "sandbox";
   // ?paddle=live: real Paddle checkout before PROVIDER flips (owner test buy)
   const livePreview = params.get("paddle") === "live";
+  // ?code=BF30 pre-fills a Paddle discount code (promo links). Anything that
+  // doesn't look like a code is ignored; Paddle checks validity and expiry.
+  const discountCode = /^[A-Za-z0-9_-]{1,32}$/.test(params.get("code") || "")
+    ? params.get("code").toUpperCase() : null;
 
   if (PROVIDER !== "paddle" && !sandbox && !livePreview) {
     location.replace(LS_CHECKOUT);
@@ -153,12 +157,14 @@
       "If it doesn't arrive within a few minutes, contact support@yjlab.io.";
 
     let completedTxn = null;
+    let codeDropped = false; // an expired/unknown ?code= falls back to full price
 
     function openCheckout() {
       open.hidden = true;
       show("");
       Paddle.Checkout.open({
         items: [{ priceId: cfg.priceId, quantity: 1 }],
+        ...(discountCode && !codeDropped ? { discountCode } : {}),
         settings: {
           displayMode: "overlay",
           variant: "one-page",
@@ -229,6 +235,10 @@
             setTimeout(() => Paddle.Checkout.close(), 1200);
             if (completedTxn) fetchLicense(completedTxn);
             else show(FALLBACK_MAIL, "err");
+          } else if (event.name === "checkout.error" && discountCode && !codeDropped) {
+            codeDropped = true;
+            Paddle.Checkout.close();
+            setTimeout(openCheckout, 300);
           } else if (event.name === "checkout.closed" && !completedTxn) {
             title.textContent = "Explorer Pro";
             open.hidden = false;
