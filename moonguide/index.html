@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MoonGuide — Keep the Moon exactly where you framed it</title>
+<meta name="description" content="MoonGuide is a free Mac app that autoguides on the Moon itself. It finds the lunar disk in a ZWO guide camera and sends small ST-4 corrections to your mount, by night, at twilight and in daylight." />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href="https://www.yjlab.io/moonguide/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="MoonGuide — Keep the Moon exactly where you framed it" />
+<meta property="og:description" content="Autoguiding on the lunar disk for Mac: a ZWO guide camera finds the Moon, and MoonGuide sends small ST-4 corrections to your mount." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.yjlab.io/moonguide/" />
+<meta property="og:image" content="https://www.yjlab.io/images/moonguide-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f7f5;
+    --ink: #17191d;
+    --ink-dim: #585d66;
+    --ink-faint: #8b9099;
+    --accent: #2d5bd7;
+    --line: #e7e7e4;
+    --warn-bg: #fff7e6;
+    --warn-line: #f1d9a6;
+    --warn-ink: #7a5300;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── header ── */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.98rem; font-weight: 700; letter-spacing: -0.01em;
+    color: var(--ink); text-decoration: none;
+  }
+  .brand .mark { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+  .nav-links { display: flex; align-items: center; gap: 28px; font-size: 0.9rem; }
+  .nav-links a { color: var(--ink-dim); text-decoration: none; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .nav-links { gap: 16px; font-size: 0.85rem; }
+    .nav-links .opt { display: none; }
+  }
+
+  /* ── hero ── */
+  .hero { padding: 96px 0 80px; }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 800px) {
+    .hero { padding: 64px 0 56px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 20px;
+  }
+  .nocaps { text-transform: none; }
+  .hero h1 {
+    font-weight: 700;
+    font-size: clamp(2rem, 4.6vw, 3.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+  }
+  .hero .lead {
+    font-size: 1.08rem; color: var(--ink-dim); max-width: 50ch; line-height: 1.7; margin-bottom: 26px;
+  }
+
+  .feat { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+  .feat li {
+    display: flex; gap: 11px; align-items: flex-start;
+    font-size: 0.95rem; color: var(--ink); line-height: 1.55;
+  }
+  .feat li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 16px; height: 16px; margin-top: 3px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%232d5bd7' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M2.5 8.5l3.5 3.5 7-8'/%3E%3C/svg%3E") no-repeat center / contain;
+  }
+
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; border-radius: 9px; font-size: 0.94rem; font-weight: 600;
+    text-decoration: none; transition: background .2s, border-color .2s;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: #2c2f36; }
+  .btn-ghost {
+    background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+    cursor: pointer; font-family: inherit;
+  }
+  .btn-ghost:hover { border-color: var(--ink-faint); background: var(--bg-soft); }
+  .cta-meta { font-size: 0.83rem; color: var(--ink-faint); margin-top: 14px; }
+
+  .hero-visual {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fbfbfa, #f2f2ef);
+    aspect-ratio: 1 / 1; max-width: 400px; margin: 0 auto; width: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-visual img {
+    width: 58%; height: auto;
+    filter: drop-shadow(0 12px 24px rgba(23, 25, 29, 0.16));
+  }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; } .d3 { animation-delay: .25s; } .d4 { animation-delay: .35s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+  }
+
+  /* ── sections ── */
+  .section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .section h2 {
+    font-weight: 700; font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+    letter-spacing: -0.025em; margin-bottom: 32px;
+  }
+  .section-lead {
+    font-size: 1rem; color: var(--ink-dim); line-height: 1.7;
+    max-width: 62ch; margin: -20px 0 36px;
+  }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    border: 1px solid var(--line); border-radius: 12px;
+    background: #fff; padding: 26px 24px;
+  }
+  .step .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    color: var(--ink); font-size: 0.84rem; font-weight: 600; margin-bottom: 16px;
+  }
+  .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .step p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.65; }
+
+  /* feature grid */
+  .tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 800px) { .tools { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .tools { grid-template-columns: 1fr; } }
+  .tool {
+    border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft);
+    padding: 16px 18px;
+  }
+  .tool h3 { font-size: 0.92rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .tool p { font-size: 0.85rem; color: var(--ink-dim); line-height: 1.55; margin-top: 4px; }
+
+  /* requirements */
+  .specs { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .spec { display: grid; grid-template-columns: 200px 1fr; gap: 16px; padding: 16px 22px; border-top: 1px solid var(--line); }
+  .spec:first-child { border-top: none; }
+  .spec dt { font-size: 0.88rem; font-weight: 600; color: var(--ink); }
+  .spec dd { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.6; }
+  @media (max-width: 560px) { .spec { grid-template-columns: 1fr; gap: 4px; } }
+
+  /* ── what you need (first section) ── */
+  .needs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 28px; }
+  @media (max-width: 800px) { .needs { grid-template-columns: 1fr; } }
+  .need { border: 1px solid var(--line); border-radius: 12px; background: #fff; padding: 24px; }
+  .need .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 0.84rem; font-weight: 700; margin-bottom: 14px;
+  }
+  .need h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .need p { font-size: 0.9rem; color: var(--ink-dim); line-height: 1.6; }
+
+  /* connection diagram: Mac → USB → camera → ST-4 → mount */
+  .rig {
+    display: grid; grid-template-columns: 1fr 1.1fr 1fr 1.1fr 1fr; align-items: center;
+    border: 1px solid var(--line); border-radius: 16px; background: var(--bg-soft);
+    padding: 32px 28px;
+  }
+  .rig-node { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+  .rig-node svg { width: 92px; height: 72px; color: var(--ink); }
+  .rig-node strong { font-size: 0.92rem; font-weight: 700; }
+  .rig-node span { font-size: 0.78rem; color: var(--ink-faint); line-height: 1.4; }
+  .rig-link { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 6px; }
+  .rig-link .wire { position: relative; width: 100%; height: 0; border-top: 3px solid var(--accent); }
+  .rig-link .wire::after {
+    content: ""; position: absolute; right: -2px; top: -8.5px;
+    border-left: 12px solid var(--accent); border-top: 7px solid transparent; border-bottom: 7px solid transparent;
+  }
+  .rig-link .cable {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent);
+    background: #fff; border: 1px solid rgba(45, 91, 215, .3); border-radius: 99px; padding: 3px 12px; white-space: nowrap;
+  }
+  .rig-link .carries { font-size: 0.74rem; color: var(--ink-faint); text-align: center; line-height: 1.35; }
+  @media (max-width: 700px) {
+    .rig { grid-template-columns: 1fr; gap: 6px; padding: 24px 16px; }
+    .rig-link { flex-direction: row; justify-content: center; gap: 12px; padding: 8px 0; }
+    .rig-link .wire { width: 0; height: 44px; border-top: none; border-left: 3px solid var(--accent); order: -1; }
+    .rig-link .wire::after {
+      right: auto; top: auto; left: -8.5px; bottom: -2px;
+      border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 12px solid var(--accent); border-bottom: none;
+    }
+    .rig-link .carries { text-align: left; }
+  }
+
+  .need-notes { list-style: none; display: grid; gap: 10px; margin-top: 28px; max-width: 80ch; }
+  .need-notes li { font-size: 0.88rem; color: var(--ink-dim); line-height: 1.6; padding-left: 16px; position: relative; }
+  .need-notes li::before { content: "›"; position: absolute; left: 0; color: var(--ink-faint); }
+  .need-notes strong { color: var(--ink); font-weight: 600; }
+  .need-notes a { color: var(--ink-dim); }
+
+  /* safety callout */
+  .warn {
+    border: 1px solid var(--warn-line); background: var(--warn-bg); border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 24px;
+  }
+  .warn h3 { font-size: 0.98rem; font-weight: 700; color: var(--warn-ink); margin-bottom: 6px; }
+  .warn p { font-size: 0.9rem; color: var(--warn-ink); line-height: 1.65; }
+
+  .fineprint {
+    margin-top: 32px; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.7;
+    max-width: 76ch;
+  }
+  .fineprint strong { color: var(--ink-dim); font-weight: 600; }
+  .fineprint a { color: var(--ink-dim); }
+
+  /* Release notes dialog */
+  dialog.rn {
+    border: none; border-radius: 16px; padding: 0; color: var(--ink);
+    background: var(--bg); max-width: 660px; width: calc(100% - 40px);
+    max-height: 82vh; box-shadow: 0 24px 60px rgba(0,0,0,.22);
+    overflow: hidden;
+  }
+  dialog.rn[open] { display: flex; flex-direction: column; }
+  dialog.rn::backdrop { background: rgba(17,19,23,.45); }
+  .rn-head {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px; border-bottom: 1px solid var(--line);
+    background: var(--bg); border-radius: 16px 16px 0 0;
+  }
+  .rn-head h2 { font-size: 1.05rem; margin: 0; }
+  .rn-close {
+    border: none; background: none; font-size: 1.5rem; line-height: 1;
+    color: var(--ink-faint); cursor: pointer; padding: 2px 8px; border-radius: 8px;
+  }
+  .rn-close:hover { color: var(--ink); background: var(--bg-soft); }
+  .rn-body { flex: 1 1 auto; min-height: 0; padding: 4px 24px 20px; overflow-y: auto; }
+  .rn-version { padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .rn-version:last-child { border-bottom: none; padding-bottom: 4px; }
+  .rn-version h3 { font-size: 0.98rem; margin: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
+  .rn-date { font-size: 0.78rem; color: var(--ink-faint); font-weight: 500; }
+  .rn-version ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+  .rn-version li {
+    font-size: 0.88rem; color: var(--ink-dim); line-height: 1.6;
+    padding-left: 16px; position: relative;
+  }
+  .rn-version li::before { content: "›"; position: absolute; left: 0; color: var(--ink-faint); }
+  .rn-version li strong { color: var(--ink); font-weight: 600; }
+
+  /* ── footer ── */
+  footer { border-top: 1px solid var(--line); padding: 40px 0; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .copy { color: var(--ink-faint); font-size: 0.82rem; margin: 0; }
+  .copy a { color: var(--ink-dim); text-decoration: none; transition: color .2s; }
+  .copy a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/moonguide/"><span class="mark"></span>MoonGuide</a>
+    <nav class="nav-links">
+      <a href="/">YJLAB</a>
+      <a href="#requirements">What you need</a>
+      <a class="opt" href="#how">How it works</a>
+      <a class="opt" href="#features">Features</a>
+      <a href="mailto:support@yjlab.io">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow reveal d1"><span class="nocaps">macOS</span> · Lunar autoguiding</p>
+        <h1 class="reveal d2">Keep the Moon exactly where you framed it.</h1>
+        <p class="lead reveal d3">Even a good mount lets the Moon slowly drift out of frame. MoonGuide watches the Moon itself through a ZWO guide camera and nudges your mount back with small ST-4 corrections, so long lunar videos, mosaics and time-lapses stay put.</p>
+        <ul class="feat reveal d3">
+          <li>Guides on the lunar disk itself, so you don't need a guide star</li>
+          <li>Works at night, at twilight and in a bright daytime sky</li>
+          <li>Auto exposure and gain tuned for the Moon</li>
+          <li>Focus indicator for the lunar limb</li>
+          <li>Every correction has a hard time limit, and a watchdog releases the mount's guide lines if anything stalls</li>
+          <li>Try it without hardware in simulation mode</li>
+        </ul>
+        <div class="hero-cta reveal d4">
+          <a class="btn btn-primary" href="/moonguide/downloads/MoonGuide.dmg">Free download</a>
+          <button class="btn btn-ghost" id="rn-open" type="button" aria-haspopup="dialog">Release notes</button>
+        </div>
+        <p class="cta-meta reveal d4">Free · Version 1.0 · macOS 15 Sequoia or later · Apple Silicon · Notarized by Apple</p>
+      </div>
+      <div class="hero-visual reveal d3">
+        <img src="../images/moonguide-icon.png" alt="MoonGuide app icon" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT YOU NEED ── -->
+  <section class="section" id="requirements">
+    <div class="wrap">
+      <h2>What you need</h2>
+      <p class="section-lead">Three pieces of gear and two cables. MoonGuide talks to the camera over USB, and the camera passes the guide corrections on to the mount through its ST-4 port.</p>
+      <div class="needs">
+        <div class="need">
+          <span class="num">1</span>
+          <h3>A ZWO camera with an ST-4 port</h3>
+          <p>Any ZWO ASI camera with an ST-4 guide port, monochrome or color, on a guide scope or your telescope. Tested with the ASI220MM Mini.</p>
+        </div>
+        <div class="need">
+          <span class="num">2</span>
+          <h3>An equatorial or Alt-Az mount with an ST-4 port</h3>
+          <p>Aligned and already tracking the Moon. MoonGuide doesn't move the mount on its own; it only adds small corrections. Tested with a Rainbow Astro RST-135E in Alt-Az mode.</p>
+        </div>
+        <div class="need">
+          <span class="num">3</span>
+          <h3>A Mac with macOS 15 or later</h3>
+          <p>A MacBook or any other Mac with Apple Silicon (M1 or newer), running macOS 15 Sequoia or later. Intel Macs aren't supported.</p>
+        </div>
+      </div>
+
+      <div class="rig" role="img" aria-label="Connection diagram: Mac, USB cable, ZWO camera, ST-4 cable, equatorial or Alt-Az mount">
+        <div class="rig-node">
+          <svg viewBox="0 0 92 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">
+            <rect x="16" y="8" width="60" height="40" rx="4"/>
+            <rect x="22" y="14" width="48" height="28" rx="1.5" fill="currentColor" opacity=".08" stroke="none"/>
+            <path d="M6 56h80l-5 8H11z"/>
+          </svg>
+          <strong>Mac</strong>
+          <span>macOS 15+<br>Apple Silicon</span>
+        </div>
+        <div class="rig-link">
+          <span class="cable">USB cable</span>
+          <div class="wire"></div>
+          <span class="carries">images in,<br>guide commands out</span>
+        </div>
+        <div class="rig-node">
+          <svg viewBox="0 0 92 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">
+            <rect x="18" y="20" width="50" height="32" rx="8"/>
+            <path d="M68 26h10v20H68"/>
+            <rect x="8" y="27" width="10" height="18" rx="2"/>
+            <circle cx="40" cy="36" r="5" fill="currentColor" stroke="none" opacity=".25"/>
+          </svg>
+          <strong>ZWO camera</strong>
+          <span>with ST-4 port<br>mono or color</span>
+        </div>
+        <div class="rig-link">
+          <span class="cable">ST-4 cable</span>
+          <div class="wire"></div>
+          <span class="carries">N / S / E / W<br>guide pulses</span>
+        </div>
+        <div class="rig-node">
+          <svg viewBox="0 0 92 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="24" y="6" width="44" height="12" rx="3" transform="rotate(-18 46 12)"/>
+            <path d="M46 20v8"/>
+            <rect x="36" y="28" width="20" height="12" rx="3"/>
+            <path d="M46 40v6M46 46L26 68M46 46l20 22M46 46v22"/>
+          </svg>
+          <strong>Mount</strong>
+          <span>equatorial or Alt-Az<br>with ST-4 port</span>
+        </div>
+      </div>
+
+      <ul class="need-notes">
+        <li><strong>Frame the whole Moon.</strong> The default settings expect a Moon about 280–400 px across, for example a 4 µm-pixel camera on a guide scope of about 150 mm focal length. For other setups, change the Moon size in Settings.</li>
+        <li><strong>No drivers to install.</strong> The ZWO camera library is built into the app.</li>
+        <li><strong>In daylight,</strong> a red or infrared-pass filter is strongly recommended. It makes the Moon stand out much more against a blue sky.</li>
+        <li><strong>Not tested yet:</strong> equatorial mounts and color cameras on real hardware. If you try them, we'd love to hear how it goes at <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="section-lead">Your mount keeps tracking the Moon as usual. MoonGuide doesn't replace that tracking. It measures where the Moon actually is and corrects the leftover drift.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>Find the Moon</h3>
+          <p>Connect the camera and start the preview. MoonGuide fits a circle to the lit edge of the Moon, so it also works on partial phases, down to about a 10 % crescent in testing.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Calibrate</h3>
+          <p>One click moves the mount a little in each direction. MoonGuide learns how each ST-4 direction moves the image, including camera rotation.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>Set a target and guide</h3>
+          <p>Click where the Moon should stay and press Start Guiding. A live graph shows the remaining tracking error.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <h2>Built for the Moon</h2>
+      <div class="tools">
+        <div class="tool">
+          <h3>Day, twilight and night</h3>
+          <p>Removes sky brightness gradients and measures Moon/sky contrast. It skips frames that are too faint or uneven to trust.</p>
+        </div>
+        <div class="tool">
+          <h3>Moon-based Auto exposure</h3>
+          <p>Keeps the bright lunar surface near 80 % of full scale instead of averaging the whole frame, which would blow out the Moon at night.</p>
+        </div>
+        <div class="tool">
+          <h3>Familiar camera controls</h3>
+          <p>Exposure and gain work like ZWO's ASICap: pick a range, type a number or drag a slider. Changes apply right away.</p>
+        </div>
+        <div class="tool">
+          <h3>Limb focus indicator</h3>
+          <p>Shows how sharp the lunar limb is. Turn the focuser until it reads "at best". Exposure and sky brightness don't change the reading.</p>
+        </div>
+        <div class="tool">
+          <h3>Bad-frame protection</h3>
+          <p>Ignores sudden jumps, clouds and stale frames. If the Moon is lost for too long, guiding stops on its own.</p>
+        </div>
+        <div class="tool">
+          <h3>Session logs and replay</h3>
+          <p>Every pulse and state change is logged. You can record frames and replay a session later to see what happened.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SAFETY ── -->
+  <section class="section" id="safety">
+    <div class="wrap">
+      <h2>Safety</h2>
+      <div class="warn">
+        <h3>Never point your optics at or near the Sun.</h3>
+        <p>Sunlight through a telescope or guide scope can destroy a camera and cause permanent eye damage. MoonGuide only sends small guide corrections and never slews the mount, but it cannot know where the Sun is. In a bright sky it asks you to confirm this before calibration or guiding starts.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>Bounded pulses</h3>
+          <p>Every correction has a hard maximum length. Only one guide line is active at a time, and a watchdog releases all lines if a pulse is not ended in time.</p>
+        </div>
+        <div class="step">
+          <h3>Stays out of the way</h3>
+          <p>Updates and other app activity never interrupt calibration or guiding. Stop Guiding (⌘.) always runs immediately.</p>
+        </div>
+        <div class="step">
+          <h3>Stay with your mount</h3>
+          <p>If the Mac crashes or USB fails completely during a pulse, a guide line may stay active. MoonGuide releases every line the next time it connects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INSTALL ── -->
+  <section class="section" id="install">
+    <div class="wrap">
+      <h2>How to install</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>Download &amp; drag</h3>
+          <p>Open the DMG and drag <strong>MoonGuide</strong> onto the Applications folder. No other software is needed, not even camera drivers.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Try the simulation</h3>
+          <p>Without a camera connected, choose <strong>Connect ▸ Simulated ASI220MM Mini</strong> to try every step on a simulated Moon.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>Stay up to date</h3>
+          <p>MoonGuide checks for new versions from <strong>MoonGuide ▸ Check for Updates…</strong> Updates are signed and installed only after you approve them.</p>
+        </div>
+      </div>
+      <p class="fineprint"><strong>Privacy.</strong> MoonGuide works offline. Settings, session logs and recorded frames stay on your Mac. The only network request is the update check. <strong>Third-party software.</strong> MoonGuide includes the ZWO ASI Camera SDK and <a href="https://libusb.info">libusb</a> (LGPL-2.1); their licenses are in the app bundle. Questions or problems? Write to <a href="mailto:support@yjlab.io">support@yjlab.io</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <p class="copy">© 2026 YJLAB. All rights reserved.</p>
+    <p class="copy">Contact: <a href="mailto:support@yjlab.io">support@yjlab.io</a></p>
+  </div>
+</footer>
+
+<dialog class="rn" id="rn-dialog" aria-labelledby="rn-title">
+  <div class="rn-head">
+    <h2 id="rn-title">Release notes</h2>
+    <button class="rn-close" id="rn-close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="rn-body">
+    <article class="rn-version">
+      <h3>1.0</h3>
+      <ul>
+        <li><strong>Initial release.</strong> Lunar disk autoguiding through a ZWO camera's ST-4 port: find the Moon, calibrate, set a target and guide.</li>
+        <li><strong>Monochrome and color ZWO cameras.</strong> A color camera's raw Bayer image is turned into a gray image, so the Moon shows no color checkerboard.</li>
+        <li><strong>Day, twilight and night.</strong> Moon detection in a bright sky, with a Sun-safety confirmation.</li>
+        <li><strong>Camera controls.</strong> ASICap-style exposure and gain, with Moon-based Auto exposure.</li>
+        <li><strong>Focus indicator</strong> for the lunar limb.</li>
+        <li><strong>Simulation and replay</strong> for trying MoonGuide without hardware.</li>
+        <li><strong>In-app updates</strong> from MoonGuide ▸ Check for Updates… They never interrupt calibration or guiding.</li>
+      </ul>
+    </article>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    var dlg = document.getElementById('rn-dialog');
+    var openBtn = document.getElementById('rn-open');
+    var closeBtn = document.getElementById('rn-close');
+    if (!dlg || !openBtn) return;
+    openBtn.addEventListener('click', function () {
+      if (typeof dlg.showModal === 'function') dlg.showModal();
+      else dlg.setAttribute('open', '');
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    });
+    dlg.addEventListener('close', function () {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    });
+    closeBtn && closeBtn.addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  })();
+</script>
+
+</body>
+</html>
